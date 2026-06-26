@@ -1,0 +1,2383 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<title>SPEAK 2000 | تكلم الإنجليزية كالناطقين بها</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&family=Syne:wght@700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#09090f;--paper:#0e0e18;--card:#14142a;--raised:#1c1c32;--border:rgba(255,255,255,.07);--gold:#f5c518;--cyan:#00ddff;--rose:#ff2d6e;--mint:#00e8a2;--violet:#9b5de5;--text:#e8e8f4;--muted:#6868a0;--correct:#00e8a2;--wrong:#ff2d6e}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{background:var(--ink);color:var(--text);font-family:'Tajawal',sans-serif;min-height:100vh;overflow-x:hidden}
+.ab{position:fixed;border-radius:50%;filter:blur(100px);animation:af 10s ease-in-out infinite;pointer-events:none;z-index:0}
+.ab1{width:500px;height:500px;background:rgba(0,221,255,.05);top:-150px;right:-100px}
+.ab2{width:400px;height:400px;background:rgba(255,45,110,.04);bottom:-100px;left:-80px;animation-delay:-4s}
+@keyframes af{0%,100%{transform:translate(0,0)}50%{transform:translate(20px,-20px)}}
+.hdr{position:sticky;top:0;z-index:90;background:rgba(9,9,15,.92);backdrop-filter:blur(22px);border-bottom:1px solid var(--border)}
+.hi{max-width:520px;margin:0 auto;height:54px;display:flex;align-items:center;gap:8px;padding:0 14px}
+.logo{font-family:'Syne',sans-serif;font-size:16px;font-weight:800;background:linear-gradient(135deg,var(--cyan),var(--violet));-webkit-background-clip:text;-webkit-text-fill-color:transparent;flex:1}
+.pill{display:flex;align-items:center;gap:5px;background:rgba(255,255,255,.06);border:1px solid var(--border);border-radius:30px;padding:5px 11px;font-size:11px;font-weight:700;white-space:nowrap}
+.dot{width:6px;height:6px;border-radius:50%;background:var(--gold);animation:bk 1.8s infinite}
+@keyframes bk{0%,100%{opacity:1}50%{opacity:.3}}
+.tabs{display:flex;background:var(--paper);border-bottom:1px solid var(--border);overflow-x:auto;scrollbar-width:none;position:sticky;top:54px;z-index:89}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex:none;padding:11px 15px;font-size:12px;font-weight:700;color:var(--muted);cursor:pointer;border-bottom:2px solid transparent;transition:all .22s;white-space:nowrap}
+.tab.on{color:var(--cyan);border-bottom-color:var(--cyan)}
+.pg{display:none;max-width:520px;margin:0 auto;padding:14px 12px 90px;position:relative;z-index:1;animation:pgi .3s ease}
+.pg.on{display:block}
+@keyframes pgi{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.hero{text-align:center;padding:22px 0 16px}
+.badge{display:inline-flex;align-items:center;gap:7px;background:rgba(245,197,24,.08);border:1px solid rgba(245,197,24,.2);border-radius:30px;padding:5px 14px;font-size:11px;font-weight:700;color:var(--gold);margin-bottom:14px}
+.hero h1{font-family:'Syne',sans-serif;font-size:28px;font-weight:800;line-height:1.2;margin-bottom:8px}
+.hero h1 em{font-style:normal;background:linear-gradient(135deg,var(--cyan),var(--mint));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero p{color:var(--muted);font-size:13px;line-height:1.7}
+.sbar{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:14px 0}
+.sc{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:12px 8px;text-align:center}
+.sn{font-family:'JetBrains Mono',monospace;font-size:20px;font-weight:700;display:block;margin-bottom:2px}
+.sl{font-size:10px;color:var(--muted);font-weight:700}
+.daily-btn{background:linear-gradient(135deg,rgba(245,197,24,.08),rgba(255,45,110,.06));border:1px solid rgba(245,197,24,.2);border-radius:16px;padding:14px 16px;display:flex;align-items:center;gap:12px;cursor:pointer;transition:all .3s;margin-bottom:18px}
+.daily-btn:active{transform:translateY(-2px)}
+.lbl{font-size:10px;font-weight:700;color:var(--muted);letter-spacing:3px;text-transform:uppercase;margin:18px 0 10px}
+.cgrid{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.cc{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:14px 12px;cursor:pointer;transition:all .28s cubic-bezier(.34,1.56,.64,1);position:relative;overflow:hidden}
+.cc:active{transform:translateY(-3px) scale(1.01)}
+.cico{font-size:26px;display:block;margin-bottom:7px}
+.cname{font-size:13px;font-weight:700;margin-bottom:2px}
+.ccnt{font-size:10px;color:var(--muted)}
+.cbar{height:2px;background:rgba(255,255,255,.06);border-radius:2px;margin-top:9px;overflow:hidden}
+.cbfill{height:100%;border-radius:2px;transition:width 1s ease}
+.cbadge{position:absolute;top:8px;left:8px;background:var(--rose);color:#fff;font-size:9px;font-weight:700;border-radius:5px;padding:2px 6px}
+.swrap{position:relative;margin-bottom:14px}
+.sinput{width:100%;background:var(--card);border:1.5px solid var(--border);border-radius:13px;padding:12px 44px 12px 14px;font-size:14px;color:var(--text);font-family:'Tajawal',sans-serif;outline:none;transition:all .3s;direction:rtl}
+.sinput:focus{border-color:var(--cyan)}
+.sico{position:absolute;left:12px;top:50%;transform:translateY(-50%);font-size:18px;color:var(--muted)}
+.sclr{position:absolute;right:12px;top:50%;transform:translateY(-50%);font-size:14px;color:var(--muted);cursor:pointer;display:none}
+.frow{display:flex;gap:7px;overflow-x:auto;padding-bottom:3px;scrollbar-width:none;margin-bottom:12px}
+.frow::-webkit-scrollbar{display:none}
+.fc{flex:none;background:rgba(255,255,255,.05);border:1px solid var(--border);border-radius:20px;padding:5px 13px;font-size:11px;font-weight:700;cursor:pointer;transition:all .22s;color:var(--muted);white-space:nowrap}
+.fc.on{background:rgba(0,221,255,.1);border-color:rgba(0,221,255,.3);color:var(--cyan)}
+.slist{display:flex;flex-direction:column;gap:9px}
+.scard{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:14px;position:relative;overflow:hidden}
+.scard::after{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--lc,var(--cyan));opacity:.5;border-radius:3px 0 0 3px}
+.scard.saved{border-color:rgba(245,197,24,.35)}
+.scard.saved::after{background:var(--gold)}
+.sen{font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:700;color:var(--text);direction:ltr;text-align:left;margin-bottom:6px;line-height:1.5}
+.sar{font-size:13px;color:var(--muted);margin-bottom:7px;line-height:1.6}
+.smeta{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.stag{font-size:9px;font-weight:700;background:rgba(255,255,255,.05);border-radius:5px;padding:2px 8px;color:var(--muted)}
+.stag.la{background:rgba(0,232,162,.1);color:var(--mint)}
+.stag.lb{background:rgba(0,221,255,.1);color:var(--cyan)}
+.stag.lc{background:rgba(255,45,110,.1);color:var(--rose)}
+.sacts{display:flex;gap:7px;margin-top:9px}
+.sb{flex:1;border:none;border-radius:9px;padding:8px;font-size:11px;font-weight:700;cursor:pointer;font-family:'Tajawal',sans-serif;transition:all .2s}
+.sb.li{background:rgba(0,221,255,.1);color:var(--cyan)}
+.sb.sv{background:rgba(245,197,24,.1);color:var(--gold)}
+.sb.pr{background:rgba(0,232,162,.1);color:var(--mint)}
+.qpanel{display:none;position:fixed;inset:0;z-index:200;background:var(--ink);flex-direction:column;animation:su .32s cubic-bezier(.4,0,.2,1)}
+.qpanel.on{display:flex}
+@keyframes su{from{transform:translateY(100%);opacity:0}to{transform:translateY(0);opacity:1}}
+.qhdr{padding:12px 14px;background:rgba(9,9,15,.94);border-bottom:1px solid var(--border);display:flex;align-items:center;gap:10px;flex-shrink:0}
+.qback{width:34px;height:34px;background:rgba(255,255,255,.07);border:none;border-radius:9px;color:var(--text);font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.qtitle{flex:1;font-size:14px;font-weight:700;text-align:center}
+.qsc{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--gold);font-weight:700}
+.qpbar{height:3px;background:rgba(255,255,255,.06);flex-shrink:0}
+.qpfill{height:100%;background:linear-gradient(90deg,var(--cyan),var(--mint));transition:width .55s ease}
+.qbody{flex:1;overflow-y:auto;padding:18px 14px;max-width:520px;margin:0 auto;width:100%}
+.qnum{font-size:10px;color:var(--muted);font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:5px}
+.qtxt{font-size:19px;font-weight:700;line-height:1.4;margin-bottom:4px}
+.qsub{font-size:12px;color:var(--muted);margin-bottom:16px}
+.bigen{background:linear-gradient(135deg,rgba(0,221,255,.06),rgba(155,93,229,.06));border:1px solid rgba(0,221,255,.15);border-radius:18px;padding:22px;text-align:center;margin-bottom:16px}
+.bigen .en{font-family:'JetBrains Mono',monospace;font-size:17px;font-weight:700;color:var(--cyan);direction:ltr;line-height:1.5;margin-bottom:6px}
+.bspk{display:inline-flex;align-items:center;gap:6px;background:rgba(0,221,255,.08);border:1px solid rgba(0,221,255,.2);color:var(--cyan);border-radius:30px;padding:7px 16px;margin-top:10px;cursor:pointer;font-size:12px;font-weight:700;font-family:'Tajawal',sans-serif}
+.choices{display:flex;flex-direction:column;gap:8px;margin-bottom:12px}
+.choice{background:rgba(255,255,255,.04);border:1.5px solid rgba(255,255,255,.08);border-radius:12px;padding:13px 15px;cursor:pointer;font-family:'Tajawal',sans-serif;font-size:14px;font-weight:600;color:var(--text);transition:all .2s;display:flex;align-items:center;gap:11px;direction:rtl;width:100%;text-align:right}
+.choice:hover:not(:disabled){border-color:rgba(0,221,255,.4);background:rgba(0,221,255,.05)}
+.choice:disabled{cursor:default}
+.choice.ok{border-color:var(--correct);background:rgba(0,232,162,.1);box-shadow:0 0 18px rgba(0,232,162,.2)}
+.choice.bad{border-color:var(--wrong);background:rgba(255,45,110,.1)}
+.cidx{width:26px;height:26px;background:rgba(255,255,255,.06);border-radius:7px;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;flex-shrink:0}
+.choice.ok .cidx{background:var(--correct);color:#000}
+.choice.bad .cidx{background:var(--wrong);color:#fff}
+.qfb{border-radius:12px;padding:12px 15px;margin-bottom:12px;font-size:13px;font-weight:700;display:none}
+.qfb.on{display:block}
+.qfb.ok{background:rgba(0,232,162,.1);color:var(--correct);border:1px solid rgba(0,232,162,.22)}
+.qfb.bad{background:rgba(255,45,110,.1);color:var(--wrong);border:1px solid rgba(255,45,110,.22)}
+.bnext{width:100%;border:none;border-radius:12px;padding:14px;background:linear-gradient(135deg,var(--cyan),var(--mint));color:#000;font-size:15px;font-weight:900;cursor:pointer;font-family:'Tajawal',sans-serif;display:none;margin-top:8px}
+.bnext.on{display:block}
+.tinput{width:100%;background:rgba(255,255,255,.04);border:1.5px solid rgba(255,255,255,.1);border-radius:12px;padding:13px 16px;font-size:17px;color:var(--text);font-family:'JetBrains Mono',monospace;direction:ltr;text-align:left;outline:none;transition:all .3s}
+.tinput:focus{border-color:var(--cyan)}
+.tinput.ok{border-color:var(--correct);background:rgba(0,232,162,.05)}
+.tinput.bad{border-color:var(--wrong);background:rgba(255,45,110,.05)}
+.bcheck{width:100%;background:rgba(0,221,255,.12);border:1px solid rgba(0,221,255,.25);border-radius:12px;padding:12px;color:var(--cyan);font-size:14px;font-weight:700;cursor:pointer;font-family:'Tajawal',sans-serif;margin-top:9px}
+.fwrap{perspective:1000px;min-height:160px;cursor:pointer;margin-bottom:14px}
+.finner{position:relative;width:100%;padding-top:50%;transform-style:preserve-3d;transition:transform .55s cubic-bezier(.4,0,.2,1)}
+.fwrap.flipped .finner{transform:rotateY(180deg)}
+.ff,.fb{position:absolute;inset:0;backface-visibility:hidden;border-radius:18px;padding:20px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.ff{background:linear-gradient(135deg,rgba(0,221,255,.07),rgba(155,93,229,.07));border:1px solid rgba(0,221,255,.2)}
+.fb{background:linear-gradient(135deg,rgba(255,45,110,.07),rgba(245,197,24,.07));border:1px solid rgba(255,45,110,.2);transform:rotateY(180deg)}
+.fhint{font-size:11px;color:var(--muted);margin-top:10px}
+.fbtns{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-bottom:12px}
+.fbtn{border:none;border-radius:11px;padding:12px;font-size:13px;font-weight:700;cursor:pointer;font-family:'Tajawal',sans-serif}
+.fbtn.no{background:rgba(255,45,110,.12);color:var(--rose)}
+.fbtn.yes{background:rgba(0,232,162,.12);color:var(--mint)}
+.sscreen{display:none;position:fixed;inset:0;z-index:300;background:rgba(9,9,15,.97);flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:28px}
+.sscreen.on{display:flex}
+.semoji{font-size:68px}
+.stitle{font-family:'Syne',sans-serif;font-size:24px;font-weight:800;margin:14px 0 6px}
+.sbig{font-family:'JetBrains Mono',monospace;font-size:58px;font-weight:700;background:linear-gradient(135deg,var(--cyan),var(--mint));-webkit-background-clip:text;-webkit-text-fill-color:transparent;line-height:1}
+.sdetail{color:var(--muted);font-size:13px;margin:12px 0 8px}
+.sstars{font-size:32px;letter-spacing:5px;margin-bottom:20px}
+.sxp{display:inline-flex;align-items:center;gap:7px;background:rgba(245,197,24,.1);border:1px solid rgba(245,197,24,.22);border-radius:30px;padding:7px 18px;color:var(--gold);font-weight:700;font-size:14px;margin-bottom:20px}
+.cpar{position:fixed;pointer-events:none;z-index:400;border-radius:2px;animation:cfall linear forwards}
+@keyframes cfall{from{transform:translateY(-10px) rotate(0);opacity:1}to{transform:translateY(110vh) rotate(720deg);opacity:0}}
+.bpri{border:none;border-radius:12px;padding:13px 28px;background:linear-gradient(135deg,var(--cyan),var(--mint));color:#000;font-size:14px;font-weight:900;cursor:pointer;font-family:'Tajawal',sans-serif;width:100%;max-width:360px;margin:5px 0}
+.bsec{border:1px solid var(--border);border-radius:12px;padding:12px 28px;background:rgba(255,255,255,.05);color:var(--text);font-size:13px;font-weight:700;cursor:pointer;font-family:'Tajawal',sans-serif;width:100%;max-width:360px;margin:5px 0}
+.aicard{background:linear-gradient(135deg,rgba(155,93,229,.07),rgba(0,221,255,.05));border:1px solid rgba(155,93,229,.22);border-radius:16px;padding:16px;margin-bottom:18px}
+.aititle{font-size:14px;font-weight:700;color:var(--violet);margin-bottom:9px}
+.aiprompt{width:100%;background:rgba(255,255,255,.04);border:1.5px solid rgba(155,93,229,.18);border-radius:11px;padding:11px 14px;font-size:13px;color:var(--text);font-family:'Tajawal',sans-serif;outline:none;resize:none;direction:rtl}
+.aiprompt:focus{border-color:var(--violet)}
+.bai{width:100%;border:none;border-radius:11px;padding:12px;margin-top:9px;background:linear-gradient(135deg,var(--violet),var(--cyan));color:#fff;font-size:14px;font-weight:700;cursor:pointer;font-family:'Tajawal',sans-serif}
+.bai:disabled{opacity:.45;cursor:not-allowed}
+.airesult{margin-top:12px;display:none}
+.airesult.on{display:block}
+.ais{background:var(--card);border:1px solid var(--border);border-radius:11px;padding:12px 14px;margin-bottom:7px}
+.ais .en{font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:700;color:var(--cyan);direction:ltr;text-align:left;margin-bottom:4px}
+.ais .ar{font-size:12px;color:var(--muted)}
+.pring{display:flex;justify-content:center;margin:18px 0}
+.prwrap{position:relative;width:150px;height:150px}
+.prwrap svg{transform:rotate(-90deg)}
+.prwrap circle{fill:none;stroke-width:11;stroke-linecap:round}
+.prbg{stroke:rgba(255,255,255,.06)}
+.prfg{stroke:url(#rg);transition:stroke-dashoffset 1.4s ease}
+.prcenter{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.prpct{font-family:'JetBrains Mono',monospace;font-size:28px;font-weight:700;color:var(--cyan)}
+.prlbl{font-size:10px;color:var(--muted);font-weight:700}
+.pcats{display:flex;flex-direction:column;gap:8px;margin:14px 0}
+.prow{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:12px}
+.prowt{display:flex;align-items:center;gap:9px;margin-bottom:8px}
+.prname{font-size:13px;font-weight:700;flex:1}
+.prval{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted)}
+.prbarbg{height:4px;background:rgba(255,255,255,.06);border-radius:2px;overflow:hidden}
+.prbarfg{height:100%;border-radius:2px;transition:width 1.4s ease}
+.bnav{position:fixed;bottom:0;left:0;right:0;z-index:80;background:rgba(9,9,15,.96);backdrop-filter:blur(20px);border-top:1px solid var(--border);display:flex;justify-content:space-around;padding:7px 0 12px}
+.bni{display:flex;flex-direction:column;align-items:center;gap:3px;cursor:pointer;padding:5px 10px;opacity:.42;transition:all .28s}
+.bni.on{opacity:1}
+.bni.on .bnic{color:var(--cyan)}
+.bnic{font-size:20px}
+.bnit{font-size:10px;font-weight:700}
+.toast{position:fixed;top:66px;left:50%;transform:translateX(-50%);background:var(--raised);border:1px solid var(--border);border-radius:11px;padding:8px 18px;font-size:12px;font-weight:700;z-index:999;white-space:nowrap;pointer-events:none}
+.lmbtn{display:block;width:100%;background:rgba(255,255,255,.05);border:1px solid var(--border);border-radius:12px;padding:11px;color:var(--text);font-size:13px;font-weight:700;cursor:pointer;font-family:'Tajawal',sans-serif;text-align:center;margin-top:12px}
+.mode-row{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:18px}
+.mode-btn{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:10px 6px;text-align:center;cursor:pointer;font-size:11px;font-weight:700;color:var(--muted);transition:all .25s}
+.mode-btn.on{color:var(--cyan);border-color:var(--cyan);background:rgba(0,221,255,.07)}
+.mode-btn .mi{font-size:20px;display:block;margin-bottom:4px}
+.streak{background:linear-gradient(135deg,rgba(255,140,66,.1),rgba(245,197,24,.08));border:1px solid rgba(255,140,66,.25);border-radius:14px;padding:12px 16px;display:flex;align-items:center;gap:12px;margin-bottom:16px}
+</style>
+</head><body>
+<div class="ab ab1"></div><div class="ab ab2"></div>
+<div class="hdr"><div class="hi">
+  <div class="logo">SPEAK 2000 ✦</div>
+  <div class="pill"><span class="dot"></span><span id="hXP">0 XP</span></div>
+  <div class="pill">🔥<span id="hStr">1</span></div>
+</div></div>
+<div class="tabs">
+  <div class="tab on" onclick="goTab('home')">🏠 الرئيسية</div>
+  <div class="tab" onclick="goTab('browse')">📖 تصفح</div>
+  <div class="tab" onclick="goTab('ai')">🤖 AI</div>
+  <div class="tab" onclick="goTab('saved')">⭐ محفوظ</div>
+  <div class="tab" onclick="goTab('prog')">📊 تقدمي</div>
+</div>
+<div class="pg on" id="pg-home">
+  <div class="hero">
+    <div class="badge">🌍 1672 جملة عامية حقيقية</div>
+    <h1>تكلّم <em>ENGLISH</em> كالناطقين بها</h1>
+    <p>نطق تفاعلي · تدريب ذكي · AI يولّد جملاً مخصصة</p>
+  </div>
+  <div class="sbar">
+    <div class="sc"><span class="sn" style="color:var(--cyan)" id="st1">1672</span><div class="sl">جملة</div></div>
+    <div class="sc"><span class="sn" style="color:var(--gold)" id="st2">0</span><div class="sl">تعلمتها</div></div>
+    <div class="sc"><span class="sn" style="color:var(--mint)" id="st3">-</span><div class="sl">دقتك</div></div>
+  </div>
+  <div class="streak">
+    <div style="font-size:30px">🔥</div>
+    <div style="flex:1">
+      <div style="font-size:13px;font-weight:700;color:#ff8c42">سلسلة <span id="streakN">1</span> يوم!</div>
+      <div style="font-size:11px;color:var(--muted)">تابع التعلم اليومي للحفاظ على سلسلتك</div>
+    </div>
+  </div>
+  <div class="daily-btn" onclick="startQuiz('daily')">
+    <div style="font-size:34px">⚡</div>
+    <div style="flex:1">
+      <div style="font-size:14px;font-weight:700;color:var(--gold);margin-bottom:2px">🏆 التحدي اليومي</div>
+      <div style="font-size:11px;color:var(--muted)">20 جملة — XP مضاعف!</div>
+    </div>
+    <div style="color:var(--gold);font-size:18px">←</div>
+  </div>
+  <div class="lbl">أنماط التدريب</div>
+  <div class="mode-row">
+    <div class="mode-btn on" onclick="setMode(0,this)"><span class="mi">🎯</span>MCQ</div>
+    <div class="mode-btn" onclick="setMode(1,this)"><span class="mi">✏️</span>كتابة</div>
+    <div class="mode-btn" onclick="setMode(2,this)"><span class="mi">🃏</span>بطاقات</div>
+    <div class="mode-btn" onclick="setMode(3,this)"><span class="mi">🔀</span>مختلط</div>
+  </div>
+  <div class="lbl">اختر موضوعاً</div>
+  <div class="cgrid" id="catGrid"></div>
+</div>
+<div class="pg" id="pg-browse">
+  <div style="padding-top:14px">
+    <div class="swrap">
+      <input class="sinput" id="srch" placeholder="ابحث بالعربية أو الإنجليزية..." oninput="doSearch()">
+      <span class="sico">🔍</span>
+      <span class="sclr" id="srchClr" onclick="clrSearch()">✕</span>
+    </div>
+    <div class="frow" id="frow"></div>
+    <div style="font-size:11px;color:var(--muted);margin-bottom:10px" id="bcnt"></div>
+    <div class="slist" id="blist"></div>
+    <button class="lmbtn" id="lmBtn" onclick="loadMore()">تحميل المزيد ↓</button>
+  </div>
+</div>
+<div class="pg" id="pg-ai">
+  <div style="padding-top:16px">
+    <h2 style="font-family:'Syne',sans-serif;font-size:20px;font-weight:800;margin-bottom:6px">🤖 مولّد بالذكاء الاصطناعي</h2>
+    <p style="color:var(--muted);font-size:12px;margin-bottom:16px">اطلب أي موضوع وسيولّد AI 10 جمل حقيقية مع ترجمتها</p>
+    <div class="aicard">
+      <div class="aititle">🤖 اطلب موضوعك الآن</div>
+      <textarea class="aiprompt" id="aiPr" rows="3" placeholder="مثال: جمل في المطعم، جمل رومانسية، جمل في مقابلة عمل..."></textarea>
+      <button class="bai" id="bAI" onclick="genAI()">✨ ولّد 10 جمل الآن</button>
+      <div class="airesult" id="aiRes"></div>
+    </div>
+    <div class="lbl">اقتراحات سريعة</div>
+    <div style="display:flex;flex-wrap:wrap;gap:7px;margin-bottom:18px" id="aiSug"></div>
+    <div class="lbl">جمل AI محفوظة</div>
+    <div id="aiSvd" style="color:var(--muted);font-size:13px;text-align:center;padding:16px">لم تولّد جملاً بعد</div>
+  </div>
+</div>
+<div class="pg" id="pg-saved">
+  <div style="padding-top:16px">
+    <h2 style="font-family:'Syne',sans-serif;font-size:18px;font-weight:800;margin-bottom:5px">⭐ جملك المحفوظة</h2>
+    <p style="color:var(--muted);font-size:12px;margin-bottom:16px" id="svdCnt">لا توجد جمل محفوظة بعد</p>
+    <div class="slist" id="svdList"></div>
+  </div>
+</div>
+<div class="pg" id="pg-prog">
+  <div style="padding-top:16px">
+    <h2 style="font-family:'Syne',sans-serif;font-size:18px;font-weight:800;margin-bottom:4px">📊 تقدمك في التعلم</h2>
+    <div class="pring"><div class="prwrap">
+      <svg width="150" height="150" viewBox="0 0 150 150">
+        <defs><linearGradient id="rg" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#00ddff"/><stop offset="100%" stop-color="#00e8a2"/>
+        </linearGradient></defs>
+        <circle class="prbg" cx="75" cy="75" r="64" stroke-dasharray="402" stroke-dashoffset="0"/>
+        <circle class="prfg" cx="75" cy="75" r="64" id="ring" stroke-dasharray="402" stroke-dashoffset="402"/>
+      </svg>
+      <div class="prcenter"><div class="prpct" id="pPct">0%</div><div class="prlbl">مكتمل</div></div>
+    </div></div>
+    <div class="sbar" style="margin:0 0 14px">
+      <div class="sc"><span class="sn" style="color:var(--cyan)" id="pL">0</span><div class="sl">تعلمتها</div></div>
+      <div class="sc"><span class="sn" style="color:var(--gold)" id="pX">0</span><div class="sl">XP</div></div>
+      <div class="sc"><span class="sn" style="color:var(--rose)" id="pS">1</span><div class="sl">يوم</div></div>
+    </div>
+    <div class="pcats" id="pcats"></div>
+    <button onclick="resetProg()" style="width:100%;background:rgba(255,45,110,.07);border:1px solid rgba(255,45,110,.18);border-radius:11px;padding:11px;color:var(--rose);font-size:12px;font-weight:700;cursor:pointer;font-family:'Tajawal',sans-serif;margin-top:8px">🗑️ إعادة تعيين</button>
+  </div>
+</div>
+<div class="qpanel" id="qPanel">
+  <div class="qhdr">
+    <button class="qback" onclick="closeQ()">✕</button>
+    <div class="qtitle" id="qTitle">اختبار</div>
+    <div class="qsc" id="qSc">0/0</div>
+  </div>
+  <div class="qpbar"><div class="qpfill" id="qPF" style="width:0%"></div></div>
+  <div class="qbody" id="qBody"></div>
+</div>
+<div class="sscreen" id="sScr">
+  <div class="semoji" id="sEm">🎉</div>
+  <div class="stitle" id="sTi">رائع!</div>
+  <div class="sbig" id="sBg">0/10</div>
+  <div class="sdetail" id="sDt">إجابة صحيحة</div>
+  <div class="sstars" id="sSt">⭐⭐⭐</div>
+  <div class="sxp">⚡ <span id="sXP">+50 XP</span></div>
+  <button class="bpri" onclick="restartQ()">العب مجدداً 🔄</button>
+  <button class="bsec" onclick="closeScore()">الرئيسية 🏠</button>
+</div>
+<div class="bnav">
+  <div class="bni on" onclick="goTab('home')"><div class="bnic">🏠</div><div class="bnit">الرئيسية</div></div>
+  <div class="bni" onclick="goTab('browse')"><div class="bnic">📖</div><div class="bnit">تصفح</div></div>
+  <div class="bni" onclick="goTab('ai')"><div class="bnic">🤖</div><div class="bnit">AI</div></div>
+  <div class="bni" onclick="goTab('saved')"><div class="bnic">⭐</div><div class="bnit">محفوظ</div></div>
+  <div class="bni" onclick="goTab('prog')"><div class="bnic">📊</div><div class="bnit">تقدمي</div></div>
+</div>
+<script>
+const CATS=[
+{id:"greet",name:"التحيات",icon:"👋",color:"#00ddff"},
+{id:"daily",name:"الحياة اليومية",icon:"☀️",color:"#f5c518"},
+{id:"feel",name:"المشاعر",icon:"❤️",color:"#ff2d6e"},
+{id:"work",name:"العمل",icon:"💼",color:"#9b5de5"},
+{id:"travel",name:"السفر",icon:"✈️",color:"#00e8a2"},
+{id:"shop",name:"التسوق",icon:"🛍️",color:"#f5c518"},
+{id:"food",name:"الطعام",icon:"🍽️",color:"#ff8c42"},
+{id:"social",name:"المواقف",icon:"🤝",color:"#00ddff"},
+{id:"health",name:"الصحة",icon:"🏥",color:"#00e8a2"},
+{id:"tech",name:"التكنولوجيا",icon:"💻",color:"#9b5de5"},
+{id:"idioms",name:"التعابير",icon:"🧠",color:"#f5c518"},
+{id:"argue",name:"النقاش",icon:"💬",color:"#ff2d6e"},
+{id:"love",name:"الحب",icon:"💑",color:"#ff2d6e"},
+{id:"family",name:"العائلة",icon:"🏠",color:"#00e8a2"},
+{id:"phone",name:"الهاتف",icon:"📱",color:"#9b5de5"},
+{id:"time",name:"الوقت",icon:"⏰",color:"#00ddff"},
+{id:"edu",name:"التعليم",icon:"🎓",color:"#f5c518"},
+{id:"sport",name:"الرياضة",icon:"⚽",color:"#00e8a2"},
+{id:"prob",name:"المشاكل",icon:"🔧",color:"#ff2d6e"},
+{id:"slang",name:"الكلام الشبابي",icon:"😎",color:"#9b5de5"},
+];
+
+const D={
+"greet":[
+{en:"Hey, how's it going?",ar:"هيه، كيف الأمور؟",lv:"A"},
+{en:"What's up?",ar:"ما الأخبار؟",lv:"A"},
+{en:"Long time no see!",ar:"منذ زمن لم أرك!",lv:"A"},
+{en:"Good to see you!",ar:"يسعدني رؤيتك!",lv:"A"},
+{en:"How have you been?",ar:"كيف كنت؟",lv:"A"},
+{en:"Nice to meet you.",ar:"تشرفت بمعرفتك.",lv:"A"},
+{en:"Where are you from?",ar:"من أين أنت؟",lv:"A"},
+{en:"Make yourself at home.",ar:"اجعل نفسك في بيتك.",lv:"A"},
+{en:"Are you new here?",ar:"هل أنت جديد هنا؟",lv:"A"},
+{en:"What brings you here?",ar:"ما الذي جاء بك هنا؟",lv:"B"},
+{en:"Have we met before?",ar:"هل التقينا من قبل؟",lv:"A"},
+{en:"Glad you could make it.",ar:"يسعدني أنك تمكنت من الحضور.",lv:"B"},
+{en:"Welcome aboard!",ar:"أهلاً بك في الفريق!",lv:"B"},
+{en:"Catch you later.",ar:"أراك لاحقاً.",lv:"A"},
+{en:"Stay in touch.",ar:"ابقَ على تواصل.",lv:"A"},
+{en:"Have a good one!",ar:"يوماً طيباً!",lv:"A"},
+{en:"Take care of yourself.",ar:"اعتنِ بنفسك.",lv:"A"},
+{en:"How's the family?",ar:"كيف حال العائلة؟",lv:"A"},
+{en:"You look great today!",ar:"تبدو رائعاً اليوم!",lv:"A"},
+{en:"I missed you!",ar:"اشتقت إليك!",lv:"A"},
+{en:"We should hang out soon.",ar:"يجب أن نخرج قريباً.",lv:"B"},
+{en:"Are you free this weekend?",ar:"هل أنت متفرغ هذا الأسبوع؟",lv:"A"},
+{en:"Let's grab coffee sometime.",ar:"لنتناول القهوة قريباً.",lv:"A"},
+{en:"It's on me!",ar:"أنا الذي سأدفع!",lv:"A"},
+{en:"I really appreciate it.",ar:"أنا ممتنن جداً.",lv:"A"},
+{en:"You're the best.",ar:"أنت الأفضل.",lv:"A"},
+{en:"I owe you one.",ar:"أنا مدين لك.",lv:"B"},
+{en:"Happy to help!",ar:"يسعدني المساعدة!",lv:"A"},
+{en:"No problem at all.",ar:"لا مشكلة على الإطلاق.",lv:"A"},
+{en:"You really made my day.",ar:"لقد أسعدت يومي حقاً.",lv:"B"},
+{en:"That means a lot to me.",ar:"هذا يعني الكثير لي.",lv:"B"},
+{en:"You're one in a million.",ar:"أنت واحد في المليون.",lv:"B"},
+{en:"What's new with you?",ar:"ما الجديد معك؟",lv:"A"},
+{en:"Hang in there.",ar:"تحمّل.",lv:"A"},
+{en:"You've got this.",ar:"ستتجاوز هذا.",lv:"A"},
+{en:"I believe in you.",ar:"أنا أؤمن بك.",lv:"A"},
+{en:"That's awesome!",ar:"هذا رائع!",lv:"A"},
+{en:"Congrats!",ar:"مبروك!",lv:"A"},
+{en:"Well done!",ar:"أحسنت!",lv:"A"},
+{en:"I'm so happy for you.",ar:"أنا سعيد جداً من أجلك.",lv:"A"},
+{en:"You deserve it.",ar:"أنت تستحق ذلك.",lv:"A"},
+{en:"Count me in.",ar:"أنا معكم.",lv:"A"},
+{en:"Let's do it!",ar:"هيا نفعلها!",lv:"A"},
+{en:"I can't wait.",ar:"لا أستطيع الانتظار.",lv:"A"},
+{en:"It's a date!",ar:"موعد محدد!",lv:"B"},
+{en:"I promise.",ar:"أعدك.",lv:"A"},
+{en:"Trust me.",ar:"ثق بي.",lv:"A"},
+{en:"Drive safe.",ar:"قُد بأمان.",lv:"A"},
+{en:"Safe travels.",ar:"سفر آمن.",lv:"A"},
+{en:"All the best.",ar:"كل التوفيق.",lv:"A"},
+{en:"I didn't catch that.",ar:"لم أفهم ذلك.",lv:"A"},
+{en:"Can you repeat that?",ar:"هل يمكنك التكرار؟",lv:"A"},
+{en:"Absolutely.",ar:"بالتأكيد تماماً.",lv:"A"},
+{en:"You have a point.",ar:"معك حق.",lv:"A"},
+{en:"I have big news.",ar:"لديّ أخبار كبيرة.",lv:"A"},
+{en:"What a small world!",ar:"يا له من عالم صغير!",lv:"A"},
+{en:"I was just thinking about you.",ar:"كنت أفكر فيك للتو.",lv:"A"},
+{en:"Can't complain.",ar:"لا يوجد ما أشكو منه.",lv:"B"},
+{en:"I'm so glad you're here.",ar:"أنا سعيد جداً بوجودك هنا.",lv:"A"},
+{en:"I value our friendship.",ar:"أقدّر صداقتنا.",lv:"B"},
+{en:"You make everything better.",ar:"أنت تجعل كل شيء أفضل.",lv:"B"},
+{en:"I'm grateful for you.",ar:"أنا ممتنٌ لك.",lv:"B"},
+{en:"Best friends forever.",ar:"أصدقاء للأبد.",lv:"A"},
+{en:"I'm here for you.",ar:"أنا هنا من أجلك.",lv:"A"},
+{en:"You're not alone.",ar:"أنت لست وحدك.",lv:"A"},
+{en:"You inspire me.",ar:"أنت تلهمني.",lv:"B"},
+{en:"No way!",ar:"لا يعقل!",lv:"A"},
+{en:"Seriously?",ar:"جدياً؟",lv:"A"},
+{en:"Hope to see you soon.",ar:"أتمنى رؤيتك قريباً.",lv:"A"},
+{en:"I've got your back.",ar:"أنا أساندك.",lv:"B"},
+{en:"Count on me.",ar:"اعتمد عليّ.",lv:"A"},
+{en:"Don't mention it.",ar:"لا تذكره.",lv:"A"},
+{en:"Friends like you are rare.",ar:"أصدقاء مثلك نادرون.",lv:"B"},
+{en:"Here's to us!",ar:"في صحتنا!",lv:"B"},
+{en:"My thoughts exactly.",ar:"هذا ما أفكر فيه تماماً.",lv:"B"},
+{en:"Looking forward to it.",ar:"أتطلع إليه.",lv:"B"},
+{en:"Guess what!",ar:"خمّن ماذا!",lv:"A"},
+{en:"Something good happened?",ar:"هل حدث شيء جيد؟",lv:"A"},
+{en:"You're glowing today.",ar:"أنت متألق اليوم.",lv:"B"},
+{en:"We should celebrate.",ar:"يجب أن نحتفل.",lv:"A"},
+{en:"You can always count on me.",ar:"يمكنك الاعتماد عليّ دائماً.",lv:"B"},
+{en:"I'm rooting for you.",ar:"أنا أشجعك.",lv:"B"},
+{en:"Thanks for being there for me.",ar:"شكراً لأنك كنت هناك من أجلي.",lv:"B"},
+{en:"I wouldn't trade you for anything.",ar:"لن أستبدلك بأي شيء.",lv:"C"},
+{en:"I look up to you.",ar:"أنت قدوتي.",lv:"B"},
+{en:"You're amazing.",ar:"أنت رائع.",lv:"A"},
+{en:"Text me when you get home.",ar:"أرسل رسالة حين تصل.",lv:"A"},
+{en:"See you then.",ar:"أراك في ذلك الوقت.",lv:"A"},
+{en:"Don't be a stranger.",ar:"لا تكن غريباً.",lv:"B"},
+{en:"Come again soon.",ar:"عُد قريباً.",lv:"A"},
+{en:"Say hi to your family.",ar:"وجّه تحياتي لعائلتك.",lv:"A"},
+{en:"I appreciate you.",ar:"أنا أقدرك.",lv:"A"},
+{en:"Through thick and thin.",ar:"في السراء والضراء.",lv:"B"},
+{en:"That's what friends are for.",ar:"هذا ما الأصدقاء من أجله.",lv:"B"},
+{en:"I knew you could do it.",ar:"كنت أعرف أنك تستطيع.",lv:"A"},
+{en:"Where have you been hiding?",ar:"أين كنت مختبئاً؟",lv:"B"},
+{en:"My treat this time.",ar:"على حسابي هذه المرة.",lv:"A"},
+{en:"You really surprised me.",ar:"فاجأتني حقاً.",lv:"A"},
+{en:"I had no idea.",ar:"لم يكن لديّ أي فكرة.",lv:"A"},
+{en:"It was great seeing you.",ar:"كان رائعاً رؤيتك.",lv:"A"},
+{en:"Let me know if you need anything.",ar:"أخبرني إذا احتجت أي شيء.",lv:"B"},
+],
+"daily":[
+{en:"I need coffee first.",ar:"أحتاج قهوة أولاً.",lv:"A"},
+{en:"I'm running late.",ar:"أنا متأخر.",lv:"A"},
+{en:"Traffic was terrible.",ar:"حركة المرور كانت فظيعة.",lv:"A"},
+{en:"I overslept.",ar:"نمت أكثر من اللازم.",lv:"A"},
+{en:"Did you eat yet?",ar:"هل أكلت بعد؟",lv:"A"},
+{en:"I'm starving.",ar:"أنا جائع جداً.",lv:"A"},
+{en:"What should we have for dinner?",ar:"ماذا نتناول للعشاء؟",lv:"A"},
+{en:"It's your turn to cook.",ar:"دورك في الطبخ.",lv:"A"},
+{en:"Can you pick up some groceries?",ar:"هل يمكنك شراء بعض البقالة؟",lv:"A"},
+{en:"Don't forget to take your keys.",ar:"لا تنسَ مفاتيحك.",lv:"A"},
+{en:"Have you seen my phone?",ar:"هل رأيت هاتفي؟",lv:"A"},
+{en:"I can't find my keys.",ar:"لا أجد مفاتيحي.",lv:"A"},
+{en:"Turn off the lights.",ar:"أطفئ الأضواء.",lv:"A"},
+{en:"Can you lower the volume?",ar:"هل يمكنك تخفيض الصوت؟",lv:"A"},
+{en:"It's freezing in here.",ar:"الجو بارد جداً هنا.",lv:"A"},
+{en:"I need a nap.",ar:"أحتاج إلى قيلولة.",lv:"A"},
+{en:"I'm exhausted.",ar:"أنا منهك تماماً.",lv:"A"},
+{en:"It's been a long day.",ar:"كان يوماً طويلاً.",lv:"A"},
+{en:"I just need to relax.",ar:"أحتاج فقط للاسترخاء.",lv:"A"},
+{en:"I have a lot on my plate.",ar:"لدي الكثير على عاتقي.",lv:"B"},
+{en:"I'm swamped at work.",ar:"أنا مشغول جداً في العمل.",lv:"B"},
+{en:"I need a day off.",ar:"أحتاج يوم إجازة.",lv:"A"},
+{en:"Let's go for a walk.",ar:"لنذهب في نزهة.",lv:"A"},
+{en:"I need some fresh air.",ar:"أحتاج إلى بعض الهواء النقي.",lv:"A"},
+{en:"I'm staying in tonight.",ar:"سأبقى في المنزل الليلة.",lv:"A"},
+{en:"Want to come over?",ar:"هل تريد المجيء؟",lv:"A"},
+{en:"I'll be right back.",ar:"سأعود فوراً.",lv:"A"},
+{en:"I'm on my way.",ar:"أنا في الطريق.",lv:"A"},
+{en:"I got lost.",ar:"لقد ضعت.",lv:"A"},
+{en:"I'm out of cash.",ar:"نفد نقودي.",lv:"A"},
+{en:"I'll pay you back.",ar:"سأعيدها لك.",lv:"A"},
+{en:"Let's split it.",ar:"لنقسمها.",lv:"A"},
+{en:"We'll go Dutch.",ar:"كل شخص يدفع عن نفسه.",lv:"B"},
+{en:"Keep the change.",ar:"احتفظ بالباقي.",lv:"A"},
+{en:"I'm not a morning person.",ar:"لست شخصاً صباحياً.",lv:"A"},
+{en:"I'm a night owl.",ar:"أنا سهراني.",lv:"B"},
+{en:"I barely made it.",ar:"بالكاد وصلت.",lv:"A"},
+{en:"I should drink more water.",ar:"يجب أن أشرب المزيد من الماء.",lv:"A"},
+{en:"Did you take out the trash?",ar:"هل أخرجت القمامة؟",lv:"A"},
+{en:"Can you do the dishes?",ar:"هل يمكنك غسل الأطباق؟",lv:"A"},
+{en:"The power went out.",ar:"انقطعت الكهرباء.",lv:"A"},
+{en:"The internet is down again.",ar:"الإنترنت منقطع مجدداً.",lv:"A"},
+{en:"Reboot the router.",ar:"أعد تشغيل الراوتر.",lv:"A"},
+{en:"I need to do laundry.",ar:"أحتاج إلى غسيل الملابس.",lv:"A"},
+{en:"I have nothing to wear.",ar:"ليس لديّ ما أرتديه.",lv:"A"},
+{en:"Let's order in tonight.",ar:"لنطلب طعاماً الليلة.",lv:"A"},
+{en:"I'm craving pizza.",ar:"أشتهي بيتزا.",lv:"A"},
+{en:"This is delicious.",ar:"هذا لذيذ.",lv:"A"},
+{en:"I burnt it again.",ar:"أحرقته مجدداً.",lv:"A"},
+{en:"I spent too much.",ar:"أنفقت الكثير.",lv:"A"},
+{en:"Stick to the budget.",ar:"التزم بالميزانية.",lv:"B"},
+{en:"Don't stay up too late.",ar:"لا تسهر كثيراً.",lv:"A"},
+{en:"I can't sleep.",ar:"لا أستطيع النوم.",lv:"A"},
+{en:"My mind is racing.",ar:"عقلي يجري بأفكار.",lv:"B"},
+{en:"Good night, sleep tight.",ar:"تصبح على خير، نم هنيئاً.",lv:"A"},
+{en:"What a day!",ar:"يا له من يوم!",lv:"A"},
+{en:"I'm beat.",ar:"أنا متعب جداً.",lv:"B"},
+{en:"Today was rough.",ar:"كان اليوم صعباً.",lv:"A"},
+{en:"Tomorrow will be better.",ar:"غداً سيكون أفضل.",lv:"A"},
+{en:"Sweet dreams.",ar:"أحلام سعيدة.",lv:"A"},
+{en:"My to-do list is endless.",ar:"قائمة مهامي لا تنتهي.",lv:"B"},
+{en:"I keep procrastinating.",ar:"أستمر في التسويف.",lv:"B"},
+{en:"Stop distracting me!",ar:"توقف عن تشتيت انتباهي!",lv:"A"},
+{en:"I'll be done soon.",ar:"سأنتهي قريباً.",lv:"A"},
+{en:"I lost track of time.",ar:"فقدت إحساسي بالوقت.",lv:"B"},
+{en:"I deserve a treat.",ar:"أستحق مكافأة.",lv:"A"},
+{en:"My back is killing me.",ar:"ظهري يؤلمني.",lv:"A"},
+{en:"Let's grab lunch.",ar:"لنتناول الغداء معاً.",lv:"A"},
+{en:"Save some for me!",ar:"دعني شيئاً!",lv:"A"},
+{en:"You saved the day!",ar:"لقد أنقذت الموقف!",lv:"A"},
+{en:"The heating is broken.",ar:"التدفئة معطلة.",lv:"A"},
+{en:"Turn on the AC.",ar:"شغّل المكيف.",lv:"A"},
+{en:"Dinner's almost ready.",ar:"العشاء يكاد يكون جاهزاً.",lv:"A"},
+{en:"Help me set the table.",ar:"ساعدني في تحضير الطاولة.",lv:"A"},
+{en:"Set an alarm for seven.",ar:"ضع منبهاً للساعة السابعة.",lv:"A"},
+{en:"I can't function without coffee.",ar:"لا أستطيع العمل بدون قهوة.",lv:"A"},
+{en:"I set three alarms.",ar:"ضبطت ثلاثة منبهات.",lv:"A"},
+{en:"Do we have any snacks?",ar:"هل لدينا وجبات خفيفة؟",lv:"A"},
+{en:"I'm working overtime today.",ar:"أنا أعمل إضافي اليوم.",lv:"A"},
+{en:"I need to go grocery shopping.",ar:"أحتاج إلى التسوق للبقالة.",lv:"A"},
+{en:"Can you pass the salt?",ar:"هل يمكنك تمرير الملح؟",lv:"A"},
+{en:"Needs more salt.",ar:"يحتاج ملحاً أكثر.",lv:"A"},
+{en:"I'll cook, you clean.",ar:"سأطبخ وأنت تنظف.",lv:"A"},
+{en:"We're out of bread.",ar:"نفد الخبز.",lv:"A"},
+{en:"I locked myself out.",ar:"أغلقت الباب على نفسي بالخارج.",lv:"A"},
+{en:"We need a new fridge.",ar:"نحتاج إلى ثلاجة جديدة.",lv:"A"},
+{en:"The washing machine is broken.",ar:"الغسالة معطلة.",lv:"A"},
+{en:"We're out of toilet paper.",ar:"نفد ورق الحمام.",lv:"A"},
+{en:"Make a shopping list.",ar:"اعمل قائمة تسوق.",lv:"A"},
+{en:"Can you close the window?",ar:"هل يمكنك إغلاق النافذة؟",lv:"A"},
+{en:"Have you seen my charger?",ar:"هل رأيت شاحن هاتفي؟",lv:"A"},
+{en:"We need to save more.",ar:"نحتاج إلى الادخار أكثر.",lv:"A"},
+{en:"Give me five minutes.",ar:"أعطني خمس دقائق.",lv:"A"},
+{en:"Hold on a second.",ar:"انتظر لحظة.",lv:"A"},
+{en:"I'll meet you there.",ar:"سألتقي بك هناك.",lv:"A"},
+{en:"I forgot my wallet.",ar:"نسيت محفظتي.",lv:"A"},
+],
+"feel":[
+{en:"I'm over the moon!",ar:"أنا في غاية السعادة!",lv:"B"},
+{en:"I couldn't be happier.",ar:"لا يمكنني أن أكون أسعد.",lv:"B"},
+{en:"This made my day.",ar:"هذا أسعد يومي.",lv:"A"},
+{en:"I'm on cloud nine.",ar:"أنا في قمة السعادة.",lv:"B"},
+{en:"I feel amazing.",ar:"أشعر بشعور رائع.",lv:"A"},
+{en:"I'm so grateful.",ar:"أنا ممتنن جداً.",lv:"A"},
+{en:"Life is good.",ar:"الحياة جيدة.",lv:"A"},
+{en:"I'm thrilled!",ar:"أنا مبتهج!",lv:"B"},
+{en:"I'm feeling a bit low today.",ar:"أشعر ببعض الاكتئاب اليوم.",lv:"A"},
+{en:"I'm not in a great mood.",ar:"لست في مزاج جيد.",lv:"A"},
+{en:"I'm going through a rough patch.",ar:"أمر بمرحلة صعبة.",lv:"B"},
+{en:"I'm struggling.",ar:"أنا أكافح.",lv:"A"},
+{en:"Things are a bit overwhelming.",ar:"الأمور مرهقة قليلاً.",lv:"B"},
+{en:"I feel stuck.",ar:"أشعر بأنني عالق.",lv:"A"},
+{en:"I just feel empty inside.",ar:"أشعر بالفراغ من الداخل.",lv:"B"},
+{en:"I need someone to talk to.",ar:"أحتاج إلى شخص يتحدث إليه.",lv:"A"},
+{en:"I'm furious!",ar:"أنا غاضب جداً!",lv:"A"},
+{en:"That really gets on my nerves.",ar:"هذا يثير أعصابي حقاً.",lv:"B"},
+{en:"I can't stand it anymore.",ar:"لا أستطيع تحمله بعد الآن.",lv:"B"},
+{en:"I'm losing my patience.",ar:"أفقد صبري.",lv:"B"},
+{en:"You're driving me crazy.",ar:"أنت تجننني.",lv:"A"},
+{en:"I need to calm down.",ar:"أحتاج إلى الهدوء.",lv:"A"},
+{en:"I'm scared.",ar:"أنا خائف.",lv:"A"},
+{en:"I'm nervous about it.",ar:"أنا متوتر منه.",lv:"A"},
+{en:"I have butterflies in my stomach.",ar:"أشعر بفراشات في بطني.",lv:"B"},
+{en:"I keep overthinking.",ar:"أستمر في التفكير الزائد.",lv:"B"},
+{en:"I can't stop worrying.",ar:"لا أستطيع التوقف عن القلق.",lv:"A"},
+{en:"Take a deep breath.",ar:"خذ نفساً عميقاً.",lv:"A"},
+{en:"I'm embarrassed.",ar:"أنا محرج.",lv:"A"},
+{en:"That was so awkward.",ar:"كان ذلك محرجاً جداً.",lv:"A"},
+{en:"I'm so proud of you.",ar:"أنا فخور بك جداً.",lv:"A"},
+{en:"I did it!",ar:"فعلتها!",lv:"A"},
+{en:"I'm so relieved.",ar:"أنا مرتاح جداً.",lv:"A"},
+{en:"A weight has been lifted.",ar:"رُفع عني ثقل.",lv:"B"},
+{en:"I feel so much better now.",ar:"أشعر بتحسن كبير الآن.",lv:"A"},
+{en:"I'm jealous, honestly.",ar:"أنا غيور، بصراحة.",lv:"A"},
+{en:"I'm happy for you.",ar:"أنا سعيد من أجلك.",lv:"A"},
+{en:"I'm confused.",ar:"أنا محتار.",lv:"A"},
+{en:"I'm torn.",ar:"أنا ممزق بين قرارين.",lv:"B"},
+{en:"I have mixed feelings.",ar:"لديّ مشاعر متضاربة.",lv:"B"},
+{en:"I need time to process this.",ar:"أحتاج إلى وقت لاستيعاب هذا.",lv:"B"},
+{en:"Let me sleep on it.",ar:"دعني أفكر في الأمر غداً.",lv:"B"},
+{en:"I'll figure it out.",ar:"سأجد طريقة.",lv:"A"},
+{en:"I feel so lonely.",ar:"أشعر بوحدة شديدة.",lv:"A"},
+{en:"I feel nostalgic.",ar:"أشعر بالحنين.",lv:"B"},
+{en:"I feel hopeful.",ar:"أشعر بالأمل.",lv:"A"},
+{en:"Things are looking up.",ar:"الأمور تتحسن.",lv:"B"},
+{en:"Stay positive.",ar:"ابقَ إيجابياً.",lv:"A"},
+{en:"The best is yet to come.",ar:"الأفضل لم يأتِ بعد.",lv:"B"},
+{en:"I feel so frustrated.",ar:"أشعر بالإحباط الشديد.",lv:"A"},
+{en:"I just need a break.",ar:"أحتاج فقط إلى استراحة.",lv:"A"},
+{en:"I feel so motivated today.",ar:"أشعر بالتحفيز اليوم.",lv:"A"},
+{en:"I'm in the zone.",ar:"أنا في حالة تركيز تامة.",lv:"B"},
+{en:"I feel unstoppable.",ar:"أشعر أنه لا شيء يوقفني.",lv:"B"},
+{en:"Let's make today count.",ar:"لنجعل هذا اليوم مميزاً.",lv:"B"},
+{en:"I feel content.",ar:"أشعر بالرضا.",lv:"B"},
+{en:"I'm at peace.",ar:"أنا في سلام داخلي.",lv:"B"},
+{en:"Gratitude changes everything.",ar:"الامتنان يغير كل شيء.",lv:"B"},
+{en:"I count my blessings.",ar:"أعد نعمي.",lv:"B"},
+{en:"I feel invisible.",ar:"أشعر أنني غير مرئي.",lv:"B"},
+{en:"Nobody understands me.",ar:"لا أحد يفهمني.",lv:"A"},
+{en:"I just want to be heard.",ar:"أريد فقط أن يُسمع لي.",lv:"B"},
+{en:"Everything will work out.",ar:"كل شيء سيكون على ما يرام.",lv:"A"},
+{en:"I've come a long way.",ar:"لقد قطعت شوطاً طويلاً.",lv:"B"},
+{en:"Breathe in, breathe out.",ar:"خذ نفساً، أطلق نفساً.",lv:"A"},
+{en:"One thing at a time.",ar:"شيء واحد في كل مرة.",lv:"A"},
+{en:"This too shall pass.",ar:"هذا أيضاً سيمضي.",lv:"B"},
+{en:"I'm stronger than I know.",ar:"أنا أقوى مما أعرف.",lv:"B"},
+{en:"I feel disappointed.",ar:"أشعر بخيبة أمل.",lv:"A"},
+{en:"Chin up.",ar:"ارفع رأسك.",lv:"A"},
+{en:"Look on the bright side.",ar:"انظر إلى الجانب المشرق.",lv:"B"},
+{en:"I'm on top of the world.",ar:"أنا في قمة العالم.",lv:"B"},
+{en:"Nothing can bring me down today.",ar:"لا شيء يستطيع إحباطي اليوم.",lv:"B"},
+{en:"Focus on the present.",ar:"ركّز على اللحظة الحالية.",lv:"B"},
+{en:"I've been through worse.",ar:"لقد مررت بأسوأ من ذلك.",lv:"A"},
+{en:"Good things are coming.",ar:"ستأتي أشياء جيدة.",lv:"A"},
+{en:"This is enough.",ar:"هذا كافٍ.",lv:"A"},
+{en:"I've had enough.",ar:"لقد اكتفيت.",lv:"A"},
+{en:"Ready to crush it.",ar:"مستعد للتألق.",lv:"B"},
+{en:"I worked hard for this.",ar:"عملت بجد من أجل هذا.",lv:"A"},
+{en:"I deserve this.",ar:"أنا أستحق هذا.",lv:"A"},
+{en:"That went better than expected.",ar:"سار ذلك أفضل مما توقعت.",lv:"B"},
+{en:"I'm trying to keep it together.",ar:"أحاول أن أتماسك.",lv:"B"},
+{en:"That's the last straw.",ar:"هذه القشة التي قصمت ظهر البعير.",lv:"C"},
+{en:"I don't know how to feel.",ar:"لا أعرف كيف أشعر.",lv:"A"},
+{en:"My mind won't stop.",ar:"عقلي لا يتوقف.",lv:"A"},
+{en:"I'm dreading this.",ar:"أنا أخشى هذا.",lv:"B"},
+{en:"I wanted to disappear.",ar:"أردت أن أختفي.",lv:"A"},
+{en:"I can laugh about it now.",ar:"يمكنني الضحك عليه الآن.",lv:"B"},
+{en:"I'm optimistic about the future.",ar:"أنا متفائل بشأن المستقبل.",lv:"B"},
+{en:"I'm at my wit's end.",ar:"وصلت إلى نهاية طاقتي.",lv:"C"},
+{en:"I need to vent.",ar:"أحتاج إلى التنفيس.",lv:"B"},
+{en:"This is so overwhelming.",ar:"هذا مرهق جداً.",lv:"B"},
+{en:"I'm over it.",ar:"لقد تجاوزته.",lv:"A"},
+{en:"Everything happens for a reason.",ar:"كل شيء يحدث لسبب.",lv:"B"},
+{en:"I'm at a good place.",ar:"أنا في مكان جيد.",lv:"B"},
+{en:"I can't shake this feeling.",ar:"لا أستطيع التخلص من هذا الشعور.",lv:"B"},
+],
+"work":[
+{en:"Can we schedule a meeting?",ar:"هل يمكننا جدولة اجتماع؟",lv:"A"},
+{en:"I'll send you a calendar invite.",ar:"سأرسل لك دعوة في التقويم.",lv:"B"},
+{en:"Let's sync up.",ar:"لنتزامن معاً.",lv:"B"},
+{en:"Can we hop on a call?",ar:"هل يمكننا إجراء اتصال؟",lv:"B"},
+{en:"Keep me posted.",ar:"أطلعني على ما يستجد.",lv:"B"},
+{en:"What's the status update?",ar:"ما آخر المستجدات؟",lv:"B"},
+{en:"We need to touch base.",ar:"نحتاج إلى التنسيق.",lv:"B"},
+{en:"Circle back with me later.",ar:"عُد إليّ لاحقاً.",lv:"C"},
+{en:"I'll loop you in.",ar:"سأضمك في الحلقة.",lv:"C"},
+{en:"Let's take this offline.",ar:"لنتحدث عن هذا خارج الاجتماع.",lv:"C"},
+{en:"I'm swamped right now.",ar:"أنا مشغول جداً الآن.",lv:"B"},
+{en:"I'm under the gun.",ar:"أنا تحت ضغط.",lv:"B"},
+{en:"The deadline is tomorrow.",ar:"الموعد النهائي غداً.",lv:"A"},
+{en:"Can you push the deadline?",ar:"هل يمكنك تمديد الموعد النهائي؟",lv:"B"},
+{en:"We're running behind schedule.",ar:"نحن متأخرون عن الجدول.",lv:"B"},
+{en:"We need to pick up the pace.",ar:"نحتاج إلى الإسراع.",lv:"B"},
+{en:"I'm ahead of schedule.",ar:"أنا متقدم على الجدول.",lv:"B"},
+{en:"I'll handle it.",ar:"سأتولى الأمر.",lv:"A"},
+{en:"That's above my pay grade.",ar:"هذا يتجاوز صلاحياتي.",lv:"C"},
+{en:"I'll escalate this.",ar:"سأرفع هذا للإدارة.",lv:"B"},
+{en:"Let me run it by my boss.",ar:"دعني أعرضه على رئيسي.",lv:"B"},
+{en:"I need sign-off on this.",ar:"أحتاج موافقة على هذا.",lv:"B"},
+{en:"Get it approved first.",ar:"احصل على الموافقة أولاً.",lv:"A"},
+{en:"I'm looking for a raise.",ar:"أبحث عن زيادة في الراتب.",lv:"A"},
+{en:"I think I deserve a promotion.",ar:"أعتقد أنني أستحق ترقية.",lv:"B"},
+{en:"I'm thinking of changing jobs.",ar:"أفكر في تغيير وظيفتي.",lv:"A"},
+{en:"I got a job offer.",ar:"حصلت على عرض وظيفي.",lv:"A"},
+{en:"I have an interview tomorrow.",ar:"لديّ مقابلة غداً.",lv:"A"},
+{en:"I nailed the interview!",ar:"أجليت في المقابلة!",lv:"B"},
+{en:"They offered me the job!",ar:"عرضوا عليّ الوظيفة!",lv:"A"},
+{en:"I'm burning out.",ar:"أنا في حالة إرهاق.",lv:"B"},
+{en:"I need a vacation desperately.",ar:"أحتاج إلى إجازة بشدة.",lv:"A"},
+{en:"Work-life balance is nonexistent.",ar:"التوازن بين العمل والحياة غائب.",lv:"B"},
+{en:"My boss micromanages everything.",ar:"رئيسي يتدخل في كل شيء.",lv:"B"},
+{en:"The culture here is toxic.",ar:"البيئة هنا سامة.",lv:"B"},
+{en:"I love what I do.",ar:"أحب ما أفعله.",lv:"A"},
+{en:"Consider it done.",ar:"اعتبره منجزاً.",lv:"B"},
+{en:"I'm on it.",ar:"أنا أتولى الأمر.",lv:"A"},
+{en:"Leave it to me.",ar:"اتركه لي.",lv:"A"},
+{en:"You can count on me.",ar:"يمكنك الاعتماد عليّ.",lv:"A"},
+{en:"We need to brainstorm.",ar:"نحتاج إلى جلسة عصف ذهني.",lv:"B"},
+{en:"Let's think outside the box.",ar:"لنفكر خارج الصندوق.",lv:"B"},
+{en:"My presentation is tomorrow.",ar:"عرضي التقديمي غداً.",lv:"A"},
+{en:"Keep it concise.",ar:"اجعله موجزاً.",lv:"B"},
+{en:"Great presentation!",ar:"عرض رائع!",lv:"A"},
+{en:"I just got promoted.",ar:"لقد حُصِّلت على ترقية للتو.",lv:"A"},
+{en:"I got a bonus.",ar:"حصلت على مكافأة.",lv:"A"},
+{en:"This calls for a celebration.",ar:"هذا يستدعي احتفالاً.",lv:"B"},
+{en:"I quit my job today.",ar:"تركت وظيفتي اليوم.",lv:"A"},
+{en:"I'm freelancing now.",ar:"أعمل حراً الآن.",lv:"B"},
+{en:"The sky is the limit.",ar:"السماء هي الحد.",lv:"B"},
+{en:"I'm new to this.",ar:"أنا جديد في هذا.",lv:"A"},
+{en:"Practice makes perfect.",ar:"الممارسة تُصنع الكمال.",lv:"A"},
+{en:"This meeting could've been an email.",ar:"كان يمكن أن يكون هذا الاجتماع بريداً إلكترونياً.",lv:"C"},
+{en:"We make a great team.",ar:"نحن فريق رائع.",lv:"A"},
+{en:"Teamwork makes the dream work.",ar:"العمل الجماعي يحقق الأحلام.",lv:"B"},
+{en:"We crushed it!",ar:"لقد تألقنا!",lv:"B"},
+{en:"I'm working from home today.",ar:"أعمل من المنزل اليوم.",lv:"A"},
+{en:"Zoom fatigue is real.",ar:"التعب من الاجتماعات الإلكترونية حقيقي.",lv:"B"},
+{en:"You're on mute.",ar:"أنت على وضع الصمت.",lv:"A"},
+{en:"Can everyone see my screen?",ar:"هل يمكن للجميع رؤية شاشتي؟",lv:"A"},
+{en:"I don't agree with this decision.",ar:"لا أتفق مع هذا القرار.",lv:"B"},
+{en:"I respectfully disagree.",ar:"أختلف باحترام.",lv:"B"},
+{en:"What's plan B?",ar:"ما الخطة البديلة؟",lv:"A"},
+{en:"Good work everyone.",ar:"عمل رائع يا جميع.",lv:"A"},
+{en:"This job is my passion.",ar:"هذه الوظيفة شغفي.",lv:"A"},
+{en:"Reply all was a mistake.",ar:"الرد على الكل كان خطأً.",lv:"B"},
+{en:"I'll look into it.",ar:"سأبحث في الأمر.",lv:"A"},
+{en:"Let me double-check that.",ar:"دعني أتحقق من ذلك مجدداً.",lv:"B"},
+{en:"Let's revisit this next week.",ar:"لنعود إلى هذا الأسبوع القادم.",lv:"B"},
+{en:"We need to align on this.",ar:"نحتاج إلى التوافق على هذا.",lv:"B"},
+{en:"Can you cover this for me?",ar:"هل يمكنك تغطية هذا عني؟",lv:"A"},
+{en:"We need a contingency plan.",ar:"نحتاج إلى خطة طوارئ.",lv:"B"},
+{en:"Let me explain my reasoning.",ar:"دعني أشرح منطقي.",lv:"B"},
+{en:"Let's get on the same page.",ar:"لنكن على نفس الصفحة.",lv:"B"},
+{en:"I'll send you the report by EOD.",ar:"سأرسل لك التقرير قبل نهاية اليوم.",lv:"C"},
+{en:"New chapter, new challenges.",ar:"فصل جديد، تحديات جديدة.",lv:"B"},
+{en:"I'll support whatever we decide.",ar:"سأدعم أي قرار نتخذه.",lv:"B"},
+{en:"Can you proofread my resume?",ar:"هل يمكنك مراجعة سيرتي الذاتية؟",lv:"B"},
+{en:"Where do you see yourself in five years?",ar:"أين تنظر لنفسك بعد خمس سنوات؟",lv:"A"},
+{en:"Thanks for your patience.",ar:"شكراً على صبرك.",lv:"A"},
+{en:"What does success look like here?",ar:"كيف يبدو النجاح هنا؟",lv:"B"},
+{en:"I'll get back to you on that.",ar:"سأرد عليك بشأن ذلك.",lv:"B"},
+{en:"Do you have bandwidth for this?",ar:"هل لديك وقت لهذا؟",lv:"B"},
+{en:"We need more resources.",ar:"نحتاج إلى مزيد من الموارد.",lv:"A"},
+{en:"I have concerns about this.",ar:"لديّ مخاوف بشأن هذا.",lv:"B"},
+{en:"I started my own business.",ar:"بدأت عملي الخاص.",lv:"A"},
+{en:"I'm passionate about my work.",ar:"أنا شغوف بعملي.",lv:"A"},
+{en:"The commute is killing me.",ar:"التنقل يرهقني.",lv:"B"},
+{en:"That's not in my job description.",ar:"هذا ليس في وصف وظيفتي.",lv:"B"},
+{en:"Mute yourself, please.",ar:"أسكت الميكروفون، من فضلك.",lv:"A"},
+{en:"I'll handle it by end of day.",ar:"سأنهيه قبل نهاية اليوم.",lv:"B"},
+],
+"travel":[
+{en:"Where's the nearest metro?",ar:"أين أقرب محطة مترو؟",lv:"A"},
+{en:"How do I get to the city center?",ar:"كيف أصل إلى مركز المدينة؟",lv:"A"},
+{en:"Is this the right bus?",ar:"هل هذه الحافلة الصحيحة؟",lv:"A"},
+{en:"I missed my flight.",ar:"فاتني طيراني.",lv:"A"},
+{en:"Can I change my ticket?",ar:"هل يمكنني تغيير تذكرتي؟",lv:"A"},
+{en:"My luggage is missing.",ar:"أمتعتي مفقودة.",lv:"A"},
+{en:"I'd like a window seat.",ar:"أريد مقعداً بجانب النافذة.",lv:"A"},
+{en:"How long is the layover?",ar:"كم مدة التوقف؟",lv:"A"},
+{en:"I have a reservation.",ar:"لديّ حجز.",lv:"A"},
+{en:"Can I check in early?",ar:"هل يمكنني الوصول مبكراً؟",lv:"A"},
+{en:"What time is checkout?",ar:"متى يكون وقت المغادرة؟",lv:"A"},
+{en:"Is breakfast included?",ar:"هل الإفطار مشمول؟",lv:"A"},
+{en:"I'm lost.",ar:"أنا ضائع.",lv:"A"},
+{en:"How far is it?",ar:"كم تبعد؟",lv:"A"},
+{en:"Can we take a taxi?",ar:"هل يمكننا أخذ تاكسي؟",lv:"A"},
+{en:"How much is the fare?",ar:"كم الأجرة؟",lv:"A"},
+{en:"What's the currency here?",ar:"ما العملة هنا؟",lv:"A"},
+{en:"Where can I exchange money?",ar:"أين يمكنني صرف النقود؟",lv:"A"},
+{en:"I lost my passport.",ar:"فقدت جواز سفري.",lv:"A"},
+{en:"Call the police.",ar:"اتصل بالشرطة.",lv:"A"},
+{en:"Where's the nearest hospital?",ar:"أين أقرب مستشفى؟",lv:"A"},
+{en:"Do you speak English?",ar:"هل تتحدث الإنجليزية؟",lv:"A"},
+{en:"I enjoyed my stay here.",ar:"استمتعت بإقامتي هنا.",lv:"A"},
+{en:"This place is beautiful.",ar:"هذا المكان جميل.",lv:"A"},
+{en:"Best trip ever.",ar:"أفضل رحلة على الإطلاق.",lv:"A"},
+{en:"I need a SIM card.",ar:"أحتاج إلى شريحة هاتف.",lv:"A"},
+{en:"Do you have free Wi-Fi?",ar:"هل لديكم واي فاي مجاني؟",lv:"A"},
+{en:"My flight is delayed.",ar:"رحلتي متأخرة.",lv:"A"},
+{en:"How do I get to the airport?",ar:"كيف أصل إلى المطار؟",lv:"A"},
+{en:"Where's the embassy?",ar:"أين السفارة؟",lv:"A"},
+{en:"What gate is my flight?",ar:"ما بوابة رحلتي؟",lv:"A"},
+{en:"How long is the flight?",ar:"كم مدة الرحلة؟",lv:"A"},
+{en:"Boarding has started.",ar:"بدأ الصعود إلى الطائرة.",lv:"A"},
+{en:"Nothing to declare.",ar:"لا شيء للإعلان.",lv:"A"},
+{en:"Take me to this address.",ar:"خذني إلى هذا العنوان.",lv:"A"},
+{en:"Keep the meter running.",ar:"اترك العداد يعمل.",lv:"B"},
+{en:"Any hidden gems nearby?",ar:"هل هناك أماكن مميزة قريبة؟",lv:"B"},
+{en:"Where do locals eat?",ar:"أين يأكل السكان المحليون؟",lv:"A"},
+{en:"Is it safe at night?",ar:"هل هو آمن في الليل؟",lv:"A"},
+{en:"Should I rent a car?",ar:"هل يجب أن أستأجر سيارة؟",lv:"A"},
+{en:"I need to confirm my booking.",ar:"أحتاج إلى تأكيد حجزي.",lv:"A"},
+{en:"Can I get a late checkout?",ar:"هل يمكنني المغادرة متأخراً؟",lv:"A"},
+{en:"I'd like a non-smoking room.",ar:"أريد غرفة غير مدخنين.",lv:"A"},
+{en:"Can I upgrade my room?",ar:"هل يمكنني ترقية غرفتي؟",lv:"A"},
+{en:"I'll definitely come back.",ar:"سأعود بالتأكيد.",lv:"B"},
+{en:"Safe flight home.",ar:"رحلة آمنة إلى البيت.",lv:"A"},
+{en:"What's the exchange rate?",ar:"ما سعر الصرف؟",lv:"A"},
+{en:"Do you have a map?",ar:"هل لديك خريطة؟",lv:"A"},
+{en:"Is it walkable?",ar:"هل يمكن الوصول مشياً؟",lv:"A"},
+{en:"Just follow the signs.",ar:"فقط اتبع اللافتات.",lv:"A"},
+{en:"I want to explore.",ar:"أريد الاستكشاف.",lv:"A"},
+{en:"How do I get back to the hotel?",ar:"كيف أعود إلى الفندق؟",lv:"A"},
+{en:"Drop me off here.",ar:"أنزلني هنا.",lv:"A"},
+{en:"I'd like to cancel my reservation.",ar:"أريد إلغاء حجزي.",lv:"A"},
+{en:"I booked the wrong date.",ar:"حجزت التاريخ الخاطئ.",lv:"A"},
+{en:"Can I get a refund?",ar:"هل يمكنني الحصول على استرداد؟",lv:"A"},
+{en:"The hotel is fully booked.",ar:"الفندق محجوز بالكامل.",lv:"A"},
+{en:"I'd like an aisle seat.",ar:"أريد مقعداً على الممر.",lv:"A"},
+{en:"Is the flight on time?",ar:"هل الرحلة في وقتها؟",lv:"A"},
+{en:"I need to report a theft.",ar:"أحتاج إلى الإبلاغ عن سرقة.",lv:"A"},
+{en:"What's the local specialty?",ar:"ما التخصص المحلي؟",lv:"A"},
+{en:"Where can I buy tickets?",ar:"أين يمكنني شراء التذاكر؟",lv:"A"},
+{en:"How long does it take to walk?",ar:"كم يستغرق المشي؟",lv:"A"},
+{en:"The view is breathtaking.",ar:"المنظر رائع لدرجة يحبس الأنفاس.",lv:"B"},
+{en:"This exceeded all my expectations.",ar:"هذا تجاوز كل توقعاتي.",lv:"B"},
+{en:"I don't want to leave.",ar:"لا أريد أن أغادر.",lv:"A"},
+{en:"This was worth every penny.",ar:"كان هذا يستحق كل فلس.",lv:"B"},
+{en:"Travel opens the mind.",ar:"السفر يفتح العقل.",lv:"B"},
+{en:"I can't believe I'm finally here.",ar:"لا أصدق أنني هنا أخيراً.",lv:"A"},
+{en:"I already miss this place.",ar:"أنا أشتاق لهذا المكان بالفعل.",lv:"B"},
+{en:"I'll be back someday.",ar:"سأعود يوماً ما.",lv:"A"},
+{en:"Is there a metro card?",ar:"هل هناك بطاقة مترو؟",lv:"A"},
+{en:"I need travel insurance.",ar:"أحتاج إلى تأمين سفر.",lv:"A"},
+{en:"Can you translate this?",ar:"هل يمكنك ترجمة هذا؟",lv:"A"},
+{en:"I'm in a hurry.",ar:"أنا في عجلة.",lv:"A"},
+{en:"Please avoid the traffic.",ar:"من فضلك تجنب الازدحام.",lv:"A"},
+{en:"Can you call me a cab?",ar:"هل يمكنك استدعاء سيارة أجرة لي؟",lv:"A"},
+{en:"What's worth seeing here?",ar:"ما الذي يستحق المشاهدة هنا؟",lv:"A"},
+{en:"I need to go through customs.",ar:"أحتاج إلى المرور عبر الجمارك.",lv:"A"},
+{en:"I'd recommend this to everyone.",ar:"سأوصي بهذا للجميع.",lv:"B"},
+{en:"Can you hold my luggage?",ar:"هل يمكنك الاحتفاظ بأمتعتي؟",lv:"A"},
+{en:"Do they accept credit cards?",ar:"هل يقبلون بطاقات الائتمان؟",lv:"A"},
+{en:"Which way is downtown?",ar:"في أي اتجاه يقع وسط المدينة؟",lv:"A"},
+{en:"What's the best way to get around?",ar:"ما أفضل طريقة للتنقل؟",lv:"B"},
+{en:"I need directions to the museum.",ar:"أحتاج إلى اتجاهات للمتحف.",lv:"A"},
+{en:"Can you write it down for me?",ar:"هل يمكنك كتابتها لي؟",lv:"A"},
+{en:"What time does the last train leave?",ar:"متى يغادر آخر قطار؟",lv:"A"},
+{en:"Can you recommend a tour guide?",ar:"هل يمكنك التوصية بمرشد سياحي؟",lv:"B"},
+],
+"shop":[
+{en:"How much is this?",ar:"كم سعر هذا؟",lv:"A"},
+{en:"Do you have a different size?",ar:"هل لديك مقاس آخر؟",lv:"A"},
+{en:"Can I try it on?",ar:"هل يمكنني تجربته؟",lv:"A"},
+{en:"Where's the fitting room?",ar:"أين غرفة القياس؟",lv:"A"},
+{en:"It's a bit too tight.",ar:"إنه ضيق قليلاً.",lv:"A"},
+{en:"Do you have a bigger size?",ar:"هل لديك مقاس أكبر؟",lv:"A"},
+{en:"I'll take it.",ar:"سآخذه.",lv:"A"},
+{en:"Do you have a discount?",ar:"هل لديك خصم؟",lv:"A"},
+{en:"Is this on sale?",ar:"هل هذا في تخفيضات؟",lv:"A"},
+{en:"Do you accept returns?",ar:"هل تقبلون الإرجاع؟",lv:"A"},
+{en:"I'd like a refund.",ar:"أريد استرداد أموالي.",lv:"A"},
+{en:"I have a receipt.",ar:"لديّ إيصال.",lv:"A"},
+{en:"It's defective.",ar:"إنه معيب.",lv:"A"},
+{en:"This is not what I ordered.",ar:"هذا ليس ما طلبته.",lv:"A"},
+{en:"Do you have this in stock?",ar:"هل هذا متوفر في المخزن؟",lv:"A"},
+{en:"I'm just browsing.",ar:"أنا فقط أتصفح.",lv:"A"},
+{en:"I'm looking for a gift.",ar:"أبحث عن هدية.",lv:"A"},
+{en:"What would you recommend?",ar:"ماذا تنصح؟",lv:"A"},
+{en:"Can you gift-wrap it?",ar:"هل يمكنك تغليفه كهدية؟",lv:"B"},
+{en:"Where do I pay?",ar:"أين أدفع؟",lv:"A"},
+{en:"Can I pay by card?",ar:"هل يمكنني الدفع ببطاقة؟",lv:"A"},
+{en:"Is there a return policy?",ar:"هل هناك سياسة إرجاع؟",lv:"A"},
+{en:"How long is the warranty?",ar:"كم مدة الضمان؟",lv:"A"},
+{en:"Can I see another color?",ar:"هل يمكنني رؤية لون آخر؟",lv:"A"},
+{en:"Do you have it in black?",ar:"هل لديك باللون الأسود؟",lv:"A"},
+{en:"What material is this?",ar:"ما هذه المادة؟",lv:"A"},
+{en:"Is this genuine leather?",ar:"هل هذا جلد أصلي؟",lv:"A"},
+{en:"Any seasonal sale?",ar:"هل هناك تخفيضات موسمية؟",lv:"B"},
+{en:"I saw it cheaper online.",ar:"رأيته أرخص عبر الإنترنت.",lv:"A"},
+{en:"How long does delivery take?",ar:"كم يستغرق التوصيل؟",lv:"A"},
+{en:"Is there free shipping?",ar:"هل الشحن مجاني؟",lv:"A"},
+{en:"I'll think about it.",ar:"سأفكر في الأمر.",lv:"A"},
+{en:"I'll come back later.",ar:"سأعود لاحقاً.",lv:"A"},
+{en:"What are your opening hours?",ar:"ما ساعات العمل لديكم؟",lv:"A"},
+{en:"It runs small.",ar:"المقاس أصغر من المعتاد.",lv:"B"},
+{en:"I need a size up.",ar:"أحتاج مقاساً أكبر.",lv:"A"},
+{en:"Can I pay in installments?",ar:"هل يمكنني الدفع بالتقسيط؟",lv:"B"},
+{en:"Do you have a loyalty program?",ar:"هل لديك برنامج ولاء؟",lv:"B"},
+{en:"Can you hold this for me?",ar:"هل يمكنك حجز هذا لي؟",lv:"A"},
+{en:"I'd like to exchange this.",ar:"أريد استبدال هذا.",lv:"A"},
+{en:"That's too expensive.",ar:"هذا غالٍ جداً.",lv:"A"},
+{en:"Is this the best price?",ar:"هل هذا أفضل سعر؟",lv:"A"},
+{en:"Can you do any better?",ar:"هل يمكنك تخفيض السعر أكثر؟",lv:"B"},
+{en:"I found it cheaper elsewhere.",ar:"وجدته أرخص في مكان آخر.",lv:"A"},
+{en:"I'm on a budget.",ar:"لديّ ميزانية محددة.",lv:"A"},
+{en:"This is worth every penny.",ar:"هذا يستحق كل فلس.",lv:"B"},
+{en:"What a steal!",ar:"يا له من سعر رخيص!",lv:"B"},
+{en:"That's a great deal.",ar:"هذه صفقة رائعة.",lv:"A"},
+{en:"I need to return this.",ar:"أحتاج إلى إرجاع هذا.",lv:"A"},
+{en:"Can I get store credit?",ar:"هل يمكنني الحصول على رصيد في المتجر؟",lv:"B"},
+{en:"I changed my mind.",ar:"غيّرت رأيي.",lv:"A"},
+{en:"I'm not happy with this.",ar:"لست راضياً عن هذا.",lv:"A"},
+{en:"It's not as described.",ar:"إنه ليس كما وُصف.",lv:"A"},
+{en:"The quality is poor.",ar:"الجودة رديئة.",lv:"A"},
+{en:"I want to speak to a manager.",ar:"أريد التحدث مع مدير.",lv:"A"},
+{en:"I'm buying this as a gift.",ar:"أشتري هذا كهدية.",lv:"A"},
+{en:"What's the best-seller here?",ar:"ما المنتج الأكثر مبيعاً هنا؟",lv:"A"},
+{en:"I trust your recommendation.",ar:"أثق في توصيتك.",lv:"A"},
+{en:"Do you price-match?",ar:"هل تساوون الأسعار؟",lv:"B"},
+{en:"Can you deliver to my address?",ar:"هل يمكنك التوصيل لعنواني؟",lv:"A"},
+{en:"When will it arrive?",ar:"متى سيصل؟",lv:"A"},
+{en:"My order hasn't arrived yet.",ar:"طلبي لم يصل بعد.",lv:"A"},
+{en:"The package was damaged.",ar:"كانت الطرد تالفة.",lv:"A"},
+{en:"Can I get a replacement?",ar:"هل يمكنني الحصول على بديل؟",lv:"A"},
+{en:"The wrong item was sent.",ar:"تم إرسال العنصر الخاطئ.",lv:"A"},
+{en:"Has my order shipped?",ar:"هل تم شحن طلبي؟",lv:"A"},
+{en:"I'll pay cash.",ar:"سأدفع نقداً.",lv:"A"},
+{en:"Do you have the latest model?",ar:"هل لديك أحدث طراز؟",lv:"A"},
+{en:"Can I test it first?",ar:"هل يمكنني اختباره أولاً؟",lv:"A"},
+{en:"What's the difference between these two?",ar:"ما الفرق بين هذين؟",lv:"A"},
+{en:"Does it come with a case?",ar:"هل يأتي مع حافظة؟",lv:"A"},
+{en:"Can I trade in my old one?",ar:"هل يمكنني استبدال القديم؟",lv:"B"},
+{en:"Is there a student discount?",ar:"هل هناك خصم للطلاب؟",lv:"A"},
+{en:"The zipper is broken.",ar:"السحاب مكسور.",lv:"A"},
+{en:"There's a stain on this.",ar:"هناك بقعة على هذا.",lv:"A"},
+{en:"I always shop here.",ar:"أتسوق هنا دائماً.",lv:"A"},
+{en:"Is this waterproof?",ar:"هل هذا مقاوم للماء؟",lv:"A"},
+{en:"Can you wrap it nicely?",ar:"هل يمكنك تغليفه بشكل جميل؟",lv:"A"},
+{en:"I want to track my order.",ar:"أريد تتبع طلبي.",lv:"A"},
+{en:"Where is the electronics section?",ar:"أين قسم الإلكترونيات؟",lv:"A"},
+{en:"I found something better.",ar:"وجدت شيئاً أفضل.",lv:"A"},
+{en:"Do you have it in white?",ar:"هل لديك باللون الأبيض؟",lv:"A"},
+{en:"I'm looking for something unique.",ar:"أبحث عن شيء فريد.",lv:"B"},
+{en:"What's trending right now?",ar:"ما هو الأكثر رواجاً الآن؟",lv:"A"},
+],
+"food":[
+{en:"A table for two, please.",ar:"طاولة لاثنين، من فضلك.",lv:"A"},
+{en:"Do you have a reservation?",ar:"هل لديك حجز؟",lv:"A"},
+{en:"Can we sit outside?",ar:"هل يمكننا الجلوس في الخارج؟",lv:"A"},
+{en:"Can I see the menu?",ar:"هل يمكنني رؤية قائمة الطعام؟",lv:"A"},
+{en:"What's the special today?",ar:"ما الطبق الخاص اليوم؟",lv:"A"},
+{en:"What do you recommend?",ar:"ماذا تنصح؟",lv:"A"},
+{en:"I'm a vegetarian.",ar:"أنا نباتي.",lv:"A"},
+{en:"Does this contain nuts?",ar:"هل يحتوي هذا على مكسرات؟",lv:"A"},
+{en:"I'm allergic to dairy.",ar:"أنا حساس لمنتجات الألبان.",lv:"A"},
+{en:"Can you make it less spicy?",ar:"هل يمكنك جعله أقل حدة؟",lv:"A"},
+{en:"Can I get that to go?",ar:"هل يمكنني أخذه معي؟",lv:"A"},
+{en:"Can we share a dish?",ar:"هل يمكننا مشاركة طبق؟",lv:"A"},
+{en:"I'd like to order.",ar:"أريد الطلب.",lv:"A"},
+{en:"Is service included?",ar:"هل الخدمة مشمولة؟",lv:"A"},
+{en:"Could we get some bread?",ar:"هل يمكننا الحصول على بعض الخبز؟",lv:"A"},
+{en:"Another round, please.",ar:"جولة أخرى، من فضلك.",lv:"A"},
+{en:"That was delicious!",ar:"كان ذلك لذيذاً!",lv:"A"},
+{en:"My compliments to the chef.",ar:"تحياتي للطاهي.",lv:"B"},
+{en:"Can I get the check?",ar:"هل يمكنني الحصول على الحساب؟",lv:"A"},
+{en:"There's a mistake in the bill.",ar:"هناك خطأ في الفاتورة.",lv:"A"},
+{en:"I didn't order this.",ar:"لم أطلب هذا.",lv:"A"},
+{en:"My food is cold.",ar:"طعامي بارد.",lv:"A"},
+{en:"I've been waiting 30 minutes.",ar:"انتظرت 30 دقيقة.",lv:"A"},
+{en:"This is overcooked.",ar:"هذا مطبوخ زيادة.",lv:"A"},
+{en:"Is this gluten-free?",ar:"هل هذا خالٍ من الغلوتين؟",lv:"A"},
+{en:"Do you have a kids menu?",ar:"هل لديك قائمة للأطفال؟",lv:"A"},
+{en:"No onions, please.",ar:"بدون بصل، من فضلك.",lv:"A"},
+{en:"Extra sauce on the side.",ar:"صلصة إضافية على الجانب.",lv:"A"},
+{en:"Can I have a refill?",ar:"هل يمكنني إعادة ملء كوبي؟",lv:"A"},
+{en:"What's in this dish?",ar:"ما مكونات هذا الطبق؟",lv:"A"},
+{en:"Is it spicy?",ar:"هل هو حار؟",lv:"A"},
+{en:"The service was excellent.",ar:"الخدمة كانت ممتازة.",lv:"A"},
+{en:"We'd like to pay separately.",ar:"نود الدفع بشكل منفصل.",lv:"A"},
+{en:"I'll have the soup.",ar:"سأتناول الحساء.",lv:"A"},
+{en:"Do you have decaf?",ar:"هل لديك قهوة منزوعة الكافيين؟",lv:"A"},
+{en:"Is there a vegan option?",ar:"هل هناك خيار نباتي صارم؟",lv:"A"},
+{en:"No ice, please.",ar:"بدون ثلج، من فضلك.",lv:"A"},
+{en:"What's your most popular dish?",ar:"ما طبقك الأكثر شعبية؟",lv:"A"},
+{en:"Is the fish fresh?",ar:"هل السمك طازج؟",lv:"A"},
+{en:"Table for one, please.",ar:"طاولة لشخص واحد، من فضلك.",lv:"A"},
+{en:"How long is the wait?",ar:"كم مدة الانتظار؟",lv:"A"},
+{en:"Is the kitchen still open?",ar:"هل المطبخ لا يزال مفتوحاً؟",lv:"A"},
+{en:"Can I order to take away?",ar:"هل يمكنني الطلب للذهاب؟",lv:"A"},
+{en:"Do you deliver?",ar:"هل تقومون بالتوصيل؟",lv:"A"},
+{en:"Add extra cheese.",ar:"أضف جبناً إضافياً.",lv:"A"},
+{en:"Hold the mayonnaise.",ar:"بدون مايونيز.",lv:"A"},
+{en:"Medium rare, please.",ar:"متوسط النضج، من فضلك.",lv:"B"},
+{en:"What's the house specialty?",ar:"ما تخصص المطعم؟",lv:"A"},
+{en:"I'd like sparkling water.",ar:"أريد ماء فوار.",lv:"A"},
+{en:"Can I speak to the manager?",ar:"هل يمكنني التحدث مع المدير؟",lv:"A"},
+{en:"We're celebrating tonight.",ar:"نحن نحتفل الليلة.",lv:"A"},
+{en:"It's our anniversary.",ar:"إنها ذكرتنا السنوية.",lv:"A"},
+{en:"Do you have a private room?",ar:"هل لديك غرفة خاصة؟",lv:"A"},
+{en:"We'd like a quiet table.",ar:"نريد طاولة هادئة.",lv:"A"},
+{en:"Near the window, please.",ar:"بجانب النافذة، من فضلك.",lv:"A"},
+{en:"I'll have what she's having.",ar:"سآخذ ما تتناوله هي.",lv:"B"},
+{en:"The steak is overcooked.",ar:"الستيك مطبوخ أكثر مما يجب.",lv:"A"},
+{en:"Is dessert included?",ar:"هل الحلوى مشمولة؟",lv:"A"},
+{en:"Still water, please.",ar:"ماء غير فوار، من فضلك.",lv:"A"},
+{en:"Can I get a doggy bag?",ar:"هل يمكنني الحصول على عبوة المتبقيات؟",lv:"B"},
+{en:"I'm on a diet.",ar:"أنا على نظام غذائي.",lv:"A"},
+{en:"Is this organic?",ar:"هل هذا عضوي؟",lv:"A"},
+{en:"The portions are huge!",ar:"الأجزاء ضخمة!",lv:"A"},
+{en:"Can we split this?",ar:"هل يمكننا تقسيم هذا؟",lv:"A"},
+{en:"Box the rest, please.",ar:"ضع الباقي في علبة، من فضلك.",lv:"A"},
+{en:"The flavors are amazing.",ar:"النكهات رائعة.",lv:"A"},
+{en:"You have to try this!",ar:"يجب عليك تجربة هذا!",lv:"A"},
+{en:"One of the best meals I've had.",ar:"من أفضل الوجبات التي تناولتها.",lv:"B"},
+{en:"I'll definitely come back.",ar:"سأعود بالتأكيد.",lv:"B"},
+{en:"No gluten please.",ar:"بدون غلوتين من فضلك.",lv:"A"},
+{en:"Can you put a candle on the cake?",ar:"هل يمكنك وضع شمعة على الكيك؟",lv:"A"},
+{en:"We need more napkins.",ar:"نحتاج إلى المزيد من المناديل.",lv:"A"},
+{en:"The soup is too salty.",ar:"الحساء مالح جداً.",lv:"A"},
+{en:"We'd like a booth.",ar:"نريد مقعداً منعزلاً.",lv:"B"},
+{en:"Do you have halal options?",ar:"هل لديك خيارات حلال؟",lv:"A"},
+{en:"I'll pass on dessert.",ar:"سأتخطى الحلوى.",lv:"B"},
+{en:"Away from the kitchen, please.",ar:"بعيداً عن المطبخ، من فضلك.",lv:"A"},
+{en:"Can you hurry the order?",ar:"هل يمكنك الإسراع بالطلب؟",lv:"A"},
+{en:"Can I substitute this?",ar:"هل يمكنني استبدال هذا؟",lv:"B"},
+{en:"We have a large group.",ar:"لدينا مجموعة كبيرة.",lv:"A"},
+{en:"Can I see the wine list?",ar:"هل يمكنني رؤية قائمة النبيذ؟",lv:"A"},
+{en:"I can't finish this.",ar:"لا أستطيع إنهاء هذا.",lv:"A"},
+],
+"social":[
+{en:"Can I ask you something?",ar:"هل يمكنني سؤالك شيئاً؟",lv:"A"},
+{en:"Mind if I sit here?",ar:"هل تمانع أن أجلس هنا؟",lv:"A"},
+{en:"Is this seat taken?",ar:"هل هذا المقعد محجوز؟",lv:"A"},
+{en:"After you.",ar:"بعدك.",lv:"A"},
+{en:"Sorry, can I get through?",ar:"آسف، هل يمكنني المرور؟",lv:"A"},
+{en:"Could you hold the door?",ar:"هل يمكنك إمساك الباب؟",lv:"A"},
+{en:"No worries.",ar:"لا توجد مشكلة.",lv:"A"},
+{en:"Could you speak more slowly?",ar:"هل يمكنك التحدث ببطء أكثر؟",lv:"A"},
+{en:"I didn't catch that.",ar:"لم أفهم ذلك.",lv:"A"},
+{en:"What do you mean?",ar:"ماذا تعني؟",lv:"A"},
+{en:"I'm not following.",ar:"لست أتابع.",lv:"A"},
+{en:"Does that make sense?",ar:"هل هذا منطقي؟",lv:"A"},
+{en:"I agree with you.",ar:"أتفق معك.",lv:"A"},
+{en:"You have a point.",ar:"معك حق.",lv:"A"},
+{en:"I see what you mean.",ar:"أفهم ما تعنيه.",lv:"A"},
+{en:"Fair enough.",ar:"هذا منصف.",lv:"B"},
+{en:"I respectfully disagree.",ar:"أختلف معك باحترام.",lv:"B"},
+{en:"Let's agree to disagree.",ar:"لنتفق على الاختلاف.",lv:"B"},
+{en:"Can I jump in?",ar:"هل يمكنني المشاركة؟",lv:"A"},
+{en:"What's your take on this?",ar:"ما رأيك في هذا؟",lv:"B"},
+{en:"Can we find a middle ground?",ar:"هل يمكننا إيجاد أرضية وسطى؟",lv:"B"},
+{en:"You raise a valid point.",ar:"تطرح نقطة صحيحة.",lv:"B"},
+{en:"I stand corrected.",ar:"أقبل التصحيح.",lv:"B"},
+{en:"I'll keep that in mind.",ar:"سأضع ذلك في اعتباري.",lv:"A"},
+{en:"Can you do me a favor?",ar:"هل يمكنك مساعدتي؟",lv:"A"},
+{en:"Would you mind helping me?",ar:"هل تمانع مساعدتي؟",lv:"A"},
+{en:"I'd be happy to help.",ar:"سيسعدني المساعدة.",lv:"A"},
+{en:"Don't hesitate to ask.",ar:"لا تتردد في السؤال.",lv:"B"},
+{en:"I'm at your service.",ar:"أنا في خدمتك.",lv:"B"},
+{en:"That's very kind of you.",ar:"هذا لطيف جداً منك.",lv:"A"},
+{en:"I can't thank you enough.",ar:"لا أستطيع أن أشكرك بما يكفي.",lv:"B"},
+{en:"Feel free to say no.",ar:"لا تتردد في الرفض.",lv:"B"},
+{en:"No pressure at all.",ar:"لا ضغط على الإطلاق.",lv:"B"},
+{en:"Take your time.",ar:"خذ وقتك.",lv:"A"},
+{en:"There's no rush.",ar:"لا عجلة.",lv:"A"},
+{en:"Allow me.",ar:"اسمح لي.",lv:"A"},
+{en:"You're very kind.",ar:"أنت لطيف جداً.",lv:"A"},
+{en:"That's so thoughtful.",ar:"هذا مدروس جداً.",lv:"B"},
+{en:"I didn't expect that.",ar:"لم أتوقع ذلك.",lv:"A"},
+{en:"You didn't have to.",ar:"لم يكن عليك ذلك.",lv:"A"},
+{en:"Can I borrow your pen?",ar:"هل يمكنني استعارة قلمك؟",lv:"A"},
+{en:"Do you know what time it is?",ar:"هل تعرف كم الساعة؟",lv:"A"},
+{en:"I'm a little lost.",ar:"أنا ضائع قليلاً.",lv:"A"},
+{en:"Can you point me in the right direction?",ar:"هل يمكنك إرشادي؟",lv:"A"},
+{en:"I'm looking for the restroom.",ar:"أبحث عن دورة المياه.",lv:"A"},
+{en:"Is there a pharmacy nearby?",ar:"هل هناك صيدلية قريبة؟",lv:"A"},
+{en:"Excuse me, you dropped this.",ar:"عذراً، لقد أسقطت هذا.",lv:"A"},
+{en:"I can relate to that.",ar:"أستطيع أن أفهم ذلك.",lv:"B"},
+{en:"Same here.",ar:"نفس الشيء بالنسبة لي.",lv:"A"},
+{en:"I've been there.",ar:"مررت بهذا.",lv:"B"},
+{en:"Tell me about it!",ar:"أخبرني عن ذلك!",lv:"A"},
+{en:"I hear you.",ar:"أسمعك وأفهمك.",lv:"B"},
+{en:"I feel the same way.",ar:"أشعر بنفس الشعور.",lv:"A"},
+{en:"No judgement here.",ar:"لا حكم هنا.",lv:"B"},
+{en:"This is a safe space.",ar:"هذا مكان آمن.",lv:"B"},
+{en:"You can be honest with me.",ar:"يمكنك أن تكون صريحاً معي.",lv:"B"},
+{en:"I won't tell anyone.",ar:"لن أخبر أحداً.",lv:"A"},
+{en:"Your secret is safe with me.",ar:"سرك بأمان معي.",lv:"B"},
+{en:"You can trust me.",ar:"يمكنك الوثوق بي.",lv:"A"},
+{en:"Let's change the subject.",ar:"لنغير الموضوع.",lv:"A"},
+{en:"That's personal.",ar:"ذلك أمر شخصي.",lv:"A"},
+{en:"It's a long story.",ar:"إنها قصة طويلة.",lv:"A"},
+{en:"Let's just enjoy the moment.",ar:"لنستمتع باللحظة فقط.",lv:"A"},
+{en:"No offense intended.",ar:"لا قصد للإساءة.",lv:"B"},
+{en:"None taken.",ar:"لم أأخذها بشكل شخصي.",lv:"B"},
+{en:"I was just curious.",ar:"كنت أتساءل فقط.",lv:"A"},
+{en:"I'd rather not say.",ar:"أفضل عدم القول.",lv:"B"},
+{en:"Mind your own business.",ar:"اهتم بشأنك.",lv:"B"},
+{en:"I'm all ears.",ar:"أنا منصت تماماً.",lv:"B"},
+{en:"You don't say!",ar:"لا يعقل!",lv:"B"},
+{en:"I had no idea.",ar:"لم يكن لديّ أي فكرة.",lv:"A"},
+{en:"I completely understand.",ar:"أفهم تماماً.",lv:"A"},
+{en:"I hope you don't mind.",ar:"أتمنى أنك لن تمانع.",lv:"B"},
+{en:"Whatever you need.",ar:"مهما تحتاج.",lv:"A"},
+{en:"How can I help?",ar:"كيف يمكنني المساعدة؟",lv:"A"},
+{en:"I appreciate the feedback.",ar:"أقدر الملاحظات.",lv:"B"},
+{en:"Speak your mind.",ar:"قل ما تفكر فيه.",lv:"B"},
+{en:"With your permission.",ar:"بإذنك.",lv:"B"},
+{en:"Is that so?",ar:"هل هذا صحيح؟",lv:"A"},
+{en:"I don't mean to pry.",ar:"لا أريد التدخل.",lv:"B"},
+{en:"Let me get this straight.",ar:"دعني أفهم هذا جيداً.",lv:"B"},
+{en:"Can I ask a personal question?",ar:"هل يمكنني طرح سؤال شخصي؟",lv:"A"},
+{en:"I'm in a hurry.",ar:"أنا في عجلة.",lv:"A"},
+{en:"Can you say that again?",ar:"هل يمكنك تكرار ذلك؟",lv:"A"},
+],
+"health":[
+{en:"I'm not feeling well.",ar:"لا أشعر بحال جيد.",lv:"A"},
+{en:"I have a headache.",ar:"لدي صداع.",lv:"A"},
+{en:"My throat hurts.",ar:"حلقي يؤلمني.",lv:"A"},
+{en:"I think I have a fever.",ar:"أعتقد أن لديّ حمى.",lv:"A"},
+{en:"I need to see a doctor.",ar:"أحتاج إلى رؤية طبيب.",lv:"A"},
+{en:"Can I make an appointment?",ar:"هل يمكنني تحديد موعد؟",lv:"A"},
+{en:"How long is the wait?",ar:"كم مدة الانتظار؟",lv:"A"},
+{en:"I have a prescription.",ar:"لديّ وصفة طبية.",lv:"A"},
+{en:"Take this twice a day.",ar:"تناول هذا مرتين يومياً.",lv:"A"},
+{en:"Are there any side effects?",ar:"هل هناك آثار جانبية؟",lv:"A"},
+{en:"I'm feeling dizzy.",ar:"أشعر بدوار.",lv:"A"},
+{en:"I've been nauseous all day.",ar:"كنت أشعر بالغثيان طوال اليوم.",lv:"B"},
+{en:"I twisted my ankle.",ar:"التوت كاحلي.",lv:"A"},
+{en:"I need an ice pack.",ar:"أحتاج إلى كيس ثلج.",lv:"A"},
+{en:"Is it serious?",ar:"هل هو خطير؟",lv:"A"},
+{en:"Do I need an X-ray?",ar:"هل أحتاج إلى أشعة سينية؟",lv:"A"},
+{en:"I'm on medication.",ar:"أنا على دواء.",lv:"A"},
+{en:"Where's the nearest pharmacy?",ar:"أين أقرب صيدلية؟",lv:"A"},
+{en:"I need cold medicine.",ar:"أحتاج إلى دواء للبرد.",lv:"A"},
+{en:"I need to cut back on stress.",ar:"أحتاج إلى تقليل التوتر.",lv:"B"},
+{en:"I should exercise more.",ar:"يجب أن أمارس الرياضة أكثر.",lv:"A"},
+{en:"I quit smoking.",ar:"تركت التدخين.",lv:"A"},
+{en:"I'm trying to lose weight.",ar:"أحاول إنقاص وزني.",lv:"A"},
+{en:"My mental health matters.",ar:"صحتي النفسية مهمة.",lv:"B"},
+{en:"I should see a therapist.",ar:"يجب أن أرى معالجاً.",lv:"A"},
+{en:"It's okay to ask for help.",ar:"لا بأس في طلب المساعدة.",lv:"A"},
+{en:"Self-care is not selfish.",ar:"العناية بالنفس ليست أنانية.",lv:"B"},
+{en:"I need to recharge.",ar:"أحتاج إلى إعادة شحن طاقتي.",lv:"A"},
+{en:"Get plenty of rest.",ar:"احصل على قسط وافر من الراحة.",lv:"A"},
+{en:"I've been having back pain.",ar:"كنت أعاني من آلام الظهر.",lv:"A"},
+{en:"I need to see a specialist.",ar:"أحتاج إلى رؤية متخصص.",lv:"A"},
+{en:"What are the symptoms?",ar:"ما الأعراض؟",lv:"A"},
+{en:"It started two days ago.",ar:"بدأ قبل يومين.",lv:"A"},
+{en:"The pain comes and goes.",ar:"الألم يأتي ويذهب.",lv:"B"},
+{en:"I'm allergic to penicillin.",ar:"أنا حساس للبنسلين.",lv:"A"},
+{en:"Do you take my insurance?",ar:"هل تقبلون تأميني الصحي؟",lv:"A"},
+{en:"I need a blood test.",ar:"أحتاج إلى تحليل دم.",lv:"A"},
+{en:"The results came back negative.",ar:"جاءت النتائج سلبية.",lv:"A"},
+{en:"I'm feeling much better.",ar:"أشعر بتحسن كبير.",lv:"A"},
+{en:"Take it easy for a few days.",ar:"خذها بهدوء لبضعة أيام.",lv:"A"},
+{en:"Drink lots of fluids.",ar:"اشرب الكثير من السوائل.",lv:"A"},
+{en:"Come back if it gets worse.",ar:"عُد إذا ازداد الأمر سوءاً.",lv:"A"},
+{en:"Prevention is better than cure.",ar:"الوقاية خير من العلاج.",lv:"A"},
+{en:"I've been sneezing all day.",ar:"كنت أعطس طوال اليوم.",lv:"A"},
+{en:"My eyes are itchy.",ar:"عيناي تحكّان.",lv:"A"},
+{en:"I think it's allergies.",ar:"أعتقد أنه حساسية.",lv:"A"},
+{en:"I need antihistamines.",ar:"أحتاج إلى مضادات الهيستامين.",lv:"B"},
+{en:"I've been having trouble sleeping.",ar:"كنت أعاني من صعوبة في النوم.",lv:"B"},
+{en:"I'm trying to build healthy habits.",ar:"أحاول بناء عادات صحية.",lv:"B"},
+{en:"Hydration is key.",ar:"الترطيب هو المفتاح.",lv:"B"},
+{en:"Listen to your body.",ar:"استمع لجسدك.",lv:"B"},
+{en:"Don't skip meals.",ar:"لا تتخطى الوجبات.",lv:"A"},
+{en:"I've been working out.",ar:"كنت أتمرن.",lv:"A"},
+{en:"I finally joined a gym.",ar:"انضممت أخيراً إلى الجيم.",lv:"A"},
+{en:"My trainer is great.",ar:"مدربي رائع.",lv:"A"},
+{en:"I love yoga.",ar:"أحب اليوغا.",lv:"A"},
+{en:"Meditation helps me.",ar:"التأمل يساعدني.",lv:"B"},
+{en:"I run every morning.",ar:"أركض كل صباح.",lv:"A"},
+{en:"I've lost five kilos.",ar:"خسرت خمسة كيلوغرامات.",lv:"A"},
+{en:"I feel stronger now.",ar:"أشعر أنني أقوى الآن.",lv:"A"},
+{en:"Progress not perfection.",ar:"التقدم وليس الكمال.",lv:"B"},
+{en:"I had a check-up today.",ar:"أجريت فحصاً اليوم.",lv:"A"},
+{en:"Everything looks good.",ar:"كل شيء يبدو جيداً.",lv:"A"},
+{en:"My blood pressure is high.",ar:"ضغط الدم لديّ مرتفع.",lv:"A"},
+{en:"Keep taking your medication.",ar:"استمر في تناول دوائك.",lv:"A"},
+{en:"Don't skip doses.",ar:"لا تفوّت الجرعات.",lv:"A"},
+{en:"Take it with food.",ar:"تناوله مع الطعام.",lv:"A"},
+{en:"I got sunburned.",ar:"أصابتني حروق الشمس.",lv:"A"},
+{en:"Is this contagious?",ar:"هل هذا معدٍ؟",lv:"A"},
+{en:"Your health is your wealth.",ar:"صحتك هي ثروتك.",lv:"B"},
+{en:"Do I need a prescription for this?",ar:"هل أحتاج إلى وصفة طبية لهذا؟",lv:"A"},
+{en:"I have a rash.",ar:"لديّ طفح جلدي.",lv:"A"},
+{en:"I feel dehydrated.",ar:"أشعر بالجفاف.",lv:"A"},
+{en:"I need a second opinion.",ar:"أحتاج إلى رأي ثانٍ.",lv:"B"},
+{en:"I hurt my shoulder.",ar:"أصبت كتفي.",lv:"A"},
+{en:"I need stitches.",ar:"أحتاج إلى خياطة.",lv:"A"},
+{en:"The wound is infected.",ar:"الجرح ملتهب.",lv:"A"},
+{en:"I'm having chest pain.",ar:"أشعر بألم في صدري.",lv:"A"},
+{en:"Call emergency services.",ar:"اتصل بخدمات الطوارئ.",lv:"A"},
+{en:"I eat when I'm stressed.",ar:"آكل عندما أشعر بالتوتر.",lv:"B"},
+{en:"I need to stretch more.",ar:"أحتاج إلى التمدد أكثر.",lv:"A"},
+{en:"Small steps make a big difference.",ar:"الخطوات الصغيرة تحدث فرقاً كبيراً.",lv:"B"},
+{en:"Avoid strenuous activity.",ar:"تجنب النشاط الشاق.",lv:"B"},
+],
+"tech":[
+{en:"My Wi-Fi is down.",ar:"الواي فاي لديّ لا يعمل.",lv:"A"},
+{en:"Can I get the Wi-Fi password?",ar:"هل يمكنني الحصول على كلمة مرور الواي فاي؟",lv:"A"},
+{en:"My phone is almost dead.",ar:"هاتفي على وشك النفاد.",lv:"A"},
+{en:"Do you have a charger?",ar:"هل لديك شاحن؟",lv:"A"},
+{en:"My laptop froze.",ar:"حاسوبي تجمد.",lv:"A"},
+{en:"Did you try turning it off and on?",ar:"هل حاولت إيقاف تشغيله وإعادة تشغيله؟",lv:"A"},
+{en:"I need to update my software.",ar:"أحتاج إلى تحديث برنامجي.",lv:"A"},
+{en:"I forgot my password.",ar:"نسيت كلمة المرور.",lv:"A"},
+{en:"I need to back up my files.",ar:"أحتاج إلى نسخ ملفاتي احتياطياً.",lv:"A"},
+{en:"Is there an app for that?",ar:"هل هناك تطبيق لذلك؟",lv:"A"},
+{en:"Can you screenshot that?",ar:"هل يمكنك التقاط صورة للشاشة؟",lv:"A"},
+{en:"Share your location with me.",ar:"شارك موقعك معي.",lv:"A"},
+{en:"I'll send you the link.",ar:"سأرسل لك الرابط.",lv:"A"},
+{en:"Just Google it.",ar:"فقط ابحث عنه في جوجل.",lv:"A"},
+{en:"It's in the cloud.",ar:"إنه في السحابة.",lv:"A"},
+{en:"My storage is full.",ar:"مساحة التخزين ممتلئة.",lv:"A"},
+{en:"My internet is really slow.",ar:"إنترنتي بطيء جداً.",lv:"A"},
+{en:"The app keeps crashing.",ar:"التطبيق يتعطل باستمرار.",lv:"A"},
+{en:"I need to reset my password.",ar:"أحتاج إلى إعادة تعيين كلمة المرور.",lv:"A"},
+{en:"I got a suspicious email.",ar:"حصلت على بريد إلكتروني مشبوه.",lv:"A"},
+{en:"Don't click that link.",ar:"لا تنقر على ذلك الرابط.",lv:"A"},
+{en:"It might be a phishing scam.",ar:"قد تكون عملية تصيد احتيالي.",lv:"B"},
+{en:"I need a stronger password.",ar:"أحتاج إلى كلمة مرور أقوى.",lv:"A"},
+{en:"Enable two-factor authentication.",ar:"فعّل التحقق بخطوتين.",lv:"B"},
+{en:"Keep your software updated.",ar:"ابقِ برامجك محدثة.",lv:"A"},
+{en:"Back up your data regularly.",ar:"احتفظ بنسخ احتياطية منتظمة.",lv:"B"},
+{en:"My phone got hacked.",ar:"تعرض هاتفي للقرصنة.",lv:"A"},
+{en:"I need a new laptop.",ar:"أحتاج إلى حاسوب جديد.",lv:"A"},
+{en:"What are the specs?",ar:"ما المواصفات؟",lv:"B"},
+{en:"Is it compatible?",ar:"هل هو متوافق؟",lv:"A"},
+{en:"Can I download this for free?",ar:"هل يمكنني تنزيل هذا مجاناً؟",lv:"A"},
+{en:"The printer isn't working.",ar:"الطابعة لا تعمل.",lv:"A"},
+{en:"The Bluetooth won't connect.",ar:"البلوتوث لا يتصل.",lv:"A"},
+{en:"Put your phone on silent.",ar:"ضع هاتفك على الصامت.",lv:"A"},
+{en:"I need a digital detox.",ar:"أحتاج إلى إزالة السموم الرقمية.",lv:"B"},
+{en:"Can you help me set this up?",ar:"هل يمكنك مساعدتي في ضبط هذا؟",lv:"A"},
+{en:"I can't get past the login screen.",ar:"لا أستطيع تجاوز شاشة تسجيل الدخول.",lv:"A"},
+{en:"My account got suspended.",ar:"تم تعليق حسابي.",lv:"A"},
+{en:"The website is down.",ar:"الموقع معطل.",lv:"A"},
+{en:"I need to clear my cookies.",ar:"أحتاج إلى مسح ملفات تعريف الارتباط.",lv:"B"},
+{en:"Don't use the same password twice.",ar:"لا تستخدم نفس كلمة المرور مرتين.",lv:"B"},
+{en:"How do I unsubscribe?",ar:"كيف أشطب الاشتراك؟",lv:"A"},
+{en:"My inbox is full.",ar:"صندوق بريدي الوارد ممتلئ.",lv:"A"},
+{en:"Can you share the file?",ar:"هل يمكنك مشاركة الملف؟",lv:"A"},
+{en:"Convert it to PDF.",ar:"حوّله إلى PDF.",lv:"A"},
+{en:"The file is too large.",ar:"الملف كبير جداً.",lv:"A"},
+{en:"Upload it to Google Drive.",ar:"حمّله على Google Drive.",lv:"A"},
+{en:"Send it as an attachment.",ar:"أرسله كملف مرفق.",lv:"A"},
+{en:"My browser is lagging.",ar:"متصفحي بطيء.",lv:"A"},
+{en:"Clear your cache.",ar:"امسح ذاكرة التخزين المؤقت.",lv:"B"},
+{en:"Try a different browser.",ar:"جرب متصفحاً مختلفاً.",lv:"A"},
+{en:"Incognito mode.",ar:"وضع التصفح الخفي.",lv:"B"},
+{en:"My screen is cracked.",ar:"شاشتي مكسورة.",lv:"A"},
+{en:"The battery drains fast.",ar:"البطارية تنفد بسرعة.",lv:"A"},
+{en:"I need a power bank.",ar:"أحتاج إلى بنك طاقة.",lv:"A"},
+{en:"My phone needs resetting.",ar:"هاتفي يحتاج إلى إعادة ضبط المصنع.",lv:"B"},
+{en:"All my data is gone!",ar:"جميع بياناتي اختفت!",lv:"A"},
+{en:"Restore from backup.",ar:"استعد من النسخة الاحتياطية.",lv:"B"},
+{en:"Update your operating system.",ar:"حدّث نظام التشغيل.",lv:"A"},
+{en:"My phone overheats.",ar:"هاتفي يسخن بشكل مفرط.",lv:"A"},
+{en:"Close background apps.",ar:"أغلق التطبيقات في الخلفية.",lv:"A"},
+{en:"Free up some storage.",ar:"أخلِ بعض مساحة التخزين.",lv:"A"},
+{en:"Set a reminder for me.",ar:"ضع لي تذكيراً.",lv:"A"},
+{en:"Turn on dark mode.",ar:"فعّل الوضع الداكن.",lv:"A"},
+{en:"This app is a game-changer.",ar:"هذا التطبيق غيّر قواعد اللعبة.",lv:"B"},
+{en:"How do I turn off notifications?",ar:"كيف أوقف الإشعارات؟",lv:"A"},
+{en:"My phone keeps ringing.",ar:"هاتفي يرن باستمرار.",lv:"A"},
+{en:"Block that number.",ar:"احظر ذلك الرقم.",lv:"A"},
+{en:"I got a spam call.",ar:"تلقيت مكالمة مزعجة.",lv:"A"},
+{en:"Text me your location.",ar:"أرسل لي موقعك.",lv:"A"},
+{en:"Can we video call tonight?",ar:"هل يمكننا إجراء مكالمة فيديو الليلة؟",lv:"A"},
+{en:"I'll airdrop it to you.",ar:"سأرسله لك عبر AirDrop.",lv:"A"},
+{en:"Use a password manager.",ar:"استخدم مدير كلمات المرور.",lv:"B"},
+{en:"My laptop has a virus.",ar:"حاسوبي يحتوي على فيروس.",lv:"A"},
+{en:"The connection keeps dropping.",ar:"الاتصال ينقطع باستمرار.",lv:"A"},
+{en:"My keyboard isn't responding.",ar:"لوحة مفاتيحي لا تستجيب.",lv:"A"},
+{en:"The camera isn't working.",ar:"الكاميرا لا تعمل.",lv:"A"},
+{en:"Check your notifications.",ar:"تحقق من إشعاراتك.",lv:"A"},
+{en:"Add me on LinkedIn.",ar:"أضفني على LinkedIn.",lv:"A"},
+{en:"Stop scrolling and talk to me.",ar:"توقف عن التمرير وتحدث معي.",lv:"B"},
+{en:"Create a strong password.",ar:"أنشئ كلمة مرور قوية.",lv:"A"},
+],
+"idioms":[
+{en:"Hit the nail on the head.",ar:"أصاب كبد الحقيقة.",lv:"B"},
+{en:"Bite off more than you can chew.",ar:"يعض أكثر مما يستطيع مضغه.",lv:"B"},
+{en:"Beat around the bush.",ar:"يتهرب من الموضوع.",lv:"B"},
+{en:"Let the cat out of the bag.",ar:"كشف السر.",lv:"B"},
+{en:"Once in a blue moon.",ar:"نادراً جداً.",lv:"B"},
+{en:"Break the ice.",ar:"يكسر الجليد.",lv:"B"},
+{en:"Cost an arm and a leg.",ar:"يكلف الكثير.",lv:"B"},
+{en:"Under the weather.",ar:"مريض أو غير متحمس.",lv:"B"},
+{en:"Bite the bullet.",ar:"يتحمل الألم ويواجه.",lv:"B"},
+{en:"Piece of cake.",ar:"سهل جداً.",lv:"A"},
+{en:"Spill the beans.",ar:"يكشف الأسرار.",lv:"B"},
+{en:"Hit the sack.",ar:"يذهب للنوم.",lv:"B"},
+{en:"Pull someone's leg.",ar:"يمزح مع شخص.",lv:"B"},
+{en:"Jump on the bandwagon.",ar:"يتبع الموضة.",lv:"B"},
+{en:"Kick the bucket.",ar:"يموت.",lv:"B"},
+{en:"Let sleeping dogs lie.",ar:"لا تثر المشاكل القديمة.",lv:"B"},
+{en:"Miss the boat.",ar:"فوّت الفرصة.",lv:"B"},
+{en:"No pain, no gain.",ar:"لا شيء يُنال بدون تعب.",lv:"A"},
+{en:"Sit on the fence.",ar:"يتردد ولا يأخذ موقفاً.",lv:"B"},
+{en:"Steal someone's thunder.",ar:"يسرق الأضواء من شخص.",lv:"C"},
+{en:"The ball is in your court.",ar:"القرار بيدك الآن.",lv:"B"},
+{en:"The best of both worlds.",ar:"الاستفادة من الأمرين معاً.",lv:"B"},
+{en:"Time flies.",ar:"الوقت يمر بسرعة.",lv:"A"},
+{en:"Burning bridges.",ar:"قطع العلاقات نهائياً.",lv:"B"},
+{en:"Don't cry over spilled milk.",ar:"لا تحزن على ما مضى.",lv:"B"},
+{en:"Every cloud has a silver lining.",ar:"كل محنة وراءها منحة.",lv:"B"},
+{en:"Go back to the drawing board.",ar:"يبدأ من الصفر.",lv:"B"},
+{en:"Hit the ground running.",ar:"يبدأ بقوة وسرعة.",lv:"B"},
+{en:"In the blink of an eye.",ar:"في لمح البصر.",lv:"B"},
+{en:"You can't judge a book by its cover.",ar:"لا تحكم على الكتاب من غلافه.",lv:"B"},
+{en:"A blessing in disguise.",ar:"نعمة في ثوب مصيبة.",lv:"B"},
+{en:"Back to square one.",ar:"العودة إلى نقطة البداية.",lv:"B"},
+{en:"Better late than never.",ar:"التأخر خير من عدم الحضور.",lv:"A"},
+{en:"Burn the midnight oil.",ar:"يسهر متأخراً في العمل.",lv:"B"},
+{en:"Caught red-handed.",ar:"ضُبط متلبساً.",lv:"B"},
+{en:"Cut to the chase.",ar:"اذهب مباشرة للموضوع.",lv:"B"},
+{en:"Drop the ball.",ar:"يفشل في مسؤوليته.",lv:"B"},
+{en:"Get out of hand.",ar:"يخرج عن السيطرة.",lv:"B"},
+{en:"Give it a shot.",ar:"جرّبه.",lv:"B"},
+{en:"Go the extra mile.",ar:"يبذل جهداً إضافياً.",lv:"B"},
+{en:"Hold your horses.",ar:"تمهّل.",lv:"B"},
+{en:"In hot water.",ar:"في ورطة.",lv:"B"},
+{en:"Jump to conclusions.",ar:"يتسرع في الاستنتاجات.",lv:"B"},
+{en:"Kill two birds with one stone.",ar:"يقتل عصفورين بحجر واحد.",lv:"B"},
+{en:"Knock on wood.",ar:"يتفاءل ويبتعد عن التشاؤم.",lv:"B"},
+{en:"Leave no stone unturned.",ar:"يبذل كل جهد ممكن.",lv:"C"},
+{en:"Make a long story short.",ar:"اختصر القصة.",lv:"B"},
+{en:"Not my cup of tea.",ar:"ليس من تفضيلاتي.",lv:"B"},
+{en:"Once bitten, twice shy.",ar:"من لدغته الحية يخاف من الحبل.",lv:"B"},
+{en:"Out of the blue.",ar:"فجأة وبدون مقدمات.",lv:"B"},
+{en:"Put your foot down.",ar:"يتخذ موقفاً حازماً.",lv:"B"},
+{en:"Ring a bell.",ar:"يذكّرك بشيء.",lv:"B"},
+{en:"See eye to eye.",ar:"يتفق مع شخص.",lv:"B"},
+{en:"Take it with a grain of salt.",ar:"خذه بتحفظ.",lv:"B"},
+{en:"The last straw.",ar:"القشة التي قصمت ظهر البعير.",lv:"B"},
+{en:"Think outside the box.",ar:"يفكر خارج الصندوق.",lv:"B"},
+{en:"Through thick and thin.",ar:"في السراء والضراء.",lv:"B"},
+{en:"Throw in the towel.",ar:"يستسلم.",lv:"B"},
+{en:"Tie the knot.",ar:"يتزوج.",lv:"B"},
+{en:"Up in the air.",ar:"غير محسوم.",lv:"B"},
+{en:"Weather the storm.",ar:"يتجاوز الصعاب.",lv:"B"},
+{en:"When pigs fly.",ar:"مستحيل.",lv:"B"},
+{en:"You reap what you sow.",ar:"تحصد ما تزرع.",lv:"B"},
+{en:"Actions speak louder than words.",ar:"الأفعال أبلغ من الكلمات.",lv:"B"},
+{en:"Don't put all your eggs in one basket.",ar:"لا تضع كل بيضك في سلة واحدة.",lv:"B"},
+{en:"The early bird catches the worm.",ar:"الطائر المبكر يصطاد الدودة.",lv:"B"},
+{en:"It takes two to tango.",ar:"يحتاج الأمر طرفين.",lv:"B"},
+{en:"Look before you leap.",ar:"فكّر قبل أن تقفز.",lv:"B"},
+{en:"Barking up the wrong tree.",ar:"يبحث في المكان الخاطئ.",lv:"B"},
+{en:"Face the music.",ar:"يواجه العواقب.",lv:"B"},
+{en:"Get cold feet.",ar:"يتردد في اللحظة الأخيرة.",lv:"B"},
+{en:"Icing on the cake.",ar:"الكرز على الكعكة.",lv:"B"},
+{en:"Keep your chin up.",ar:"ابقَ متفائلاً.",lv:"A"},
+{en:"Light at the end of the tunnel.",ar:"نور في نهاية النفق.",lv:"B"},
+{en:"Make ends meet.",ar:"يوفّر احتياجاته الأساسية.",lv:"B"},
+{en:"Money doesn't grow on trees.",ar:"المال لا ينبت على الأشجار.",lv:"B"},
+{en:"Not rocket science.",ar:"ليس بالأمر الصعب.",lv:"B"},
+{en:"On the tip of my tongue.",ar:"على طرف لساني.",lv:"B"},
+{en:"Rome wasn't built in a day.",ar:"روما لم تُبنَ في يوم.",lv:"B"},
+{en:"The more the merrier.",ar:"كلما زاد العدد زاد الفرح.",lv:"B"},
+{en:"Add fuel to the fire.",ar:"يضيف الزيت على النار.",lv:"B"},
+{en:"At the drop of a hat.",ar:"فوراً وبدون تردد.",lv:"B"},
+{en:"By the skin of your teeth.",ar:"بصعوبة شديدة.",lv:"B"},
+{en:"Don't beat a dead horse.",ar:"لا تضيع وقتك في أمر منتهٍ.",lv:"C"},
+{en:"Bite the hand that feeds you.",ar:"يعض اليد التي تطعمه.",lv:"C"},
+{en:"A penny for your thoughts.",ar:"ماذا يدور في بالك؟",lv:"B"},
+{en:"Every dog has its day.",ar:"لكل كلب يومه.",lv:"B"},
+{en:"It's raining cats and dogs.",ar:"الأمطار غزيرة جداً.",lv:"B"},
+{en:"Hit the books.",ar:"يبدأ في الدراسة الجادة.",lv:"B"},
+{en:"Cross that bridge when you come to it.",ar:"سنحل المشكلة حين تحدث.",lv:"C"},
+{en:"Bite the dust.",ar:"يفشل أو يُهزم.",lv:"B"},
+],
+"argue":[
+{en:"That's not what I meant.",ar:"هذا ليس ما قصدته.",lv:"A"},
+{en:"You're putting words in my mouth.",ar:"أنت تضع كلمات في فمي.",lv:"B"},
+{en:"Let me finish.",ar:"دعني أكمل.",lv:"A"},
+{en:"Can you let me speak?",ar:"هل يمكنك أن تتركني أتكلم؟",lv:"A"},
+{en:"You're not listening.",ar:"أنت لا تستمع.",lv:"A"},
+{en:"Hear me out.",ar:"استمع إليّ.",lv:"A"},
+{en:"I don't appreciate that.",ar:"لا أرتاح لهذا.",lv:"B"},
+{en:"That was uncalled for.",ar:"هذا لم يكن ضرورياً.",lv:"B"},
+{en:"Please don't raise your voice.",ar:"من فضلك لا ترفع صوتك.",lv:"A"},
+{en:"We need to talk.",ar:"نحتاج إلى التحدث.",lv:"A"},
+{en:"Can we discuss this calmly?",ar:"هل يمكننا مناقشة هذا بهدوء؟",lv:"A"},
+{en:"I'm not trying to fight.",ar:"لست أحاول الشجار.",lv:"A"},
+{en:"I'm just trying to be honest.",ar:"أحاول فقط أن أكون صادقاً.",lv:"A"},
+{en:"That's not fair.",ar:"هذا ليس عادلاً.",lv:"A"},
+{en:"I have a right to be upset.",ar:"من حقي أن أكون محبطاً.",lv:"B"},
+{en:"I'm sorry you feel that way.",ar:"أنا آسف لأنك تشعر بهذا الشكل.",lv:"B"},
+{en:"I owe you an apology.",ar:"أنت تستحق مني اعتذاراً.",lv:"B"},
+{en:"I was wrong.",ar:"كنت مخطئاً.",lv:"A"},
+{en:"Let's move on.",ar:"لننتقل إلى الأمام.",lv:"A"},
+{en:"I forgive you.",ar:"أنا أسامحك.",lv:"A"},
+{en:"Let's start fresh.",ar:"لنبدأ من جديد.",lv:"A"},
+{en:"No hard feelings.",ar:"لا مشاعر سلبية.",lv:"A"},
+{en:"I shouldn't have said that.",ar:"لم كان ينبغي لي أن أقول ذلك.",lv:"B"},
+{en:"I regret it.",ar:"أنا نادم على ذلك.",lv:"A"},
+{en:"Can we drop it?",ar:"هل يمكننا إنهاء الموضوع؟",lv:"A"},
+{en:"I'm over it.",ar:"لقد تجاوزته.",lv:"A"},
+{en:"It's in the past.",ar:"إنه في الماضي.",lv:"A"},
+{en:"I was out of line.",ar:"تصرفت بشكل غير لائق.",lv:"B"},
+{en:"I didn't mean to hurt you.",ar:"لم أقصد إيذاءك.",lv:"A"},
+{en:"Give me a chance to explain.",ar:"أعطني فرصة للتوضيح.",lv:"A"},
+{en:"Please hear my side.",ar:"من فضلك استمع لوجهة نظري.",lv:"A"},
+{en:"I see your perspective.",ar:"أرى منظورك.",lv:"B"},
+{en:"I take full responsibility.",ar:"أتحمل المسؤولية الكاملة.",lv:"B"},
+{en:"It won't happen again.",ar:"لن يحدث هذا مجدداً.",lv:"A"},
+{en:"I'll do better.",ar:"سأكون أفضل.",lv:"A"},
+{en:"I'm not your enemy.",ar:"لست عدوك.",lv:"A"},
+{en:"We're on the same side.",ar:"نحن في نفس الجانب.",lv:"B"},
+{en:"This argument is pointless.",ar:"هذا الجدال لا طائل منه.",lv:"B"},
+{en:"What do you want from me?",ar:"ماذا تريد مني؟",lv:"A"},
+{en:"Stop twisting my words.",ar:"توقف عن تحريف كلامي.",lv:"B"},
+{en:"Let's talk when we're both calm.",ar:"لنتحدث عندما نكون كلانا هادئين.",lv:"B"},
+{en:"I still care about you.",ar:"لا أزال أهتم بك.",lv:"A"},
+{en:"This needs to stop.",ar:"يجب أن يتوقف هذا.",lv:"A"},
+{en:"Something needs to change.",ar:"يجب أن يتغير شيء ما.",lv:"B"},
+{en:"Communication is key.",ar:"التواصل هو المفتاح.",lv:"A"},
+{en:"I'm willing to compromise.",ar:"أنا مستعد للتسوية.",lv:"B"},
+{en:"Can we meet halfway?",ar:"هل يمكننا الاجتماع في المنتصف؟",lv:"B"},
+{en:"I want to fix this.",ar:"أريد إصلاح هذا.",lv:"A"},
+{en:"I choose you over being right.",ar:"أختارك على أن أكون على حق.",lv:"C"},
+{en:"Let's clear the air.",ar:"لنصفي الجو.",lv:"B"},
+{en:"I need some space right now.",ar:"أحتاج إلى بعض المساحة الآن.",lv:"B"},
+{en:"I'm not ready to talk yet.",ar:"لست مستعداً للحديث بعد.",lv:"B"},
+{en:"I acted out of frustration.",ar:"تصرفت من الإحباط.",lv:"B"},
+{en:"Thank you for being patient with me.",ar:"شكراً على صبرك معي.",lv:"B"},
+{en:"I value this relationship.",ar:"أقدّر هذه العلاقة.",lv:"B"},
+{en:"Let's find a solution together.",ar:"لنجد حلاً معاً.",lv:"A"},
+{en:"I'm not trying to win.",ar:"لست أحاول الانتصار.",lv:"A"},
+{en:"It takes two to fix this.",ar:"يحتاج إصلاح هذا طرفين.",lv:"B"},
+{en:"Give me time to process.",ar:"أعطني وقتاً للاستيعاب.",lv:"B"},
+{en:"I just need a moment.",ar:"أحتاج لحظة فقط.",lv:"A"},
+{en:"That came out wrong.",ar:"خرجت تلك الجملة بطريقة خاطئة.",lv:"B"},
+{en:"I didn't mean it that way.",ar:"لم أقصد ذلك بهذا الشكل.",lv:"B"},
+{en:"Let's be adults about this.",ar:"لنتعامل مع هذا بنضج.",lv:"B"},
+{en:"I'm disappointed but not angry.",ar:"أنا محبط ولكن لست غاضباً.",lv:"B"},
+{en:"Can we start over?",ar:"هل يمكننا البدء من جديد؟",lv:"A"},
+{en:"I was not fair to you.",ar:"لم أكن عادلاً معك.",lv:"A"},
+{en:"I need you to listen.",ar:"أحتاجك أن تستمع.",lv:"A"},
+{en:"We need to work on this together.",ar:"نحتاج إلى العمل على هذا معاً.",lv:"B"},
+{en:"We can't keep doing this.",ar:"لا يمكننا الاستمرار في هذا.",lv:"B"},
+{en:"I'm trying to be the bigger person.",ar:"أحاول أن أكون الشخص الأكثر نضجاً.",lv:"B"},
+{en:"I don't want to say something I'll regret.",ar:"لا أريد أن أقول شيئاً سأندم عليه.",lv:"B"},
+{en:"Water under the bridge.",ar:"مياه تحت الجسر.",lv:"C"},
+{en:"I'm sorry.",ar:"أنا آسف.",lv:"A"},
+],
+"love":[
+{en:"I like you.",ar:"أنا معجب بك.",lv:"A"},
+{en:"I have a crush on you.",ar:"أنا مفتون بك.",lv:"A"},
+{en:"You've been on my mind.",ar:"كنت في خاطري.",lv:"B"},
+{en:"I can't stop thinking about you.",ar:"لا أستطيع التوقف عن التفكير فيك.",lv:"B"},
+{en:"Would you like to go out sometime?",ar:"هل تود الخروج في وقت ما؟",lv:"A"},
+{en:"You make me smile.",ar:"أنت تجعلني أبتسم.",lv:"A"},
+{en:"I love spending time with you.",ar:"أحب قضاء الوقت معك.",lv:"A"},
+{en:"You mean a lot to me.",ar:"أنت تعني لي الكثير.",lv:"B"},
+{en:"I love you.",ar:"أحبك.",lv:"A"},
+{en:"I'm falling for you.",ar:"أقع في حبك.",lv:"B"},
+{en:"You're my person.",ar:"أنت شريكي في الحياة.",lv:"B"},
+{en:"I feel safe with you.",ar:"أشعر بالأمان معك.",lv:"B"},
+{en:"You complete me.",ar:"أنت تكملني.",lv:"B"},
+{en:"I want to be with you.",ar:"أريد أن أكون معك.",lv:"A"},
+{en:"Do you feel the same way?",ar:"هل تشعر بالمثل؟",lv:"A"},
+{en:"I was afraid to tell you.",ar:"كنت خائفاً من إخبارك.",lv:"A"},
+{en:"I've never felt this way before.",ar:"لم أشعر بهذه الطريقة من قبل.",lv:"B"},
+{en:"You're unlike anyone I've met.",ar:"أنت لا تشبه أي شخص قابلته.",lv:"B"},
+{en:"I'd love to get to know you better.",ar:"أود التعرف عليك أكثر.",lv:"B"},
+{en:"Can I take you on a date?",ar:"هل يمكنني أخذك في موعد؟",lv:"A"},
+{en:"I've been thinking about us.",ar:"كنت أفكر فيما بيننا.",lv:"B"},
+{en:"I need space.",ar:"أحتاج إلى مساحة.",lv:"A"},
+{en:"I think we should break up.",ar:"أعتقد أننا يجب أن ننفصل.",lv:"B"},
+{en:"It's not you, it's me.",ar:"ليس أنت، إنني أنا.",lv:"A"},
+{en:"I still care about you.",ar:"لا أزال أهتم بك.",lv:"A"},
+{en:"I hope we can stay friends.",ar:"أتمنى أن نبقى أصدقاء.",lv:"A"},
+{en:"Maybe in another life.",ar:"ربما في حياة أخرى.",lv:"B"},
+{en:"Thank you for the memories.",ar:"شكراً على الذكريات.",lv:"B"},
+{en:"You have my heart.",ar:"قلبي لك.",lv:"B"},
+{en:"I adore you.",ar:"أنا أعشقك.",lv:"B"},
+{en:"You make everything better.",ar:"أنت تجعل كل شيء أفضل.",lv:"B"},
+{en:"I cherish every moment with you.",ar:"أقدر كل لحظة معك.",lv:"B"},
+{en:"You're my best friend.",ar:"أنت أفضل صديق لي.",lv:"B"},
+{en:"I choose you every day.",ar:"أختارك كل يوم.",lv:"B"},
+{en:"I'd do anything for you.",ar:"سأفعل أي شيء من أجلك.",lv:"B"},
+{en:"You're home to me.",ar:"أنت وطني.",lv:"C"},
+{en:"Growing old with you sounds perfect.",ar:"التقدم في السن معك يبدو مثالياً.",lv:"C"},
+{en:"I'm nervous around you.",ar:"أشعر بالتوتر في حضورك.",lv:"A"},
+{en:"You give me butterflies.",ar:"تجعلني أشعر بفراشات في بطني.",lv:"B"},
+{en:"I can't imagine life without you.",ar:"لا أستطيع تخيل الحياة بدونك.",lv:"B"},
+{en:"Will you be mine?",ar:"هل ستكون لي؟",lv:"B"},
+{en:"You're the one.",ar:"أنت الشخص المناسب.",lv:"B"},
+{en:"We were meant to be.",ar:"كنا مقدرين لبعض.",lv:"B"},
+{en:"I love you more each day.",ar:"أحبك أكثر كل يوم.",lv:"B"},
+{en:"Distance can't change how I feel.",ar:"المسافة لا تغير مشاعري.",lv:"B"},
+{en:"Let's take it slow.",ar:"لنسير ببطء.",lv:"B"},
+{en:"I want to make this official.",ar:"أريد أن أجعل هذا رسمياً.",lv:"B"},
+{en:"Meet my partner.",ar:"هذا شريك حياتي.",lv:"A"},
+{en:"We just got engaged!",ar:"لقد خطبنا للتو!",lv:"A"},
+{en:"She said yes!",ar:"قالت نعم!",lv:"A"},
+{en:"We're getting married!",ar:"سنتزوج!",lv:"A"},
+{en:"I do.",ar:"أقبل.",lv:"A"},
+{en:"You're the love of my life.",ar:"أنت حب حياتي.",lv:"B"},
+{en:"I'm so glad I met you.",ar:"أنا سعيد جداً لأنني قابلتك.",lv:"A"},
+{en:"Being with you feels right.",ar:"الكون معك يبدو صحيحاً.",lv:"B"},
+{en:"You know me better than anyone.",ar:"تعرفني أكثر من أي شخص.",lv:"B"},
+{en:"We're a team.",ar:"نحن فريق.",lv:"A"},
+{en:"You bring out the best in me.",ar:"تُخرج أفضل ما فيّ.",lv:"B"},
+{en:"I trust you completely.",ar:"أثق بك تماماً.",lv:"B"},
+{en:"I appreciate you every single day.",ar:"أقدرك كل يوم.",lv:"B"},
+{en:"Every day with you is a gift.",ar:"كل يوم معك هو هبة.",lv:"B"},
+{en:"I love everything about you.",ar:"أحب كل شيء فيك.",lv:"B"},
+{en:"You're my favorite person.",ar:"أنت شخصي المفضل.",lv:"B"},
+{en:"You make my world brighter.",ar:"أنت تضيء عالمي.",lv:"B"},
+{en:"I've never been happier.",ar:"لم أكن أكثر سعادة من أي وقت مضى.",lv:"B"},
+{en:"I want to spend forever with you.",ar:"أريد أن أقضي الأبد معك.",lv:"B"},
+{en:"My life is better with you in it.",ar:"حياتي أفضل بوجودك فيها.",lv:"C"},
+{en:"Here's to us, forever.",ar:"في صحتنا، إلى الأبد.",lv:"B"},
+{en:"I couldn't have done it without you.",ar:"لم أكن لأتمكن من ذلك بدونك.",lv:"B"},
+{en:"I fall in love with you more every day.",ar:"أزداد حباً لك كل يوم.",lv:"C"},
+{en:"Are we exclusive?",ar:"هل علاقتنا حصرية؟",lv:"B"},
+{en:"I like where this is going.",ar:"يعجبني أين تسير الأمور.",lv:"B"},
+{en:"We need to talk about us.",ar:"نحتاج إلى التحدث عن علاقتنا.",lv:"B"},
+{en:"I think we've grown apart.",ar:"أعتقد أننا ابتعدنا عن بعض.",lv:"B"},
+{en:"I knew from the start.",ar:"علمت من البداية.",lv:"B"},
+],
+"family":[
+{en:"Dinner is ready!",ar:"العشاء جاهز!",lv:"A"},
+{en:"Come set the table.",ar:"تعال واستعد الطاولة.",lv:"A"},
+{en:"Who left the lights on?",ar:"من ترك الأنوار مضاءة؟",lv:"A"},
+{en:"Don't slam the door.",ar:"لا تدق الباب بقوة.",lv:"A"},
+{en:"Clean your room.",ar:"نظف غرفتك.",lv:"A"},
+{en:"We're out of milk.",ar:"نفد الحليب.",lv:"A"},
+{en:"Who ate the last slice?",ar:"من أكل القطعة الأخيرة؟",lv:"A"},
+{en:"What's for breakfast?",ar:"ما وجبة الإفطار؟",lv:"A"},
+{en:"Keep the noise down.",ar:"قلل الضوضاء.",lv:"A"},
+{en:"Can we talk?",ar:"هل يمكننا التحدث؟",lv:"A"},
+{en:"I'm proud of you.",ar:"أنا فخور بك.",lv:"A"},
+{en:"You're growing up so fast.",ar:"أنت تكبر بسرعة كبيرة.",lv:"A"},
+{en:"I'll always be here for you.",ar:"سأكون دائماً هنا من أجلك.",lv:"B"},
+{en:"Family comes first.",ar:"العائلة في المرتبة الأولى.",lv:"A"},
+{en:"We need a family meeting.",ar:"نحتاج إلى اجتماع عائلي.",lv:"A"},
+{en:"Let's plan a family trip.",ar:"لنخطط لرحلة عائلية.",lv:"A"},
+{en:"Watch your language.",ar:"راقب لغتك.",lv:"A"},
+{en:"We're having guests over.",ar:"سيأتينا ضيوف.",lv:"A"},
+{en:"Help me with the cooking.",ar:"ساعدني في الطبخ.",lv:"A"},
+{en:"Stop fighting with your sister.",ar:"توقف عن الشجار مع أختك.",lv:"A"},
+{en:"Apologize to your brother.",ar:"اعتذر لأخيك.",lv:"A"},
+{en:"Share!",ar:"شارك!",lv:"A"},
+{en:"You're grounded.",ar:"أنت ممنوع من الخروج.",lv:"A"},
+{en:"I'm not angry, I'm disappointed.",ar:"لست غاضباً، أنا محبط.",lv:"A"},
+{en:"You know better than that.",ar:"أنت أفضل من أن تفعل ذلك.",lv:"B"},
+{en:"I love you no matter what.",ar:"أحبك مهما حدث.",lv:"A"},
+{en:"You're my world.",ar:"أنت عالمي.",lv:"B"},
+{en:"I'd do anything for my kids.",ar:"سأفعل أي شيء من أجل أطفالي.",lv:"A"},
+{en:"Children are a blessing.",ar:"الأطفال نعمة.",lv:"A"},
+{en:"Call your mother.",ar:"اتصل بأمك.",lv:"A"},
+{en:"She worries about you.",ar:"إنها قلقة عليك.",lv:"A"},
+{en:"Visit more often.",ar:"زُر أكثر.",lv:"A"},
+{en:"The kids miss you.",ar:"الأطفال يشتاقون إليك.",lv:"A"},
+{en:"We should video call tonight.",ar:"يجب أن نتحدث عبر الفيديو الليلة.",lv:"A"},
+{en:"Happy birthday, sweetheart.",ar:"عيد ميلاد سعيد يا حبيبي.",lv:"A"},
+{en:"I made your favorite meal.",ar:"أعددت طبقك المفضل.",lv:"A"},
+{en:"We're proud of everything you do.",ar:"نحن فخورون بكل ما تفعله.",lv:"B"},
+{en:"The house feels empty without you.",ar:"يبدو البيت فارغاً بدونك.",lv:"B"},
+{en:"Come home soon.",ar:"عُد إلى البيت قريباً.",lv:"A"},
+{en:"You'll always have a home here.",ar:"ستجد دائماً بيتاً هنا.",lv:"B"},
+{en:"Grandma says hello.",ar:"جدتك تبعث بتحياتها.",lv:"A"},
+{en:"How are your parents?",ar:"كيف حال والديك؟",lv:"A"},
+{en:"My parents are visiting.",ar:"والداي قادمان في زيارة.",lv:"A"},
+{en:"It's a family tradition.",ar:"إنها تقليد عائلي.",lv:"B"},
+{en:"Home is where the heart is.",ar:"البيت حيث يكون القلب.",lv:"B"},
+{en:"Don't forget your chores.",ar:"لا تنسَ واجباتك المنزلية.",lv:"A"},
+{en:"Homework before games.",ar:"الواجب المنزلي قبل الألعاب.",lv:"A"},
+{en:"How was school today?",ar:"كيف كان يوم المدرسة اليوم؟",lv:"A"},
+{en:"Did you finish your homework?",ar:"هل أنهيت واجبك المنزلي؟",lv:"A"},
+{en:"Eat your vegetables.",ar:"كُل خضروآتك.",lv:"A"},
+{en:"It's almost bedtime.",ar:"حان وقت النوم تقريباً.",lv:"A"},
+{en:"Give me a hug.",ar:"أعطني عناقاً.",lv:"A"},
+{en:"I love you to the moon and back.",ar:"أحبك إلى القمر وعودة.",lv:"A"},
+{en:"Sleep tight, little one.",ar:"نم هنيئاً يا صغيري.",lv:"A"},
+{en:"Can we go to the park?",ar:"هل يمكننا الذهاب إلى الحديقة؟",lv:"A"},
+{en:"I want ice cream.",ar:"أريد آيس كريم.",lv:"A"},
+{en:"That's not fair!",ar:"هذا ليس عادلاً!",lv:"A"},
+{en:"Are we there yet?",ar:"هل وصلنا بعد؟",lv:"A"},
+{en:"Turn off the TV.",ar:"أطفئ التلفاز.",lv:"A"},
+{en:"I'm bored.",ar:"أشعر بالملل.",lv:"A"},
+{en:"Let's watch a movie together.",ar:"لنشاهد فيلماً معاً.",lv:"A"},
+{en:"Sunday is family day.",ar:"الأحد يوم العائلة.",lv:"A"},
+{en:"Don't stay up too late.",ar:"لا تسهر كثيراً.",lv:"A"},
+{en:"You have school tomorrow.",ar:"لديك مدرسة غداً.",lv:"A"},
+{en:"We're out of bread.",ar:"نفد الخبز.",lv:"A"},
+{en:"Your room is a mess.",ar:"غرفتك فوضى.",lv:"A"},
+{en:"Turn that music down.",ar:"خفف الموسيقى.",lv:"A"},
+{en:"Who wants dessert?",ar:"من يريد الحلوى؟",lv:"A"},
+{en:"Let me tell you a bedtime story.",ar:"دعني أحكي لك قصة قبل النوم.",lv:"A"},
+{en:"We're out of snacks.",ar:"نفد وجبات الخفيفة.",lv:"A"},
+{en:"Mom said no, ask dad.",ar:"أمي قالت لا، اسأل أبي.",lv:"B"},
+{en:"Go to your room.",ar:"اذهب إلى غرفتك.",lv:"A"},
+{en:"We don't speak like that in this house.",ar:"لا نتحدث بهذه الطريقة في هذا البيت.",lv:"B"},
+{en:"Who used all the hot water?",ar:"من استخدم كل الماء الساخن؟",lv:"A"},
+{en:"The whole family is coming for holidays.",ar:"كل العائلة ستأتي في العطلة.",lv:"A"},
+{en:"It's way past your bedtime.",ar:"لقد تجاوزت وقت نومك بكثير.",lv:"B"},
+{en:"I need to talk to you privately.",ar:"أحتاج إلى التحدث معك على انفراد.",lv:"B"},
+{en:"My brother took my stuff.",ar:"أخي أخذ أغراضي.",lv:"A"},
+{en:"Can I have a friend over?",ar:"هل يمكنني دعوة صديق؟",lv:"A"},
+],
+"phone":[
+{en:"Can you hear me?",ar:"هل تسمعني؟",lv:"A"},
+{en:"You're breaking up.",ar:"الاتصال متقطع.",lv:"A"},
+{en:"I'll call you back.",ar:"سأعاود الاتصال بك.",lv:"A"},
+{en:"Let me put you on hold.",ar:"دعني أضعك في الانتظار.",lv:"A"},
+{en:"He's not available right now.",ar:"إنه غير متاح الآن.",lv:"A"},
+{en:"Can I take a message?",ar:"هل يمكنني أخذ رسالة؟",lv:"A"},
+{en:"Who's calling?",ar:"من يتصل؟",lv:"A"},
+{en:"I have bad signal here.",ar:"لديّ إشارة ضعيفة هنا.",lv:"A"},
+{en:"Let me switch to WhatsApp.",ar:"دعني أتحول إلى واتساب.",lv:"A"},
+{en:"Sorry, wrong number.",ar:"آسف، رقم خاطئ.",lv:"A"},
+{en:"My battery died.",ar:"مات بطارية هاتفي.",lv:"A"},
+{en:"I'll text you.",ar:"سأرسل لك رسالة.",lv:"A"},
+{en:"Did you see my message?",ar:"هل رأيت رسالتي؟",lv:"A"},
+{en:"I sent you the details.",ar:"أرسلت لك التفاصيل.",lv:"A"},
+{en:"Why aren't you answering?",ar:"لماذا لا ترد؟",lv:"A"},
+{en:"You left me on read.",ar:"تركتني أرى أنك قرأت ولم ترد.",lv:"B"},
+{en:"I was busy, sorry.",ar:"كنت مشغولاً، آسف.",lv:"A"},
+{en:"I'll reply later.",ar:"سأرد لاحقاً.",lv:"A"},
+{en:"Can you pick up?",ar:"هل يمكنك الرد على الهاتف؟",lv:"A"},
+{en:"Just give me a missed call.",ar:"فقط أعطني اتصالاً غير مرد عليه.",lv:"B"},
+{en:"I'm in a meeting.",ar:"أنا في اجتماع.",lv:"A"},
+{en:"I can't talk right now.",ar:"لا أستطيع التحدث الآن.",lv:"A"},
+{en:"I'll FaceTime you tonight.",ar:"سأتصل بك عبر فيس تايم الليلة.",lv:"A"},
+{en:"Are you on WhatsApp?",ar:"هل أنت على واتساب؟",lv:"A"},
+{en:"I'll add you to the group.",ar:"سأضيفك إلى المجموعة.",lv:"A"},
+{en:"Check your messages.",ar:"تحقق من رسائلك.",lv:"A"},
+{en:"I sent you a voice note.",ar:"أرسلت لك رسالة صوتية.",lv:"A"},
+{en:"Your number isn't working.",ar:"رقمك لا يعمل.",lv:"A"},
+{en:"The line went dead.",ar:"انقطع الخط.",lv:"A"},
+{en:"Call me on my mobile.",ar:"اتصل بي على هاتفي المحمول.",lv:"A"},
+{en:"Can you call me back in 10?",ar:"هل يمكنك الاتصال بي مجدداً بعد 10 دقائق؟",lv:"A"},
+{en:"I tried calling you twice.",ar:"حاولت الاتصال بك مرتين.",lv:"A"},
+{en:"Your phone is off.",ar:"هاتفك مغلق.",lv:"A"},
+{en:"Put me on speaker.",ar:"ضعني على مكبر الصوت.",lv:"A"},
+{en:"Let me save your number.",ar:"دعني أحفظ رقمك.",lv:"A"},
+{en:"What's the best way to reach you?",ar:"ما أفضل طريقة للتواصل معك؟",lv:"A"},
+{en:"I lost your number.",ar:"فقدت رقمك.",lv:"A"},
+{en:"Can you resend that?",ar:"هل يمكنك إرسال ذلك مجدداً؟",lv:"A"},
+{en:"I didn't get your message.",ar:"لم أتلق رسالتك.",lv:"A"},
+{en:"Leave a voicemail.",ar:"اترك رسالة صوتية.",lv:"A"},
+{en:"I'll DM you.",ar:"سأرسل لك رسالة مباشرة.",lv:"B"},
+{en:"Follow me back.",ar:"تابعني بدوري.",lv:"A"},
+{en:"I tagged you in a photo.",ar:"وسّمتك في صورة.",lv:"A"},
+{en:"My phone is on silent.",ar:"هاتفي على الصامت.",lv:"A"},
+{en:"Can you forward that to me?",ar:"هل يمكنك إعادة توجيه ذلك لي؟",lv:"A"},
+{en:"I'm in a group chat.",ar:"أنا في محادثة جماعية.",lv:"A"},
+{en:"Mute the group.",ar:"اكتم المجموعة.",lv:"A"},
+{en:"I'm getting so many notifications.",ar:"أتلقى إشعارات كثيرة جداً.",lv:"A"},
+{en:"Block that number.",ar:"احظر ذلك الرقم.",lv:"A"},
+{en:"I got a spam call.",ar:"تلقيت مكالمة مزعجة.",lv:"A"},
+{en:"Call me when you land.",ar:"اتصل بي عندما تصل.",lv:"A"},
+{en:"Text me your location.",ar:"أرسل لي موقعك.",lv:"A"},
+{en:"Can we video call tonight?",ar:"هل يمكننا إجراء مكالمة فيديو الليلة؟",lv:"A"},
+{en:"My phone screen is broken.",ar:"شاشة هاتفي مكسورة.",lv:"A"},
+{en:"I need a new phone.",ar:"أحتاج إلى هاتف جديد.",lv:"A"},
+{en:"I'll call you on WhatsApp, it's free.",ar:"سأتصل بك على واتساب، إنه مجاني.",lv:"A"},
+{en:"I'll be on the plane, no signal.",ar:"سأكون في الطائرة، لا إشارة.",lv:"A"},
+{en:"Did you listen to my voice note?",ar:"هل استمعت إلى رسالتي الصوتية؟",lv:"A"},
+{en:"I have you on speed dial.",ar:"رقمك على الاتصال السريع.",lv:"B"},
+{en:"I accidentally called you.",ar:"اتصلت بك بالخطأ.",lv:"A"},
+{en:"I'll turn on airplane mode.",ar:"سأشغّل وضع الطائرة.",lv:"A"},
+{en:"Can I borrow your phone?",ar:"هل يمكنني استعارة هاتفك؟",lv:"A"},
+{en:"The call dropped.",ar:"انقطع الاتصال.",lv:"A"},
+{en:"Can you hear me now?",ar:"هل تسمعني الآن؟",lv:"A"},
+{en:"I'll be on Do Not Disturb.",ar:"سأكون على وضع عدم الإزعاج.",lv:"B"},
+{en:"I called you but no answer.",ar:"اتصلت بك لكن لا رد.",lv:"A"},
+{en:"The reception is terrible here.",ar:"الإشارة سيئة جداً هنا.",lv:"A"},
+{en:"Put your phone away.",ar:"ضع هاتفك جانباً.",lv:"A"},
+{en:"No phones at the dinner table.",ar:"لا هواتف على طاولة العشاء.",lv:"B"},
+{en:"We got disconnected.",ar:"انقطع الاتصال بيننا.",lv:"A"},
+{en:"My phone is out of storage.",ar:"مساحة تخزين هاتفي ممتلئة.",lv:"A"},
+{en:"Don't ignore my calls!",ar:"لا تتجاهل اتصالاتي!",lv:"A"},
+{en:"I'll video call you when I arrive.",ar:"سأتصل بك عبر الفيديو حين أصل.",lv:"A"},
+{en:"My ringtone is turned off.",ar:"نغمة رنيني مغلقة.",lv:"A"},
+{en:"I don't recognize this number.",ar:"لا أعرف هذا الرقم.",lv:"A"},
+{en:"Should I answer?",ar:"هل أرد؟",lv:"A"},
+{en:"Let the call go to voicemail.",ar:"اتركه يذهب للبريد الصوتي.",lv:"B"},
+{en:"I'll call you as soon as I'm free.",ar:"سأتصل بك بمجرد أن أتفرغ.",lv:"A"},
+{en:"My phone keeps ringing.",ar:"هاتفي يرن باستمرار.",lv:"A"},
+],
+"time":[
+{en:"What time is it?",ar:"كم الساعة؟",lv:"A"},
+{en:"I'm running five minutes late.",ar:"سأتأخر خمس دقائق.",lv:"A"},
+{en:"Can we push it back an hour?",ar:"هل يمكننا تأجيله ساعة؟",lv:"B"},
+{en:"I'll be there on time.",ar:"سأكون هناك في الوقت المحدد.",lv:"A"},
+{en:"Don't be late.",ar:"لا تتأخر.",lv:"A"},
+{en:"Time is money.",ar:"الوقت من ذهب.",lv:"A"},
+{en:"Better late than never.",ar:"التأخر خير من عدم الحضور.",lv:"A"},
+{en:"I lost track of time.",ar:"فقدت إحساسي بالوقت.",lv:"B"},
+{en:"The time just flew by.",ar:"مر الوقت بسرعة.",lv:"A"},
+{en:"We have all the time in the world.",ar:"لدينا كل الوقت في العالم.",lv:"B"},
+{en:"It's about time!",ar:"حان الوقت أخيراً!",lv:"B"},
+{en:"There's no rush.",ar:"لا عجلة.",lv:"A"},
+{en:"In the nick of time.",ar:"في اللحظة الأخيرة.",lv:"B"},
+{en:"Right on schedule.",ar:"في الوقت المحدد تماماً.",lv:"B"},
+{en:"It won't take long.",ar:"لن يستغرق وقتاً طويلاً.",lv:"A"},
+{en:"Give it some time.",ar:"أعطه بعض الوقت.",lv:"A"},
+{en:"I need more time.",ar:"أحتاج إلى المزيد من الوقت.",lv:"A"},
+{en:"Sooner or later.",ar:"عاجلاً أم آجلاً.",lv:"A"},
+{en:"Just a moment.",ar:"لحظة فقط.",lv:"A"},
+{en:"I'll do it when I get a chance.",ar:"سأفعله عندما أجد الفرصة.",lv:"B"},
+{en:"I've been waiting forever.",ar:"كنت أنتظر إلى الأبد.",lv:"A"},
+{en:"Is it that late already?",ar:"هل هو متأخر جداً بالفعل؟",lv:"A"},
+{en:"Where did the day go?",ar:"أين ذهب اليوم؟",lv:"B"},
+{en:"I don't have time for this.",ar:"ليس لديّ وقت لهذا.",lv:"A"},
+{en:"Make time for what matters.",ar:"اجعل وقتاً لما يهم.",lv:"B"},
+{en:"Don't waste my time.",ar:"لا تضيع وقتي.",lv:"A"},
+{en:"I'm pressed for time.",ar:"أنا مضغوط على الوقت.",lv:"B"},
+{en:"Can we reschedule?",ar:"هل يمكننا إعادة الجدولة؟",lv:"A"},
+{en:"What time works for you?",ar:"ما الوقت المناسب لك؟",lv:"A"},
+{en:"Any time this week?",ar:"أي وقت هذا الأسبوع؟",lv:"A"},
+{en:"I'm free in the morning.",ar:"أنا متفرغ في الصباح.",lv:"A"},
+{en:"How about afternoon?",ar:"كيف حال بعد الظهر؟",lv:"A"},
+{en:"Let's say three o'clock.",ar:"لنقل الساعة الثالثة.",lv:"A"},
+{en:"Set a reminder.",ar:"ضع تذكيراً.",lv:"A"},
+{en:"Block that time off.",ar:"احجز ذلك الوقت.",lv:"B"},
+{en:"Time flies when you're having fun.",ar:"الوقت يمر بسرعة عندما تستمتع.",lv:"B"},
+{en:"We're wasting precious time.",ar:"نحن نضيع وقتاً ثميناً.",lv:"B"},
+{en:"Every second counts.",ar:"كل ثانية مهمة.",lv:"B"},
+{en:"The clock is ticking.",ar:"الساعة تدق.",lv:"B"},
+{en:"First things first.",ar:"الأهم أولاً.",lv:"A"},
+{en:"Prioritize your time.",ar:"رتب أولوياتك.",lv:"B"},
+{en:"Don't put off till tomorrow.",ar:"لا تؤجل عمل اليوم إلى الغد.",lv:"B"},
+{en:"Deadline is approaching fast.",ar:"الموعد النهائي يقترب بسرعة.",lv:"B"},
+{en:"I need five more minutes.",ar:"أحتاج خمس دقائق أخرى.",lv:"A"},
+{en:"Can you wait a bit?",ar:"هل يمكنك الانتظار قليلاً؟",lv:"A"},
+{en:"I'm almost ready.",ar:"أكاد أكون جاهزاً.",lv:"A"},
+{en:"We're out of time.",ar:"نفد الوقت.",lv:"A"},
+{en:"Start the timer.",ar:"ابدأ المؤقت.",lv:"A"},
+{en:"Time's up!",ar:"انتهى الوقت!",lv:"A"},
+{en:"We finished ahead of time.",ar:"أنهينا قبل الموعد.",lv:"B"},
+{en:"Time really does heal.",ar:"الوقت يشفي حقاً.",lv:"B"},
+{en:"This moment is precious.",ar:"هذه اللحظة ثمينة.",lv:"B"},
+{en:"Live in the moment.",ar:"عش في اللحظة.",lv:"B"},
+{en:"I'm not ready yet.",ar:"لست جاهزاً بعد.",lv:"A"},
+{en:"An hour has passed already?",ar:"مرت ساعة بالفعل؟",lv:"A"},
+{en:"I'll meet you in an hour.",ar:"سألتقي بك بعد ساعة.",lv:"A"},
+{en:"Can we move it to next week?",ar:"هل يمكننا تأجيله إلى الأسبوع القادم؟",lv:"A"},
+{en:"This will only take a second.",ar:"هذا لن يستغرق سوى ثانية.",lv:"A"},
+{en:"I've been waiting for 20 minutes.",ar:"كنت أنتظر منذ 20 دقيقة.",lv:"A"},
+{en:"Punctuality is important.",ar:"الالتزام بالوقت مهم.",lv:"B"},
+{en:"Time is up, let's go.",ar:"انتهى الوقت، لنذهب.",lv:"A"},
+{en:"I'll call you first thing in the morning.",ar:"سأتصل بك فور الاستيقاظ.",lv:"B"},
+{en:"The meeting is in ten minutes.",ar:"الاجتماع بعد عشر دقائق.",lv:"A"},
+{en:"What's today's date?",ar:"ما تاريخ اليوم؟",lv:"A"},
+{en:"Is it Monday already?",ar:"هل هو الاثنين بالفعل؟",lv:"A"},
+{en:"The weekend went by so fast.",ar:"مرت عطلة نهاية الأسبوع بسرعة.",lv:"A"},
+{en:"Let me check my calendar.",ar:"دعني أتحقق من تقويمي.",lv:"A"},
+{en:"That time doesn't work for me.",ar:"ذلك الوقت لا يناسبني.",lv:"A"},
+{en:"I have 30 minutes to spare.",ar:"لديّ 30 دقيقة متاحة.",lv:"A"},
+{en:"I'm running on no sleep.",ar:"أعمل دون نوم.",lv:"B"},
+{en:"Let me make time for this.",ar:"دعني أجد وقتاً لهذا.",lv:"B"},
+{en:"I'll be done before you know it.",ar:"سأنتهي قبل أن تدرك.",lv:"B"},
+{en:"I'm double-booked that day.",ar:"لديّ موعدان في نفس الوقت ذلك اليوم.",lv:"C"},
+],
+"edu":[
+{en:"I'm studying for finals.",ar:"أنا أدرس للامتحانات النهائية.",lv:"A"},
+{en:"I bombed the exam.",ar:"رسبت في الامتحان.",lv:"B"},
+{en:"I aced it!",ar:"تفوقت فيه!",lv:"B"},
+{en:"Can I borrow your notes?",ar:"هل يمكنني استعارة ملاحظاتك؟",lv:"A"},
+{en:"What chapter are we on?",ar:"في أي فصل نحن؟",lv:"A"},
+{en:"The professor went over my head.",ar:"الأستاذ تحدث بما يتجاوز فهمي.",lv:"B"},
+{en:"Can you explain it again?",ar:"هل يمكنك شرحه مجدداً؟",lv:"A"},
+{en:"I'm falling behind.",ar:"أنا أتأخر في الدراسة.",lv:"A"},
+{en:"The deadline is midnight.",ar:"الموعد النهائي منتصف الليل.",lv:"A"},
+{en:"I pulled an all-nighter.",ar:"سهرت الليل كله للدراسة.",lv:"B"},
+{en:"I have a group project.",ar:"لديّ مشروع جماعي.",lv:"A"},
+{en:"I need extra credit.",ar:"أحتاج إلى نقاط إضافية.",lv:"B"},
+{en:"Can I retake the test?",ar:"هل يمكنني إعادة الاختبار؟",lv:"A"},
+{en:"What's the passing grade?",ar:"ما درجة النجاح؟",lv:"A"},
+{en:"I'm switching majors.",ar:"أنا أغير تخصصي.",lv:"B"},
+{en:"I graduated!",ar:"تخرجت!",lv:"A"},
+{en:"What's your major?",ar:"ما تخصصك؟",lv:"A"},
+{en:"I'm in my second year.",ar:"أنا في سنتي الثانية.",lv:"A"},
+{en:"The professor is brilliant.",ar:"الأستاذ متميز.",lv:"A"},
+{en:"This subject is really tough.",ar:"هذا الموضوع صعب حقاً.",lv:"A"},
+{en:"I need a study buddy.",ar:"أحتاج إلى شريك دراسة.",lv:"A"},
+{en:"The library is packed.",ar:"المكتبة مكتظة.",lv:"A"},
+{en:"I use flashcards.",ar:"أستخدم بطاقات المراجعة.",lv:"A"},
+{en:"I learn by doing.",ar:"أتعلم من خلال التطبيق.",lv:"A"},
+{en:"I record the lectures.",ar:"أسجل المحاضرات.",lv:"A"},
+{en:"When are office hours?",ar:"متى ساعات المكتب؟",lv:"A"},
+{en:"I need an extension.",ar:"أحتاج إلى تمديد.",lv:"B"},
+{en:"Can I submit late?",ar:"هل يمكنني التقديم متأخراً؟",lv:"A"},
+{en:"My laptop crashed.",ar:"حاسوبي تعطل.",lv:"A"},
+{en:"I lost my work.",ar:"فقدت عملي.",lv:"A"},
+{en:"I need to cite my sources.",ar:"أحتاج إلى الإشارة إلى مصادري.",lv:"B"},
+{en:"Is this plagiarism?",ar:"هل هذا سرقة أدبية؟",lv:"A"},
+{en:"I have a presentation on Friday.",ar:"لديّ عرض تقديمي يوم الجمعة.",lv:"A"},
+{en:"Public speaking scares me.",ar:"التحدث أمام الجمهور يخيفني.",lv:"A"},
+{en:"I'm joining a study group.",ar:"سأنضم إلى مجموعة دراسية.",lv:"A"},
+{en:"Can you quiz me?",ar:"هل يمكنك اختباري؟",lv:"A"},
+{en:"I learn from my mistakes.",ar:"أتعلم من أخطائي.",lv:"A"},
+{en:"Knowledge is power.",ar:"المعرفة قوة.",lv:"A"},
+{en:"Never stop learning.",ar:"لا تتوقف عن التعلم أبداً.",lv:"A"},
+{en:"Education opens doors.",ar:"التعليم يفتح الأبواب.",lv:"A"},
+{en:"Invest in yourself.",ar:"استثمر في نفسك.",lv:"A"},
+{en:"I'm thinking of getting my master's.",ar:"أفكر في الحصول على الماجستير.",lv:"B"},
+{en:"What's your GPA?",ar:"ما معدلك التراكمي؟",lv:"A"},
+{en:"I'm on a scholarship.",ar:"أنا على منحة دراسية.",lv:"A"},
+{en:"The exam is in two days.",ar:"الامتحان بعد يومين.",lv:"A"},
+{en:"I'm stressed about my grades.",ar:"أنا قلق بشأن درجاتي.",lv:"A"},
+{en:"I just want to pass.",ar:"أريد فقط أن أنجح.",lv:"A"},
+{en:"Study smarter, not harder.",ar:"ادرس بذكاء، ليس بجهد أكبر.",lv:"B"},
+{en:"Take breaks while studying.",ar:"خذ فترات راحة أثناء الدراسة.",lv:"B"},
+{en:"Focus for 25 minutes, then break.",ar:"ركّز لمدة 25 دقيقة، ثم استرح.",lv:"B"},
+{en:"Practice past papers.",ar:"تدرب على الاختبارات القديمة.",lv:"B"},
+{en:"Get enough sleep before exams.",ar:"احصل على قدر كافٍ من النوم قبل الامتحانات.",lv:"B"},
+{en:"I failed my exam.",ar:"رسبت في امتحاني.",lv:"A"},
+{en:"Don't give up.",ar:"لا تستسلم.",lv:"A"},
+{en:"Try again.",ar:"حاول مجدداً.",lv:"A"},
+{en:"Everyone fails sometimes.",ar:"الجميع يفشل أحياناً.",lv:"A"},
+{en:"Your grade doesn't define you.",ar:"درجتك لا تحدد هويتك.",lv:"B"},
+{en:"Hard work pays off eventually.",ar:"العمل الجاد يؤتي ثماره في النهاية.",lv:"B"},
+{en:"The journey matters more than the result.",ar:"الرحلة تهم أكثر من النتيجة.",lv:"C"},
+{en:"I'm thinking of taking an online course.",ar:"أفكر في أخذ دورة عبر الإنترنت.",lv:"A"},
+{en:"Can you recommend a good resource?",ar:"هل يمكنك التوصية بمرجع جيد؟",lv:"A"},
+{en:"I love learning new things.",ar:"أحب تعلم أشياء جديدة.",lv:"A"},
+{en:"Can we form a study group?",ar:"هل يمكننا تشكيل مجموعة دراسة؟",lv:"A"},
+{en:"Two heads are better than one.",ar:"رأسان أفضل من رأس واحد.",lv:"B"},
+{en:"I owe my success to my teachers.",ar:"أدين بنجاحي لمعلميّ.",lv:"B"},
+{en:"Self-study is underrated.",ar:"الدراسة الذاتية مُهملة.",lv:"B"},
+{en:"I finished the assignment early!",ar:"أنهيت الواجب مبكراً!",lv:"A"},
+{en:"I don't understand this concept.",ar:"لا أفهم هذا المفهوم.",lv:"A"},
+{en:"Can you break it down for me?",ar:"هل يمكنك تبسيطه لي؟",lv:"A"},
+{en:"I need to improve my English writing.",ar:"أحتاج إلى تحسين كتابتي بالإنجليزية.",lv:"A"},
+{en:"I should organize my notes.",ar:"يجب أن أنظم ملاحظاتي.",lv:"A"},
+{en:"I'm preparing for a big test.",ar:"أستعد لامتحان مهم.",lv:"A"},
+{en:"I got an A!",ar:"حصلت على تقدير A!",lv:"A"},
+{en:"I need to read more.",ar:"أحتاج إلى القراءة أكثر.",lv:"A"},
+{en:"I need to paraphrase this.",ar:"أحتاج إلى إعادة صياغة هذا.",lv:"B"},
+{en:"I'll teach you if you help me.",ar:"سأعلمك إذا ساعدتني.",lv:"A"},
+{en:"I'm so close to graduating.",ar:"أنا على وشك التخرج.",lv:"B"},
+],
+"sport":[
+{en:"Let's watch the game.",ar:"لنشاهد المباراة.",lv:"A"},
+{en:"Who's playing tonight?",ar:"من يلعب الليلة؟",lv:"A"},
+{en:"Did you see that goal?",ar:"هل رأيت ذلك الهدف؟",lv:"A"},
+{en:"What a save!",ar:"يا له من إنقاذ!",lv:"A"},
+{en:"That was a foul!",ar:"كانت تلك مخالفة!",lv:"A"},
+{en:"The ref is blind!",ar:"الحكم أعمى!",lv:"A"},
+{en:"They're killing it!",ar:"إنهم يتألقون!",lv:"B"},
+{en:"What a comeback!",ar:"يا له من عودة!",lv:"A"},
+{en:"We're in overtime.",ar:"نحن في الوقت الإضافي.",lv:"A"},
+{en:"It went to penalties.",ar:"وصل إلى ركلات الترجيح.",lv:"A"},
+{en:"Hit the gym.",ar:"اذهب إلى الجيم.",lv:"A"},
+{en:"Are you working out?",ar:"هل تتمرن؟",lv:"A"},
+{en:"I skipped leg day.",ar:"تخطيت يوم تمارين الأرجل.",lv:"B"},
+{en:"My muscles are killing me.",ar:"عضلاتي تؤلمني.",lv:"A"},
+{en:"I'm training for a marathon.",ar:"أتدرب لسباق ماراثون.",lv:"A"},
+{en:"That's a personal best.",ar:"ذاك رقم قياسي شخصي.",lv:"B"},
+{en:"I'm on a streak.",ar:"أنا في سلسلة انتصارات.",lv:"B"},
+{en:"We won!",ar:"فزنا!",lv:"A"},
+{en:"They crushed us.",ar:"دمّرونا.",lv:"A"},
+{en:"Next time we'll get them.",ar:"في المرة القادمة سننتقم.",lv:"B"},
+{en:"I'm warming up.",ar:"أنا أتدفأ.",lv:"A"},
+{en:"Don't forget to stretch.",ar:"لا تنسَ التمدد.",lv:"A"},
+{en:"Hydrate well.",ar:"اشرب الماء جيداً.",lv:"A"},
+{en:"Stay consistent.",ar:"ابقَ منتظماً.",lv:"B"},
+{en:"Push through the pain.",ar:"تجاوز الألم.",lv:"B"},
+{en:"No pain, no gain.",ar:"لا ألم، لا مكسب.",lv:"A"},
+{en:"I'm seeing results.",ar:"أرى نتائج.",lv:"A"},
+{en:"I'm in the best shape of my life.",ar:"أنا في أفضل حالة بدنية في حياتي.",lv:"B"},
+{en:"I lost five kilos!",ar:"خسرت خمسة كيلوغرامات!",lv:"A"},
+{en:"Fitness is a lifestyle.",ar:"اللياقة أسلوب حياة.",lv:"B"},
+{en:"I play football on weekends.",ar:"ألعب كرة القدم في عطل نهاية الأسبوع.",lv:"A"},
+{en:"What sports do you play?",ar:"ما الرياضة التي تمارس؟",lv:"A"},
+{en:"I'm a fan of basketball.",ar:"أنا من محبي كرة السلة.",lv:"A"},
+{en:"My team lost again.",ar:"فريقي خسر مجدداً.",lv:"A"},
+{en:"We're in the playoffs.",ar:"نحن في الأدوار الإقصائية.",lv:"B"},
+{en:"What a match that was!",ar:"يا لها من مباراة رائعة!",lv:"A"},
+{en:"The stadium was packed.",ar:"الملعب كان مكتظاً.",lv:"A"},
+{en:"I got courtside tickets!",ar:"حصلت على تذاكر في حافة الملعب!",lv:"B"},
+{en:"I swim every morning.",ar:"أسبح كل صباح.",lv:"A"},
+{en:"I've been cycling to work.",ar:"كنت أذهب للعمل بالدراجة.",lv:"B"},
+{en:"I started taking yoga classes.",ar:"بدأت حضور دروس اليوغا.",lv:"A"},
+{en:"I need a personal trainer.",ar:"أحتاج إلى مدرب شخصي.",lv:"A"},
+{en:"I hate cardio.",ar:"أكره تمارين الكارديو.",lv:"A"},
+{en:"Cardio is good for your heart.",ar:"الكارديو جيد لقلبك.",lv:"A"},
+{en:"I love outdoor sports.",ar:"أحب الرياضات الخارجية.",lv:"A"},
+{en:"Hiking is my therapy.",ar:"المشي في الجبال علاجي.",lv:"B"},
+{en:"Sport keeps me sane.",ar:"الرياضة تحافظ على صحتي العقلية.",lv:"B"},
+{en:"Rematch?",ar:"مباراة إعادة؟",lv:"A"},
+{en:"Good game!",ar:"مباراة رائعة!",lv:"A"},
+{en:"You played really well.",ar:"لعبت بشكل رائع حقاً.",lv:"A"},
+{en:"I need more practice.",ar:"أحتاج إلى المزيد من التدريب.",lv:"A"},
+{en:"Have you watched the game yet?",ar:"هل شاهدت المباراة بعد؟",lv:"A"},
+{en:"No spoilers!",ar:"لا حرق لتفاصيل المباراة!",lv:"A"},
+{en:"Who do you think will win?",ar:"من تعتقد أنه سيفوز؟",lv:"A"},
+{en:"I'm rooting for the home team.",ar:"أنا أشجع الفريق المحلي.",lv:"B"},
+{en:"I can't believe they lost.",ar:"لا أصدق أنهم خسروا.",lv:"A"},
+{en:"They were robbed!",ar:"سُرق الفوز منهم!",lv:"B"},
+{en:"They're the champions!",ar:"هم أبطال!",lv:"A"},
+{en:"Better luck next time.",ar:"حظاً أفضل في المرة القادمة.",lv:"A"},
+{en:"That was a close game.",ar:"كانت مباراة متقاربة.",lv:"B"},
+{en:"Are you watching the finals?",ar:"هل تشاهد النهائي؟",lv:"A"},
+{en:"Don't jinx it!",ar:"لا تجلب الحظ السيئ!",lv:"B"},
+{en:"I grew up watching this team.",ar:"ترعرعت على مشاهدة هذا الفريق.",lv:"B"},
+{en:"Sports bring people together.",ar:"الرياضة تجمع الناس.",lv:"B"},
+{en:"I need new running shoes.",ar:"أحتاج إلى حذاء جري جديد.",lv:"A"},
+{en:"I hurt myself at the gym.",ar:"أصبت نفسي في الجيم.",lv:"A"},
+{en:"I need a rest day.",ar:"أحتاج إلى يوم راحة.",lv:"A"},
+{en:"I beat my record!",ar:"حطمت رقمي القياسي!",lv:"A"},
+{en:"I'm a huge football fan.",ar:"أنا معجب كبير بكرة القدم.",lv:"A"},
+{en:"Did you see the highlights?",ar:"هل رأيت أبرز لقطات المباراة؟",lv:"A"},
+{en:"That was an incredible match.",ar:"كانت مباراة مذهلة.",lv:"A"},
+{en:"We're through to the final!",ar:"وصلنا إلى النهائي!",lv:"B"},
+{en:"Extra time went to the wire.",ar:"الوقت الإضافي امتد حتى اللحظة الأخيرة.",lv:"C"},
+{en:"I'll be watching at home.",ar:"سأشاهد في المنزل.",lv:"A"},
+{en:"Let's bet on the game.",ar:"لنراهن على المباراة.",lv:"B"},
+{en:"I'll join the gym next month.",ar:"سأنضم إلى الجيم الشهر القادم.",lv:"A"},
+{en:"My knees hurt after running.",ar:"ركبتاي تؤلمانني بعد الجري.",lv:"A"},
+],
+"prob":[
+{en:"Something's wrong.",ar:"هناك شيء خاطئ.",lv:"A"},
+{en:"This isn't working.",ar:"هذا لا يعمل.",lv:"A"},
+{en:"I think I made a mistake.",ar:"أعتقد أنني ارتكبت خطأً.",lv:"A"},
+{en:"How do I fix this?",ar:"كيف أصلح هذا؟",lv:"A"},
+{en:"It's worse than I thought.",ar:"إنه أسوأ مما ظننت.",lv:"A"},
+{en:"I'm in deep trouble.",ar:"أنا في ورطة كبيرة.",lv:"A"},
+{en:"I need your help.",ar:"أحتاج إلى مساعدتك.",lv:"A"},
+{en:"Don't panic.",ar:"لا تتذعر.",lv:"A"},
+{en:"Stay calm.",ar:"ابقَ هادئاً.",lv:"A"},
+{en:"Think it through.",ar:"فكر فيه جيداً.",lv:"B"},
+{en:"Every problem has a solution.",ar:"لكل مشكلة حل.",lv:"A"},
+{en:"Let's troubleshoot.",ar:"لنستكشف المشكلة.",lv:"B"},
+{en:"One step at a time.",ar:"خطوة بخطوة.",lv:"A"},
+{en:"We'll figure it out together.",ar:"سنجد الحل معاً.",lv:"A"},
+{en:"There's always a way.",ar:"هناك دائماً طريقة.",lv:"A"},
+{en:"This will pass.",ar:"سيمر هذا.",lv:"A"},
+{en:"We got through it!",ar:"تجاوزناه!",lv:"A"},
+{en:"Lesson learned.",ar:"تعلمنا الدرس.",lv:"A"},
+{en:"Don't be so hard on yourself.",ar:"لا تكن قاسياً على نفسك.",lv:"B"},
+{en:"We all make mistakes.",ar:"كلنا نرتكب أخطاء.",lv:"A"},
+{en:"What went wrong?",ar:"ما الذي جرى بشكل خاطئ؟",lv:"A"},
+{en:"Let's analyze this.",ar:"لنحلل هذا.",lv:"B"},
+{en:"I should have seen this coming.",ar:"كان يجب أن أتوقع هذا.",lv:"B"},
+{en:"Now I know better.",ar:"الآن أعرف أفضل.",lv:"A"},
+{en:"Experience is the best teacher.",ar:"التجربة هي أفضل معلم.",lv:"B"},
+{en:"We live and learn.",ar:"نعيش ونتعلم.",lv:"B"},
+{en:"I can't do this alone.",ar:"لا أستطيع فعل هذا وحدي.",lv:"A"},
+{en:"I need backup.",ar:"أحتاج إلى دعم.",lv:"A"},
+{en:"This is an emergency.",ar:"هذه حالة طارئة.",lv:"A"},
+{en:"Is everyone okay?",ar:"هل الجميع بخير؟",lv:"A"},
+{en:"What's the worst that could happen?",ar:"ما أسوأ ما يمكن أن يحدث؟",lv:"A"},
+{en:"Plan for the worst, hope for the best.",ar:"خطط للأسوأ، تفاءل بالأفضل.",lv:"B"},
+{en:"Let's come up with options.",ar:"لنفكر في خيارات.",lv:"B"},
+{en:"What are our options?",ar:"ما خياراتنا؟",lv:"A"},
+{en:"Stick to the plan.",ar:"التزم بالخطة.",lv:"A"},
+{en:"The plan failed.",ar:"الخطة فشلت.",lv:"A"},
+{en:"Time to improvise.",ar:"حان وقت الارتجال.",lv:"B"},
+{en:"We'll have to make do.",ar:"سيتعين علينا الاكتفاء بما لدينا.",lv:"B"},
+{en:"It is what it is.",ar:"الأمر كما هو.",lv:"B"},
+{en:"Accept and move forward.",ar:"اقبل وامضِ قُدُماً.",lv:"B"},
+{en:"Don't dwell on it.",ar:"لا تبقَ منشغلاً به.",lv:"B"},
+{en:"Let it go.",ar:"اتركها تمضي.",lv:"A"},
+{en:"Focus on solutions, not problems.",ar:"ركّز على الحلول، لا المشاكل.",lv:"B"},
+{en:"We'll get through this.",ar:"سنتجاوز هذا.",lv:"A"},
+{en:"I've dealt with worse.",ar:"تعاملت مع أسوأ من هذا.",lv:"A"},
+{en:"Nothing I can't handle.",ar:"لا يوجد شيء لا أستطيع التعامل معه.",lv:"B"},
+{en:"Challenge accepted.",ar:"التحدي مقبول.",lv:"B"},
+{en:"I won't back down.",ar:"لن أتراجع.",lv:"A"},
+{en:"I'm stronger than this.",ar:"أنا أقوى من هذا.",lv:"B"},
+{en:"This only makes me stronger.",ar:"هذا يجعلني أقوى فحسب.",lv:"B"},
+{en:"I will not be defeated.",ar:"لن أُهزم.",lv:"B"},
+{en:"Victory is just around the corner.",ar:"النصر على بُعد خطوات.",lv:"B"},
+{en:"Ask for help when you need it.",ar:"اطلب المساعدة عندما تحتاجها.",lv:"A"},
+{en:"Two heads are better than one.",ar:"رأسان أفضل من رأس واحد.",lv:"B"},
+{en:"Let's think creatively.",ar:"لنفكر بشكل إبداعي.",lv:"B"},
+{en:"What's the root cause?",ar:"ما السبب الجذري؟",lv:"B"},
+{en:"I tried everything.",ar:"جربت كل شيء.",lv:"A"},
+{en:"I'm out of ideas.",ar:"نفدت أفكاري.",lv:"A"},
+{en:"Fresh eyes might help.",ar:"عيون جديدة قد تساعد.",lv:"B"},
+{en:"Let's get a second opinion.",ar:"لنأخذ رأياً ثانياً.",lv:"B"},
+{en:"Progress over perfection.",ar:"التقدم فوق الكمال.",lv:"B"},
+{en:"Done is better than perfect.",ar:"المنجَز أفضل من المثالي.",lv:"B"},
+{en:"Just start, the rest will follow.",ar:"ابدأ فقط، الباقي سيتبع.",lv:"B"},
+{en:"Keep going, you're almost there.",ar:"استمر، أنت تكاد تصل.",lv:"A"},
+{en:"Never give up on yourself.",ar:"لا تستسلم أبداً لنفسك.",lv:"B"},
+{en:"I'll find a way.",ar:"سأجد طريقة.",lv:"A"},
+{en:"Trust your instincts.",ar:"ثق بحدسك.",lv:"B"},
+{en:"Take it one day at a time.",ar:"خذها يوماً بيوم.",lv:"B"},
+{en:"This is just a bump in the road.",ar:"هذه مجرد عقبة في الطريق.",lv:"B"},
+{en:"What's the simplest solution?",ar:"ما الحل الأبسط؟",lv:"A"},
+{en:"Break it down into smaller steps.",ar:"قسّمه إلى خطوات أصغر.",lv:"B"},
+{en:"I'll sleep on it.",ar:"سأفكر فيه غداً.",lv:"B"},
+{en:"What can we learn from this?",ar:"ما الذي يمكننا تعلمه من هذا؟",lv:"A"},
+{en:"I'll go with your suggestion.",ar:"سأتبع اقتراحك.",lv:"A"},
+{en:"We'll make it work.",ar:"سنجعله ينجح.",lv:"A"},
+{en:"What do you think is best?",ar:"ما الذي تعتقد أنه الأفضل؟",lv:"A"},
+],
+"slang":[
+{en:"That's lit!",ar:"هذا رائع جداً!",lv:"A"},
+{en:"No cap.",ar:"بدون مبالغة، هذا صحيح.",lv:"B"},
+{en:"He's lowkey obsessed.",ar:"هو مهووس بشكل خفي.",lv:"B"},
+{en:"That's sus.",ar:"هذا مشبوه.",lv:"B"},
+{en:"I'm dead.",ar:"أموت من الضحك.",lv:"B"},
+{en:"Say less.",ar:"لا تقل أكثر، فهمت.",lv:"B"},
+{en:"We're vibing.",ar:"نحن في تناغم.",lv:"B"},
+{en:"He ghosted me.",ar:"تجاهلني تماماً.",lv:"B"},
+{en:"That's a flex.",ar:"هذا تباهٍ.",lv:"B"},
+{en:"I'm not about that life.",ar:"لست من هذا النوع.",lv:"B"},
+{en:"She's extra.",ar:"هي مبالغة.",lv:"B"},
+{en:"It's a vibe.",ar:"إنه جو رائع.",lv:"A"},
+{en:"You do you.",ar:"افعل ما يناسبك.",lv:"B"},
+{en:"I'm here for it.",ar:"أنا مستعد وداعم لهذا.",lv:"B"},
+{en:"That slaps.",ar:"هذا رائع جداً.",lv:"B"},
+{en:"Bestie, relax.",ar:"يا صاحبي، هدّئ من نفسك.",lv:"B"},
+{en:"Main character moment.",ar:"لحظة البطل الرئيسي.",lv:"B"},
+{en:"Rent free in my head.",ar:"يعيش في رأسي بدون إيجار.",lv:"B"},
+{en:"Understood the assignment.",ar:"فهم المطلوب وأتقنه.",lv:"B"},
+{en:"That's bussin.",ar:"هذا لذيذ أو رائع جداً.",lv:"B"},
+{en:"Big yikes.",ar:"هذا محرج جداً.",lv:"B"},
+{en:"I can't even.",ar:"لا أستطيع، هذا كثير.",lv:"B"},
+{en:"Glow up.",ar:"تحوّل إلى شخص أفضل.",lv:"B"},
+{en:"Snatched.",ar:"مثالي، مظهره رائع.",lv:"B"},
+{en:"That's a whole mood.",ar:"هذا يعبر عن مشاعري تماماً.",lv:"B"},
+{en:"Sending me.",ar:"يجعلني أموت ضحكاً.",lv:"B"},
+{en:"Not me doing that.",ar:"لا أصدق أنني فعلت ذلك.",lv:"B"},
+{en:"I'm obsessed.",ar:"أنا مهووس.",lv:"A"},
+{en:"This is iconic.",ar:"هذا أسطوري.",lv:"B"},
+{en:"Lowkey amazing.",ar:"رائع بشكل خفي.",lv:"B"},
+{en:"This hits different.",ar:"هذا يؤثر بطريقة مختلفة.",lv:"B"},
+{en:"Living for this.",ar:"أحيا من أجل هذا.",lv:"B"},
+{en:"Okay, but hear me out.",ar:"حسناً، لكن استمع لي.",lv:"B"},
+{en:"Plot twist!",ar:"انعطافة مفاجئة في القصة!",lv:"B"},
+{en:"Period.",ar:"هذا كلام نهائي.",lv:"B"},
+{en:"Sheesh!",ar:"واو! هذا قوي!",lv:"B"},
+{en:"Slaying!",ar:"يتألق بشكل مذهل!",lv:"B"},
+{en:"No thoughts, just vibes.",ar:"لا أفكار، فقط أجواء.",lv:"C"},
+{en:"This is so random.",ar:"هذا عشوائي جداً.",lv:"A"},
+{en:"I'm screaming.",ar:"أصرخ من المتعة.",lv:"B"},
+{en:"Red flag!",ar:"إشارة تحذير!",lv:"B"},
+{en:"Green flag!",ar:"إشارة إيجابية!",lv:"B"},
+{en:"He's a walking red flag.",ar:"هو إشارة تحذير واضحة.",lv:"B"},
+{en:"She passed the vibe check.",ar:"اجتازت اختبار الأجواء.",lv:"B"},
+{en:"That's actually fire.",ar:"هذا في الحقيقة رائع.",lv:"B"},
+{en:"No worries, fam.",ar:"لا توجد مشكلة، يا صديقي.",lv:"B"},
+{en:"You're goated.",ar:"أنت الأفضل على الإطلاق.",lv:"B"},
+{en:"W move.",ar:"تصرف رائع.",lv:"B"},
+{en:"Took an L.",ar:"خسر.",lv:"B"},
+{en:"Take the W.",ar:"خذ النصر.",lv:"B"},
+{en:"He's got rizz.",ar:"لديه جاذبية طبيعية.",lv:"C"},
+{en:"Delulu.",ar:"وهمي للغاية.",lv:"C"},
+{en:"Ate and left no crumbs.",ar:"أتقن ما فعله تماماً.",lv:"C"},
+{en:"Villain era.",ar:"مرحلة الشرير.",lv:"C"},
+{en:"NPC behavior.",ar:"سلوك شخصية ثانوية.",lv:"C"},
+{en:"Touch grass.",ar:"اخرج واستمتع بالحياة الحقيقية.",lv:"C"},
+{en:"Spill the tea!",ar:"أخبرنا الأخبار!",lv:"B"},
+{en:"That's the tea.",ar:"هذه هي الحقيقة.",lv:"B"},
+{en:"I'm shook.",ar:"أنا مصدوم.",lv:"B"},
+{en:"The audacity!",ar:"يا للوقاحة!",lv:"B"},
+{en:"We love to see it.",ar:"نحب رؤية ذلك.",lv:"B"},
+{en:"I'm crying laughing.",ar:"أنا أبكي من الضحك.",lv:"B"},
+{en:"I'm in my feels.",ar:"أنا في مشاعري.",lv:"B"},
+{en:"Big brain move.",ar:"تصرف ذكي جداً.",lv:"B"},
+{en:"That hits hard.",ar:"هذا يؤثر بشدة.",lv:"B"},
+{en:"Ngl, this is fire.",ar:"بصراحة، هذا رائع.",lv:"B"},
+{en:"He's built different.",ar:"هو من طينة مختلفة.",lv:"B"},
+{en:"She ate that up.",ar:"أتقنت ذلك.",lv:"B"},
+{en:"That's an absolute W.",ar:"هذا انتصار مطلق.",lv:"B"},
+{en:"I can't with you.",ar:"لا أستطيع التعامل معك.",lv:"B"},
+{en:"No, bestie, don't.",ar:"لا يا صاحبي، لا تفعل.",lv:"B"},
+{en:"I said what I said.",ar:"قلت ما قلت.",lv:"B"},
+{en:"Main character energy.",ar:"طاقة البطل الرئيسي.",lv:"C"},
+{en:"Do it for the plot.",ar:"افعلها لتكون القصة ممتعة.",lv:"C"},
+{en:"Not the drama again.",ar:"ليس الدراما من جديد.",lv:"C"},
+{en:"That energy is immaculate.",ar:"هذه الطاقة لا تشوبها شائبة.",lv:"C"},
+{en:"Caught in 4K.",ar:"ضُبط على الفيديو بالكامل.",lv:"C"},
+{en:"It's not giving.",ar:"إنه لا يعطي النتيجة المطلوبة.",lv:"C"},
+{en:"You're so extra.",ar:"أنت مبالغ جداً.",lv:"B"},
+{en:"I'm soft-launching.",ar:"أُعرّف بها ببطء.",lv:"C"},
+{en:"That's cheugy.",ar:"هذا قديم الموضة.",lv:"C"},
+{en:"Clout chaser.",ar:"يبحث عن الشهرة.",lv:"B"},
+{en:"Zero rizz.",ar:"لا يملك أي جاذبية.",lv:"C"},
+{en:"Poggers!",ar:"مذهل! رائع!",lv:"C"},
+],
+};
+
+const TOTAL=1672;
+let xp=+localStorage.getItem('s6x')||0,streak=+localStorage.getItem('s6s')||1;
+let learned=+localStorage.getItem('s6l')||0,tA=+localStorage.getItem('s6t')||0,cA=+localStorage.getItem('s6c')||0;
+let sv=JSON.parse(localStorage.getItem('s6sv')||'[]'),li=JSON.parse(localStorage.getItem('s6li')||'[]'),aiS=JSON.parse(localStorage.getItem('s6ai')||'[]');
+let bo=0,bf='all',sq='',qD={},gm=0;
+function save(){localStorage.setItem('s6x',xp);localStorage.setItem('s6s',streak);localStorage.setItem('s6l',learned);localStorage.setItem('s6t',tA);localStorage.setItem('s6c',cA);localStorage.setItem('s6sv',JSON.stringify(sv));localStorage.setItem('s6li',JSON.stringify(li));localStorage.setItem('s6ai',JSON.stringify(aiS));updateUI();}
+function updateUI(){
+  document.getElementById('hXP').textContent=xp+' XP';
+  document.getElementById('hStr').textContent=streak;
+  document.getElementById('streakN').textContent=streak;
+  document.getElementById('st2').textContent=learned;
+  document.getElementById('st3').textContent=tA>0?Math.round(cA/tA*100)+'%':'-';
+  document.getElementById('pL').textContent=learned;
+  document.getElementById('pX').textContent=xp;
+  document.getElementById('pS').textContent=streak;
+  var tot=0;for(var k in D)tot+=D[k].length;
+  var pct=Math.min(100,tot>0?Math.round(learned/(tot/100)):0);
+  document.getElementById('pPct').textContent=pct+'%';
+  var ring=document.getElementById('ring');
+  if(ring)ring.style.strokeDashoffset=402-(pct/100)*402;
+}
+function setupStreak(){
+  var today=new Date().toDateString(),last=localStorage.getItem('s6last');
+  if(last!==today){var y=new Date(Date.now()-86400000).toDateString();if(last===y)streak++;else if(!last)streak=1;localStorage.setItem('s6s',streak);localStorage.setItem('s6last',today);}
+}
+function goTab(id){
+  document.querySelectorAll('.tab').forEach(function(t,i){t.classList.toggle('on',['home','browse','ai','saved','prog'][i]===id);});
+  document.querySelectorAll('.pg').forEach(function(p){p.classList.remove('on');});
+  document.getElementById('pg-'+id).classList.add('on');
+  document.querySelectorAll('.bni').forEach(function(b,i){b.classList.toggle('on',['home','browse','ai','saved','prog'][i]===id);});
+  if(id==='saved')buildSaved();if(id==='prog')buildProg();if(id==='browse')loadBrowse(true);if(id==='ai')buildAISaved();
+}
+function buildCatGrid(){
+  document.getElementById('catGrid').innerHTML=CATS.map(function(c){
+    var cnt=(D[c.id]||[]).length;
+    var p=+localStorage.getItem('s6cp_'+c.id)||0;
+    var badge=p===0?'<div class="cbadge">جديد</div>':'';
+    return '<div class="cc" style="--cc:'+c.color+'" onclick="startQuiz(\''+c.id+'\')">'
+      +badge+'<span class="cico">'+c.icon+'</span>'
+      +'<div class="cname">'+c.name+'</div>'
+      +'<div class="ccnt">'+cnt+' جملة</div>'
+      +'<div class="cbar"><div class="cbfill" style="width:'+p+'%;background:'+c.color+'"></div></div>'
+      +'</div>';
+  }).join('');
+}
+function setMode(m,el){gm=m;document.querySelectorAll('.mode-btn').forEach(function(b){b.classList.remove('on');});el.classList.add('on');toast('تم اختيار النمط ✓','var(--cyan)');}
+function buildFilterRow(){
+  document.getElementById('frow').innerHTML='<div class="fc on" onclick="setFilter(\'all\',this)">الكل</div>'
+    +CATS.map(function(c){return '<div class="fc" onclick="setFilter(\''+c.id+'\',this)">'+c.icon+' '+c.name+'</div>';}).join('');
+}
+function setFilter(f,el){bf=f;bo=0;document.querySelectorAll('.fc').forEach(function(x){x.classList.remove('on');});el.classList.add('on');loadBrowse(true);}
+function getFiltered(){
+  var arr=[];
+  if(bf==='all'){CATS.forEach(function(c){if(D[c.id])arr=arr.concat(D[c.id].map(function(s){return Object.assign({},s,{cat:c.id,cn:c.name,cc:c.color});}));});}
+  else{var c=CATS.find(function(x){return x.id===bf;});if(c&&D[c.id])arr=D[c.id].map(function(s){return Object.assign({},s,{cat:c.id,cn:c.name,cc:c.color});});}
+  if(sq){var q=sq.toLowerCase();arr=arr.filter(function(s){return s.en.toLowerCase().includes(q)||s.ar.includes(sq);});}
+  return arr;
+}
+function loadBrowse(reset){
+  if(reset)bo=0;
+  var all=getFiltered(),slice=all.slice(bo,bo+20);
+  var list=document.getElementById('blist');
+  if(reset)list.innerHTML='';
+  slice.forEach(function(s,i){list.innerHTML+=rCard(s,bo+i);});
+  bo+=20;
+  document.getElementById('lmBtn').style.display=bo>=all.length?'none':'block';
+  document.getElementById('bcnt').textContent=all.length+' جملة';
+}
+function loadMore(){loadBrowse(false);}
+function esc(s){return s.replace(/\\/g,'\\\\').replace(/'/g,"\\'");}
+function rCard(s,idx){
+  var saved=sv.includes(s.en);
+  var e=esc(s.en),a=esc(s.ar);
+  return '<div class="scard'+(saved?' saved':'')+'" style="--lc:'+(s.cc||'var(--cyan)')+'"><div class="sen">'+s.en+'</div>'
+    +'<div class="sar">'+s.ar+'</div>'
+    +'<div class="smeta"><span class="stag">'+(s.cn||'')+'</span>'
+    +'<span class="stag l'+((s.lv||'A').toLowerCase())+'">Level '+(s.lv||'A')+'</span>'
+    +'<span style="font-size:9px;color:#444;margin-right:auto">#'+(idx+1)+'</span></div>'
+    +'<div class="sacts">'
+    +'<button class="sb li" onclick="speak(\''+e+'\')">🔊 استمع</button>'
+    +'<button class="sb sv" onclick="toggleSave(\''+e+'\',\''+a+'\',this)">'+(saved?'★ محفوظ':'☆ احفظ')+'</button>'
+    +'<button class="sb pr" onclick="qp(\''+e+'\',\''+a+'\')">✏️ تدرب</button>'
+    +'</div></div>';
+}
+function doSearch(){sq=document.getElementById('srch').value;document.getElementById('srchClr').style.display=sq?'block':'none';loadBrowse(true);}
+function clrSearch(){document.getElementById('srch').value='';sq='';document.getElementById('srchClr').style.display='none';loadBrowse(true);}
+function toggleSave(en,ar,btn){
+  var idx=sv.indexOf(en);
+  if(idx>-1){sv.splice(idx,1);btn.textContent='☆ احفظ';btn.closest('.scard').classList.remove('saved');toast('🗑️ حُذف');}
+  else{sv.push(en);btn.textContent='★ محفوظ';btn.closest('.scard').classList.add('saved');toast('⭐ حُفظ!','var(--gold)');xp+=2;}
+  save();
+}
+function buildSaved(){
+  var list=document.getElementById('svdList'),cnt=document.getElementById('svdCnt');
+  if(!sv.length){list.innerHTML='<div style="text-align:center;padding:50px 20px;color:var(--muted)"><span style="font-size:46px;display:block;margin-bottom:12px">⭐</span><p>لم تحفظ أي جملة بعد</p></div>';cnt.textContent='لا توجد جمل محفوظة';return;}
+  cnt.textContent=sv.length+' جملة محفوظة';
+  var all=[];Object.values(D).forEach(function(arr){all=all.concat(arr);});
+  list.innerHTML=sv.slice().reverse().map(function(en){
+    var s=all.find(function(x){return x.en===en;});if(!s)return'';
+    var e=esc(en),a=esc(s.ar);
+    return '<div class="scard saved"><div class="sen">'+en+'</div><div class="sar">'+s.ar+'</div>'
+      +'<div class="sacts">'
+      +'<button class="sb li" onclick="speak(\''+e+'\')">🔊 استمع</button>'
+      +'<button class="sb sv" onclick="rmSaved(\''+e+'\',this)">🗑️ احذف</button>'
+      +'<button class="sb pr" onclick="qp(\''+e+'\',\''+a+'\')">✏️ تدرب</button>'
+      +'</div></div>';
+  }).join('');
+}
+function rmSaved(en,btn){sv=sv.filter(function(x){return x!==en;});btn.closest('.scard').remove();save();toast('🗑️ حُذف');}
+function buildProg(){
+  updateUI();
+  document.getElementById('pcats').innerHTML=CATS.map(function(c){
+    var p=+localStorage.getItem('s6cp_'+c.id)||0;
+    return '<div class="prow"><div class="prowt"><span style="font-size:20px">'+c.icon+'</span>'
+      +'<span class="prname">'+c.name+'</span><span class="prval">'+p+'%</span></div>'
+      +'<div class="prbarbg"><div class="prbarfg" style="width:'+p+'%;background:'+c.color+'"></div></div></div>';
+  }).join('');
+  setTimeout(function(){updateUI();},100);
+}
+function resetProg(){
+  if(!confirm('هل أنت متأكد من إعادة التعيين؟'))return;
+  xp=streak=learned=tA=cA=0;sv=[];li=[];CATS.forEach(function(c){localStorage.removeItem('s6cp_'+c.id);});
+  save();buildCatGrid();buildProg();toast('🔄 تم إعادة التعيين');
+}
+function qp(en,ar){qD={questions:[{type:'flip',word:{en:en,ar:ar}}],index:0,score:0,moduleId:'quick'};document.getElementById('qTitle').textContent='✏️ تدرب';document.getElementById('qPanel').classList.add('on');renderQ();}
+function startQuiz(catId){
+  var cat=CATS.find(function(c){return c.id===catId;});
+  var pool=[];
+  if(catId==='daily'){
+    CATS.forEach(function(c){if(D[c.id])pool=pool.concat(D[c.id].map(function(s){return Object.assign({},s,{cat:c.id});}));});
+    pool=pool.sort(function(){return Math.random()-.5;}).slice(0,20);
+  }else{
+    pool=(D[catId]||[]).map(function(s){return Object.assign({},s,{cat:catId});}).sort(function(){return Math.random()-.5;}).slice(0,100);
+  }
+  var all=[];Object.values(D).forEach(function(arr){all=all.concat(arr);});
+  var qs=[];
+  pool.forEach(function(w,i){
+    var t=gm===0?'mcq':gm===1?'type':gm===2?'flip':['mcq','mcq','type','flip','fill'][i%5];
+    if(t==='fill'){
+      var ws=w.en.split(' ');
+      if(ws.length>=3){var bi=Math.floor(Math.random()*(ws.length-2))+1;qs.push({type:'fill',word:w,display:ws.map(function(x,j){return j===bi?'____':x;}).join(' '),answer:ws[bi]});return;}
+      t='mcq';
+    }
+    if(t==='mcq'){var wr=all.filter(function(v){return v.ar!==w.ar;}).sort(function(){return Math.random()-.5;}).slice(0,3).map(function(v){return v.ar;});qs.push({type:'mcq',word:w,choices:[w.ar].concat(wr).sort(function(){return Math.random()-.5;}),correct:w.ar});}
+    else if(t==='type')qs.push({type:'type',word:w});
+    else qs.push({type:'flip',word:w});
+  });
+  qD={questions:qs,index:0,score:0,moduleId:catId};
+  document.getElementById('qTitle').textContent=catId==='daily'?'🏆 التحدي اليومي':(cat?cat.icon+' '+cat.name:'اختبار');
+  document.getElementById('qSc').textContent='0/'+qs.length;
+  document.getElementById('qPanel').classList.add('on');renderQ();
+}
+function renderQ(){
+  var questions=qD.questions,index=qD.index;
+  if(index>=questions.length){showScore();return;}
+  var q=questions[index];
+  document.getElementById('qPF').style.width=(index/questions.length*100)+'%';
+  document.getElementById('qSc').textContent=qD.score+'/'+questions.length;
+  var body=document.getElementById('qBody');
+  var e=esc(q.word.en);
+  if(q.type==='mcq'){
+    var ls=['أ','ب','ج','د'];var ch='';
+    q.choices.forEach(function(c,i){var c2=esc(c),cor=esc(q.correct);ch+='<button class="choice" onclick="chkMCQ(this,\''+c2+'\',\''+cor+'\',\''+e+'\')">'+'<span>'+c+'</span><span class="cidx">'+ls[i]+'</span></button>';});
+    body.innerHTML='<div class="qnum">السؤال '+(index+1)+' من '+questions.length+'</div>'
+      +'<div class="qtxt">ما معنى هذه الجملة؟</div><div class="qsub">اختر الترجمة الصحيحة</div>'
+      +'<div class="bigen"><div class="en">'+q.word.en+'</div><button class="bspk" onclick="speak(\''+e+'\')">🔊 استمع</button></div>'
+      +'<div class="choices">'+ch+'</div>'
+      +'<div class="qfb" id="qFB"></div><button class="bnext" id="btnNext" onclick="nextQ()">التالي →</button>';
+  }else if(q.type==='type'){
+    body.innerHTML='<div class="qnum">السؤال '+(index+1)+' من '+questions.length+'</div>'
+      +'<div class="qtxt">اكتب الجملة بالإنجليزية</div><div class="qsub">ترجم من العربية للإنجليزية</div>'
+      +'<div class="bigen"><div class="en" style="color:var(--gold);font-size:16px">'+q.word.ar+'</div></div>'
+      +'<input class="tinput" id="tInp" placeholder="اكتب هنا..." autocomplete="off" autocorrect="off" spellcheck="false" onkeydown="if(event.key===\'Enter\')chkType(\''+e+'\')">'
+      +'<button class="bcheck" onclick="chkType(\''+e+'\')">تحقق ✓</button>'
+      +'<div class="qfb" id="qFB"></div><button class="bnext" id="btnNext" onclick="nextQ()">التالي →</button>';
+    setTimeout(function(){var t=document.getElementById('tInp');if(t)t.focus();},150);
+  }else if(q.type==='fill'){
+    var blk=q.display.replace('____','<span style="color:var(--cyan);border-bottom:2px solid var(--cyan);min-width:80px;display:inline-block;text-align:center" id="blk">____</span>');
+    var ans=esc(q.answer);
+    body.innerHTML='<div class="qnum">السؤال '+(index+1)+' من '+questions.length+'</div>'
+      +'<div class="qtxt">أكمل الجملة</div><div class="qsub">'+q.word.ar+'</div>'
+      +'<div class="bigen" style="direction:ltr;text-align:left;font-family:monospace;font-size:15px;line-height:2">'+blk+'</div>'
+      +'<input class="tinput" id="tInp" placeholder="الكلمة الناقصة..." autocomplete="off" autocorrect="off" spellcheck="false" onkeydown="if(event.key===\'Enter\')chkFill(\''+ans+'\')">'
+      +'<button class="bcheck" onclick="chkFill(\''+ans+'\')">تحقق ✓</button>'
+      +'<div class="qfb" id="qFB"></div><button class="bnext" id="btnNext" onclick="nextQ()">التالي →</button>';
+    setTimeout(function(){var t=document.getElementById('tInp');if(t)t.focus();},150);
+  }else{
+    body.innerHTML='<div class="qnum">السؤال '+(index+1)+' من '+questions.length+'</div>'
+      +'<div class="qtxt">بطاقة تعلم — اضغط للقلب</div><div class="qsub">احفظ الجملة ثم اختر</div>'
+      +'<div class="fwrap" id="fCard" onclick="flipIt()"><div class="finner">'
+      +'<div class="ff"><div style="font-family:monospace;font-size:17px;font-weight:700;color:var(--cyan);direction:ltr;text-align:left;line-height:1.5;width:100%">'+q.word.en+'</div>'
+      +'<button class="bspk" onclick="event.stopPropagation();speak(\''+e+'\')">🔊 استمع</button>'
+      +'<div class="fhint">اضغط لرؤية الترجمة 👇</div></div>'
+      +'<div class="fb"><div style="font-size:20px;font-weight:700;margin-bottom:8px">'+q.word.ar+'</div></div>'
+      +'</div></div>'
+      +'<div class="fbtns"><button class="fbtn no" onclick="mFlip(false)">❌ لم أتذكرها</button>'
+      +'<button class="fbtn yes" onclick="mFlip(true)">✅ حفظتها!</button></div>'
+      +'<div class="qfb" id="qFB"></div>';
+  }
+}
+function flipIt(){var c=document.getElementById('fCard');if(c)c.classList.toggle('flipped');speak(qD.questions[qD.index].word.en);}
+function chkMCQ(btn,choice,correct,en){
+  document.querySelectorAll('.choice').forEach(function(b){b.disabled=true;});
+  var fb=document.getElementById('qFB');
+  if(choice===correct){btn.classList.add('ok');qD.score++;cA++;xp+=15;mLearned(en);fb.className='qfb ok on';fb.textContent='🎉 إجابة صحيحة! ممتاز!';tone('ok');confetti(5);}
+  else{btn.classList.add('bad');document.querySelectorAll('.choice').forEach(function(b){if(b.querySelector('span:first-child')&&b.querySelector('span:first-child').textContent===correct)b.classList.add('ok');});fb.className='qfb bad on';fb.textContent='❌ الإجابة: '+correct;tone('bad');vib();}
+  tA++;save();speak(en);document.getElementById('btnNext').classList.add('on');
+}
+function chkType(correct){
+  var inp=document.getElementById('tInp');if(!inp)return;
+  var val=inp.value.trim().toLowerCase(),ans=correct.toLowerCase(),fb=document.getElementById('qFB');inp.disabled=true;
+  if(val===ans){inp.classList.add('ok');qD.score++;cA++;xp+=20;mLearned(correct);fb.className='qfb ok on';fb.textContent='🎉 ممتاز!';tone('ok');confetti(5);}
+  else if(lev(val,ans)<=2&&val.length>2){inp.classList.add('ok');qD.score++;cA++;xp+=10;fb.className='qfb ok on';fb.textContent='✅ قريب! الصحيح: '+correct;tone('ok');}
+  else{inp.classList.add('bad');inp.value=correct;fb.className='qfb bad on';fb.textContent='❌ الصحيح: '+correct;tone('bad');vib();}
+  tA++;save();speak(correct);document.getElementById('btnNext').classList.add('on');
+}
+function chkFill(answer){
+  var inp=document.getElementById('tInp');if(!inp)return;
+  var val=inp.value.trim().toLowerCase(),fb=document.getElementById('qFB'),blk=document.getElementById('blk');inp.disabled=true;
+  if(val===answer.toLowerCase()||lev(val,answer.toLowerCase())<=1){inp.classList.add('ok');qD.score++;cA++;xp+=18;fb.className='qfb ok on';fb.textContent='🎉 صحيح! '+answer;if(blk)blk.textContent=answer;tone('ok');confetti(5);}
+  else{inp.classList.add('bad');inp.value=answer;fb.className='qfb bad on';fb.textContent='❌ الصحيح: '+answer;if(blk)blk.textContent=answer;tone('bad');vib();}
+  tA++;save();speak(qD.questions[qD.index].word.en);document.getElementById('btnNext').classList.add('on');
+}
+function mFlip(knew){
+  var fb=document.getElementById('qFB'),w=qD.questions[qD.index].word;
+  if(knew){qD.score++;cA++;xp+=10;mLearned(w.en);fb.className='qfb ok on';fb.textContent='🎉 رائع! حفظتها!';tone('ok');confetti(3);}
+  else{fb.className='qfb bad on';fb.textContent='💪 ستحفظها قريباً!';tone('bad');vib();}
+  tA++;save();document.querySelectorAll('.fbtn').forEach(function(b){b.disabled=true;});setTimeout(function(){nextQ();},1200);
+}
+function nextQ(){qD.index++;renderQ();document.getElementById('qBody').scrollTo({top:0,behavior:'smooth'});}
+function closeQ(){document.getElementById('qPanel').classList.remove('on');buildCatGrid();}
+function mLearned(en){if(!li.includes(en)){li.push(en);learned++;save();}}
+function showScore(){
+  var score=qD.score,tot=qD.questions.length,moduleId=qD.moduleId;
+  var pct=tot>0?Math.round(score/tot*100):0;
+  if(moduleId&&moduleId!=='daily'&&moduleId!=='quick')localStorage.setItem('s6cp_'+moduleId,pct);
+  var emoji,title,stars,bonus;
+  if(pct>=90){emoji='🏆';title='أسطورة! مثالي!';stars='⭐⭐⭐';bonus=100;}
+  else if(pct>=70){emoji='🎉';title='ممتاز!';stars='⭐⭐';bonus=60;}
+  else if(pct>=50){emoji='💪';title='جيد! يمكنك أفضل!';stars='⭐';bonus=30;}
+  else{emoji='📚';title='تابع التدريب!';stars='✨';bonus=15;}
+  xp+=bonus;save();
+  document.getElementById('sEm').textContent=emoji;document.getElementById('sTi').textContent=title;
+  document.getElementById('sBg').textContent=score+'/'+tot;document.getElementById('sDt').textContent=pct+'% إجابات صحيحة';
+  document.getElementById('sSt').textContent=stars;document.getElementById('sXP').textContent='+'+bonus+' XP';
+  if(pct>=70)confetti(20);
+  document.getElementById('sScr').classList.add('on');document.getElementById('qPanel').classList.remove('on');
+}
+function restartQ(){document.getElementById('sScr').classList.remove('on');startQuiz(qD.moduleId);}
+function closeScore(){document.getElementById('sScr').classList.remove('on');buildCatGrid();goTab('home');}
+var AISG=['جمل في المطعم','جمل رومانسية','جمل في مقابلة عمل','جمل للتسوق','جمل للطوارئ','جمل في الجيم','جمل مضحكة','جمل للمدرسة','جمل عند الطبيب','جمل في الفندق','جمل للتعبير عن الفرح','جمل شبابية'];
+function buildAISuggestions(){document.getElementById('aiSug').innerHTML=AISG.map(function(s){return '<div class="fc" onclick="useAISug(\''+s.replace(/'/g,"\\'")+'\')">' +s+'</div>';}).join('');}
+function useAISug(s){document.getElementById('aiPr').value=s;genAI();}
+async function genAI(){
+  var prompt=document.getElementById('aiPr').value.trim();
+  if(!prompt){toast('⚠️ اكتب ما تريد تعلمه','var(--rose)');return;}
+  var btn=document.getElementById('bAI');btn.disabled=true;btn.textContent='⏳ يولّد...';
+  var res=document.getElementById('aiRes');res.className='airesult on';
+  res.innerHTML='<div style="text-align:center;color:var(--muted);padding:20px">🤖 AI يفكر...</div>';
+  try{
+    var r=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',
+      headers:{'Content-Type':'application/json','anthropic-dangerous-direct-browser-access':'true'},
+      body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:1000,
+        system:'أنت خبير تعليم اللغة الإنجليزية. ولّد 10 جمل إنجليزية عامية مع ترجمتها. أجب فقط بـ JSON: {"sentences":[{"en":"...","ar":"..."}]}',
+        messages:[{role:'user',content:'ولّد 10 جمل إنجليزية عامية عن: '+prompt}]})});
+    var data=await r.json();
+    var text=data.content.map(function(b){return b.text||'';}).join('');
+    var parsed=JSON.parse(text.replace(/```json|```/g,'').trim());
+    var sents=parsed.sentences||[];
+    res.innerHTML=sents.map(function(s,i){var e=esc(s.en),a=esc(s.ar);
+      return '<div class="ais" style="animation-delay:'+(i*.07)+'s"><div class="en">'+s.en+'</div><div class="ar">'+s.ar+'</div>'
+        +'<div style="display:flex;gap:7px;margin-top:8px">'
+        +'<button class="sb li" style="max-width:80px" onclick="speak(\''+e+'\')">🔊</button>'
+        +'<button class="sb sv" style="max-width:120px" onclick="saveAI(\''+e+'\',\''+a+'\',this)">⭐ احفظ</button>'
+        +'</div></div>';
+    }).join('');
+    xp+=25;save();toast('✨ تم توليد '+sents.length+' جملة!','var(--violet)');
+  }catch(e){res.innerHTML='<div style="color:var(--rose);padding:16px;text-align:center">❌ خطأ في الاتصال بـ AI</div>';}
+  btn.disabled=false;btn.textContent='✨ ولّد 10 جمل الآن';
+}
+function saveAI(en,ar,btn){aiS.unshift({en:en,ar:ar,date:new Date().toLocaleDateString('ar')});btn.textContent='✅ محفوظ';btn.disabled=true;save();buildAISaved();toast('⭐ حُفظت!','var(--gold)');}
+function buildAISaved(){
+  var c=document.getElementById('aiSvd');
+  if(!aiS.length){c.innerHTML='<div style="text-align:center;padding:40px 20px;color:var(--muted)"><span style="font-size:40px;display:block;margin-bottom:10px">🤖</span><p>لم تولّد جملاً بعد</p></div>';return;}
+  c.innerHTML=aiS.slice(0,20).map(function(s){var e=esc(s.en);
+    return '<div class="ais"><div class="en">'+s.en+'</div><div class="ar">'+s.ar+'</div>'
+      +'<div style="font-size:11px;color:#555;margin-top:4px">'+s.date+'</div>'
+      +'<button class="sb li" style="width:100%;margin-top:7px" onclick="speak(\''+e+'\')">🔊 استمع</button></div>';
+  }).join('');
+}
+function speak(text){
+  if(!window.speechSynthesis)return;
+  speechSynthesis.cancel();
+  var u=new SpeechSynthesisUtterance(text);u.lang='en-US';u.rate=.82;u.pitch=1;
+  var voices=speechSynthesis.getVoices();
+  var v=voices.find(function(x){return x.lang==='en-US';})||voices.find(function(x){return x.lang.startsWith('en');});
+  if(v)u.voice=v;speechSynthesis.speak(u);
+}
+function tone(type){
+  try{var ctx=new(window.AudioContext||window.webkitAudioContext)(),o=ctx.createOscillator(),g=ctx.createGain();
+    o.connect(g);g.connect(ctx.destination);
+    if(type==='ok'){o.frequency.setValueAtTime(440,ctx.currentTime);o.frequency.setValueAtTime(554,ctx.currentTime+.1);o.frequency.setValueAtTime(659,ctx.currentTime+.2);}
+    else{o.frequency.setValueAtTime(280,ctx.currentTime);o.frequency.setValueAtTime(200,ctx.currentTime+.12);}
+    g.gain.setValueAtTime(.12,ctx.currentTime);g.gain.exponentialRampToValueAtTime(.001,ctx.currentTime+.4);
+    o.start();o.stop(ctx.currentTime+.4);
+  }catch(e){}
+}
+function vib(){if(navigator.vibrate)navigator.vibrate([60,30,60]);}
+function confetti(n){
+  var cols=['#00ddff','#ff2d6e','#f5c518','#00e8a2','#9b5de5'];
+  for(var i=0;i<n;i++){(function(idx){setTimeout(function(){
+    var el=document.createElement('div');el.className='cpar';
+    el.style.left=Math.random()*100+'vw';el.style.width=(6+Math.random()*6)+'px';el.style.height=(6+Math.random()*6)+'px';
+    el.style.background=cols[idx%5];el.style.animationDuration=(1.2+Math.random()*1.5)+'s';el.style.animationDelay=(Math.random()*.4)+'s';
+    document.body.appendChild(el);setTimeout(function(){el.remove();},3000);
+  },idx*50);})(i);}
+}
+var _tT;
+function toast(msg,color){
+  color=color||'var(--cyan)';var old=document.querySelector('.toast');if(old)old.remove();
+  var t=document.createElement('div');t.className='toast';t.style.color=color;t.textContent=msg;
+  document.body.appendChild(t);clearTimeout(_tT);_tT=setTimeout(function(){t.remove();},2200);
+}
+function lev(a,b){
+  var dp=[];for(var i=0;i<=a.length;i++){dp[i]=[];for(var j=0;j<=b.length;j++)dp[i][j]=i===0?j:j===0?i:0;}
+  for(var i=1;i<=a.length;i++)for(var j=1;j<=b.length;j++)dp[i][j]=a[i-1]===b[j-1]?dp[i-1][j-1]:1+Math.min(dp[i-1][j],dp[i][j-1],dp[i-1][j-1]);
+  return dp[a.length][b.length];
+}
+window.addEventListener('load',function(){
+  if(window.speechSynthesis)speechSynthesis.getVoices();
+  setupStreak();updateUI();buildCatGrid();buildFilterRow();loadBrowse(true);buildAISuggestions();buildAISaved();
+});
+
+</script></body></html>
